@@ -1,0 +1,21 @@
+// Partials
+@import "partials/normalize.scss";
+@import "partials/vars.scss";
+@import "partials/default.scss";
+@import "partials/header.scss";
+@import "partials/footer.scss";
+
+// Home
+@import "home/about.scss";
+@import "home/warranty.scss";
+@import "home/production.scss";
+@import "home/form.scss";
+
+// Catalog
+@import "catalog/catalog.scss";
+
+// Product
+@import "product/product.scss";
+
+// Table
+@import "table/table.scss";

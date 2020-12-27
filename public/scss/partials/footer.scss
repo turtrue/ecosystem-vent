@@ -1,0 +1,23 @@
+.footer {
+    padding: 50px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    background: $lightBlack;
+    color: $white;
+
+    &__col {
+        h2 {
+            font-size: 3rem;
+            color: $darkGreen;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

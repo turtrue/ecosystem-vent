@@ -1,0 +1,59 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Круглые отводы
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/kruglye-otvody.jpg' alt='круглые отводы')
+                .product__header-text
+                    p Ecosystem предлагает приобрести круглые вентиляционные отводы, служащие для поворота сети воздуховодов под различными углами.
+                    p В нашем каталоге представлен большой выбор круглых отводов 90, 60, 45, 30, 15 градусов различного диаметра, изготовленных из оцинкованной стали.
+
+                    p Продукция отличается:
+
+                    ul
+                        li Высоким качеством исполнения и надежностью;
+                        li Практической универсальностью;
+                        li Легкостью установки и демонтажа;
+                        li Недорогой стоимостью;
+
+            .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                p Мы гарантируем:
+
+                ul
+                    li Договорной характер взаимоотношений;
+                    li Оперативное формирование заказа;
+                    li Доставку воздуховодов по Казани и другим регионам;
+                    li Оказание консультативной и практической помощи покупателям;
+
+                .product__body-images.product__body-images--flex
+                    div
+                        h3 Отвод (90&deg;)
+                        .product__body-group
+                            img(src='/assets/product/img/kruglye-otvody-90.jpg' alt='круглые отводы 90 градусов')
+                            img(src='/assets/product/img/kruglye-otvody-90-skhema.jpg' alt='схема круглых отводов 90 градусов')
+                    div
+                        h3 Отвод (60&deg;)
+                        .product__body-group
+                            img(src='/assets/product/img/kruglye-otvody-60.jpg' alt='круглые отводы 60 градусов')
+                            img(src='/assets/product/img/kruglye-otvody-60-skhema.jpg' alt='схема круглых отводов 60 градусов')
+                    div
+                        h3 Отвод (45&deg;)
+                        .product__body-group
+                            img(src='/assets/product/img/kruglye-otvody-45.jpg' alt='круглые отводы 45 градусов')
+                            img(src='/assets/product/img/kruglye-otvody-45-skhema.jpg' alt='схема круглых отводов 45 градусов')
+                    div
+                        h3 Отвод (30&deg;)
+                        .product__body-group
+                            img(src='/assets/product/img/kruglye-otvody-30.jpg' alt='круглые отводы 30 градусов')
+                            img(src='/assets/product/img/kruglye-otvody-30-skhema.jpg' alt='схема круглых отводов 30 градусов')
+                    div
+                        h3 Отвод (15&deg;)
+                        .product__body-group
+                            img(src='/assets/product/img/kruglye-otvody-15.jpg' alt='круглые отводы 15 градусов')
+                            img(src='/assets/product/img/kruglye-otvody-15-skhema.jpg' alt='схема круглых отводов 15 градусов')
+
+            include ../tables/kruglye-otvody.pug

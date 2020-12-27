@@ -1,0 +1,37 @@
+.table {
+    &__title {
+        font-size: 3rem;
+    }
+
+    table {
+        margin-top: 20px;
+        padding: 20px;
+
+        font-size: 1.6rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 $lightBlack;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background: rgba($lightGreen, 0.1);
+            }
+
+            &:nth-child(even) {
+                background: rgba($lightGreen, 0.2);
+            }
+        }
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+
+        text-align: center;
+        border-radius: 5px;
+    }
+}

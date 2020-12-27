@@ -1,0 +1,39 @@
+section.about
+    .container.container--about
+        .about__content(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true')
+            h1.about__title <span>ECOSYSTEM</span> занимается<br>производством и поставкой:
+
+            ul.menu-about
+                +menuAboutItem(
+                    'воздуховодов',
+                    '/catalog/vozdukhovody',
+                    'about__slide-1',
+                    'active')
+                +menuAboutItem(
+                    'фасонных изделий',
+                    '#',
+                    'about__slide-2')
+                +menuAboutItem(
+                    'расходных материалов',
+                    '#',
+                    'about__slide-3')
+                +menuAboutItem(
+                    'деталей для систем',
+                    '#',
+                    'about__slide-4')
+                +menuAboutItem(
+                    'блоков управления и автоматизации',
+                    '#',
+                    'about__slide-5')
+
+            a.btn.btn--about(href='catalog')
+                svg.btn__logo
+                    use(xlink:href='#map')
+                p.btn__text Каталог
+
+        .about__slider(data-aos='fade-left' data-aos-duration='1000' data-aos-once='true')
+            +aboutSlide('about__slide-1 active', 'assets/home/img/slide-1.jpg', 'воздуховоды')
+            +aboutSlide('about__slide-2', 'assets/home/img/slide-2.jpg', 'фасонные изделия')
+            +aboutSlide('about__slide-3', 'assets/home/img/slide-3.jpg', 'расходные материалы')
+            +aboutSlide('about__slide-4', 'assets/home/img/slide-4.jpg', 'детали для систем')
+            +aboutSlide('about__slide-5', 'assets/home/img/slide-5.jpg', 'блоки управления и оптимизации')

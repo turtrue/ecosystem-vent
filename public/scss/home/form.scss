@@ -1,0 +1,81 @@
+.form {
+    padding: 100px 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba($darkGreen, 1) 0,
+        rgba($lightGreen, 1) 50%,
+        rgba($white, 1) 100%
+    );
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-size: 4rem;
+        text-align: center;
+        color: $white;
+    }
+
+    &__line {
+        margin: 0 auto 50px;
+        width: 50px;
+        height: 4px;
+
+        background: $white;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        padding: 50px;
+        width: 500px;
+
+        box-shadow: 0 0 10px 0 $lightBlack;
+        background: $white;
+        border-radius: 20px;
+    }
+
+    &__group {
+        margin-bottom: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        input {
+            padding: 10px;
+
+            outline: none;
+            border: none;
+            border-bottom: $lightBlack 2px solid;
+        }
+    }
+
+    &__text {
+        margin-left: 30px;
+        padding: 50px;
+        width: 500px;
+
+        border: $lightBlack 2px dashed;
+        border-radius: 20px;
+
+        p {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.btn--form {
+    margin-top: 50px;
+}

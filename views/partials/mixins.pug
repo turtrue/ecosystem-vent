@@ -1,0 +1,39 @@
+//- About
+mixin menuAboutItem(linkValue, linkHref, dataSlide, active='')
+    li(class='menu-about__item')
+        a(class='menu-about__link ' + active href=linkHref data-slide=dataSlide)=linkValue
+
+mixin aboutSlide(slideClasses, imgSrc, alt)
+    img(class='about__slide ' + slideClasses src=imgSrc alt=alt)
+
+//- Waranty
+mixin itemWarranty(idIcon, descr, dataAosDelay)
+    .item-warranty.mt-3(data-aos='fade-up' data-aos-delay=dataAosDelay data-aos-duration='1000' data-aos-once='true')
+        svg.item-warranty__icon
+            use(xlink:href=idIcon)
+        .item-warranty__descr
+            p=descr
+
+//- Production
+mixin productionItem(src, alt, title, text1, text2)
+    .production__item(data-aos='zoom-out' data-aos-duration='1000' data-aos-once='true')
+        .production__img-wrapper
+            img.production__img(src=src, alt=alt)
+        .production__text
+            h2=title
+            p=text1
+            p=text2
+
+//- Form
+mixin formGroup(id, labelValue, inputType)
+    .form__group
+        label(for=id)=labelValue
+        input(id=id type=inputType required)
+
+//- Catalog
+mixin catalogItem(href, src, alt, text)
+    a.catalog__item(href=href data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+        section
+            img.catalog__item-img(src=src alt=alt)
+            .catalog__item-text
+                h2=text

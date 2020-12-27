@@ -1,0 +1,58 @@
+.warranty {
+    padding: 100px 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba($darkGreen, 1) 0,
+        rgba($lightGreen, 1) 50%,
+        rgba($white, 1) 100%
+    );
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-size: 4rem;
+        text-align: center;
+        color: $white;
+    }
+
+    &__line {
+        margin: 0 auto 20px;
+        width: 50px;
+        height: 4px;
+
+        background: $white;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.item-warranty {
+    padding: 30px 15px;
+    width: 250px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 $lightBlack;
+    background: $white;
+
+    &__icon {
+        margin: 0 auto 20px;
+        width: 80px;
+        height: 80px;
+
+        display: block;
+        fill: $lightBlack;
+    }
+
+    &__descr {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+}

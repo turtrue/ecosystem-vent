@@ -1,0 +1,19 @@
+extends layouts/main.pug
+
+block links
+    //- https://michalsnik.github.io/aos/
+    link(href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet')
+    link(rel='stylesheet' href='/scss/index.scss')
+
+block content
+    main
+        include home/about.pug
+        .banner
+        include home/warranty.pug
+        include home/production.pug
+        include home/form.pug
+
+block scripts
+    //- https://michalsnik.github.io/aos/
+    script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
+    script(src='/scripts/home.js')

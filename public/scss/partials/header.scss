@@ -1,0 +1,36 @@
+.header {
+    background: $white;
+
+    .header__body {
+        padding: 10px 50px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 80px;
+    }
+}
+
+.nav {
+    display: flex;
+    font-size: 2rem;
+
+    &__link {
+        padding: 0 30px;
+
+        a {
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $darkGreen;
+            }
+
+            &.active {
+                color: $darkGreen;
+            }
+        }
+    }
+}

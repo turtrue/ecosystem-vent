@@ -1,0 +1,40 @@
+header.header
+    .header__body
+        a(href='/')
+            img.header__logo(src='/assets/header/img/logo.png' alt='ecosystem производство и поставка воздуховодов')
+
+        nav
+            ul.nav
+                if isHome
+                    li.nav__link
+                        a.active(href='/') Главная
+                else
+                    li.nav__link
+                        a(href='/') Главная
+
+                if isCatalog
+                    li.nav__link
+                        a.active(href='/catalog') Каталог
+                else
+                    li.nav__link
+                        a(href='/catalog') Каталог
+
+                if isProducts
+                    li.nav__link
+                        a.active(href='/products') Продукция
+                else
+                    li.nav__link
+                        a(href='/products') Продукция
+
+                if isServices
+                    li.nav__link
+                        a.active(href='/services') Услуги
+                else
+                    li.nav__link
+                        a(href='/services') Услуги
+
+        a.btn(href='tel:89514821173')
+            svg.btn__logo
+                use(xlink:href='#phone')
+
+            p.btn__text Позвоните нам

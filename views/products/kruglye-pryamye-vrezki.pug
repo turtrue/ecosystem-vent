@@ -1,0 +1,16 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Круглые, прямые врезки
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/kruglye-pryamye-vrezki.jpg' alt='круглые, прямые врезки')
+                .product__header-text
+                    p Круглые, прямые врезки являются частью ассортимента фасонных изделий и производятся на заказ по заявкам клиентов, поскольку варианты исполнения этих фасонных деталей разнообразные и зависят от типа каналов, для которых они предназначаются.
+                    p Круглые, прямые врезки применяются при монтаже воздуховодов круглого типа к другому прямоугольному воздуховоду. Другое предназначение – присоединение к стенке воздуховода.
+                    p Выполняются из нержавеющей, оцинкованной, черной стали. Могут прикрепляться с использованием заклепок либо саморезов.
+
+            include ../tables/kruglye-pryamye-vrezki.pug

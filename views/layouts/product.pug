@@ -1,0 +1,25 @@
+include ../partials/mixins.pug
+
+doctype html
+html(lang='ru')
+    head
+        include ../partials/head.pug
+        //- https://michalsnik.github.io/aos/
+        link(href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet')
+        link(rel='stylesheet' href='/scss/index.scss')
+
+    body
+        .page
+            include ../partials/svg.pug
+            .banner
+            include ../partials/header.pug
+            .banner-mini
+
+            main
+                block content
+
+            include ../partials/footer.pug
+
+        //- https://michalsnik.github.io/aos/
+        script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
+        script(src='/scripts/product.js')

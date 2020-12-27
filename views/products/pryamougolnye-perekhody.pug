@@ -1,0 +1,15 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Прямоугольные переходы
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/pryamougolnye-perekhody.jpg' alt='прямоугольные переходы')
+                .product__header-text
+                    p Используются для соединения между собой вентиляционных коробов, находящихся в разных плоскостях или на различных уровнях, с неравными размерами, а также используются при монтаже решеток в систему или уже имеющую на конце установленную сетку.
+                    p Существуют разновидности типов прямоугольных переходов, указанные на схеме. По стандарту оснащается шинореечным соединением с обоих концов. Соединяются болтами и гайками с воздуховодами или другими фасонными изделиями. Также при монтаже можно воспользоваться дополнительными зажимами.
+
+            include ../tables/pryamougolnye-perekhody.pug

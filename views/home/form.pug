@@ -1,0 +1,21 @@
+form.form(method='post')
+    .container
+        h1.form__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Заявка на расчет вентиляции
+
+        .form__line(data-aos='fade-left' data-aos-duration='1000' data-aos-once='true')
+
+        .form__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+            .form__item
+                +formGroup('name', 'Имя', 'text')
+                +formGroup('phone', 'Телефон', 'tel')
+                +formGroup('email', 'Email', 'email')
+
+                a.btn.btn--form(href='#' type='submit')
+                    svg.btn__logo
+                        use(xlink:href='#letter')
+                    p.btn__text Отправить
+
+            .form__text
+                p Заполните форму заявки и в ближайшее время менеджер вам перезвонит
+                p Позвоните нам и получите эксклюзивное предложение на системы вентиляции
+                p +7(843)204-04-10
