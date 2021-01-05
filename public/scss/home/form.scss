@@ -34,6 +34,7 @@
         padding: 50px;
         width: 500px;
 
+        position: relative;
         box-shadow: 0 0 10px 0 $lightBlack;
         background: $white;
         border-radius: 20px;
@@ -74,8 +75,4 @@
             }
         }
     }
-}
-
-.btn--form {
-    margin-top: 50px;
 }

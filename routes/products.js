@@ -100,6 +100,17 @@ router.get('/kruglye-zaglushki', (req, res) => {
     }
 });
 
+router.get('/kruglye-zonty', (req, res) => {
+    try {
+        res.render('products/kruglye-zonty', {
+            title: 'Круглые зонты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 router.get('/pryamougolnye-trojniki', (req, res) => {
     try {
         res.render('products/pryamougolnye-trojniki', {
@@ -122,10 +133,54 @@ router.get('/pryamougolnye-perekhody', (req, res) => {
     }
 });
 
+router.get('/perekhody-s-pryamougolnykh-na-kruglye-secheniya', (req, res) => {
+    try {
+        res.render('products/perekhody-s-pryamougolnykh-na-kruglye-secheniya', {
+            title: 'Переходы с прямоугольных на круглые сечения',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/pryamougolnye-zonty', (req, res) => {
+    try {
+        res.render('products/pryamougolnye-zonty', {
+            title: 'Прямоугольные зонты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/pryamougolnye-utki', (req, res) => {
+    try {
+        res.render('products/pryamougolnye-utki', {
+            title: 'Прямоугольные утки',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 router.get('/nippeli', (req, res) => {
     try {
         res.render('products/nippeli', {
             title: 'Ниппели',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/drossel-klapana', (req, res) => {
+    try {
+        res.render('products/drossel-klapana', {
+            title: 'Дроссель клапана',
             isCatalog: true
         });
     } catch (e) {

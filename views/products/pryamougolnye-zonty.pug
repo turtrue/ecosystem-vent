@@ -1,0 +1,27 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Прямоугольные зонты
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/pryamougolnye-zonty.jpg' alt='прямоугольные зонты')
+                .product__header-text
+                    p Прямоугольные зонты применяются в системах вытяжной вентиляции с естественным и механическим побуждением и предназначены для предотвращения проникновения атмосферных осадков в вентиляционные шахты.
+
+                    p Прямоугольные зонты больших размеров усиливают уголком и полосой. При монтаже зонтов больших размеров особое внимание должно быть обращено на транспортировку и погрузочно-разгрузочные работы.
+
+                    p Особо габаритные зонты собираются непосредственно на месте установки из частей, изготовленных на вентиляционном предприятии.
+
+            .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                p Изделия отличаются:
+
+                ul
+                    li Надежностью и долговечностью;
+                    li Практической эффективностью;
+                    li Легкостью установки;
+                    li Привлекательным внешним видом;
+
+            include ../tables/pryamougolnye-zonty.pug

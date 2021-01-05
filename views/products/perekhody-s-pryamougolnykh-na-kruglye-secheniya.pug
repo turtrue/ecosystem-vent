@@ -1,0 +1,21 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Переходы с прямоугольных на круглые сечения
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/perekhody-s-pryamougolnykh-na-kruglye-secheniya.jpg' alt='переходы с прямоугольных на круглые сечения')
+                .product__header-text
+                    p При наличии в вентиляционной системе участков воздуховодов или фасонных деталей с разными типами или размерами сечения необходимо использовать переходы. Эти изделия плотно и герметично стыкуют коммуникации между собой, не допуская утечек воздуха. Данный переход стыкует прямоугольные воздуховоды с круглыми.
+
+                    p Их конструкция отличается:
+
+                    ul
+                        li Простотой;
+                        li Надежностью;
+                        li Легкостью установки и обслуживания;
+
+            include ../tables/perekhody-s-pryamougolnykh-na-kruglye-secheniya.pug

@@ -25,10 +25,10 @@ mixin productionItem(src, alt, title, text1, text2)
             p=text2
 
 //- Form
-mixin formGroup(id, labelValue, inputType)
+mixin formGroup(id, labelValue, inputType, name)
     .form__group
         label(for=id)=labelValue
-        input(id=id type=inputType required)
+        input(id=id type=inputType name=name required)
 
 //- Catalog
 mixin catalogItem(href, src, alt, text)

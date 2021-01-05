@@ -1,12 +1,11 @@
 const express = require('express');
-// const mongoose = require('mongoose');
 const path = require('path');
 const compileSass = require('express-compile-sass');
 const homeRoutes = require('./routes/home');
 const catalogRoutes = require('./routes/catalog');
 const productsRoutes = require('./routes/products');
 const servicesRoutes = require('./routes/services');
-// const keys = require('./keys');
+const emailsRoutes = require('./routes/emails');
 
 const app = express();
 
@@ -24,22 +23,20 @@ app.set('view engine', 'pug');
 
 // Express
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Регистрация роутов
 app.use('/', homeRoutes);
 app.use('/catalog', catalogRoutes);
 app.use('/products', productsRoutes);
 app.use('/services', servicesRoutes);
+app.use('/emails', emailsRoutes);
 
 const PORT = process.env.PORT || 3000;
 
 function start() {
     try {
-        // await mongoose.connect(keys.MONGODB_URI, {
-        //     useNewUrlParser: true,
-        //     useUnifiedTopology: true,
-        //     useFindAndModify: false
-        // });
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
         });

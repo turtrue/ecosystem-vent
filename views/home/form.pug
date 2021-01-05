@@ -1,4 +1,4 @@
-form.form(method='post')
+form#form.form(action='/emails/statement' method='POST')
     .container
         h1.form__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Заявка на расчет вентиляции
 
@@ -6,11 +6,14 @@ form.form(method='post')
 
         .form__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
             .form__item
-                +formGroup('name', 'Имя', 'text')
-                +formGroup('phone', 'Телефон', 'tel')
-                +formGroup('email', 'Email', 'email')
+                p#form-message.message
+                img#form-loader.loader(src='assets/loader.gif' alt='загрузка')
 
-                a.btn.btn--form(href='#' type='submit')
+                +formGroup('name', 'Имя', 'text', 'name')
+                +formGroup('phone', 'Телефон', 'tel', 'phone')
+                +formGroup('email', 'Email', 'email', 'email')
+
+                a#form-btn.btn.mt-5(href='#')
                     svg.btn__logo
                         use(xlink:href='#letter')
                     p.btn__text Отправить
