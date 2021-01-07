@@ -23,6 +23,17 @@ router.get('/vozdukhovody-i-fasonnye-chasti', (req, res) => {
     }
 });
 
+router.get('/komplektuyushchie', (req, res) => {
+    try {
+        res.render('komplektuyushchie', {
+            title: 'Комплектующие',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 router.get('/vozdukhovody', (req, res) => {
     try {
         res.render('vozdukhovody', {

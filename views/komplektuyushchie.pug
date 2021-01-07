@@ -1,0 +1,19 @@
+extends layouts/catalog.pug
+
+block content
+    .catalog__body
+            +catalogItem(
+                '/products/lsp',
+                '/assets/product/img/lsp.jpg',
+                'перфорированные ленты',
+                'лсп')
+            +catalogItem(
+                '/products/bystrosemnye-khomuty-mx',
+                '/assets/product/img/bystrosemnye-khomuty-mx.jpg',
+                'быстросъемные хомуты mx',
+                'быстросъемные хомуты mx')
+            +catalogItem(
+                '/products/ventilyacionnye-khomuty',
+                '/assets/product/img/ventilyacionnye-khomuty.jpg',
+                'вентиляционные хомуты',
+                'вентиляционные хомуты')

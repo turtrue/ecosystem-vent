@@ -188,4 +188,37 @@ router.get('/drossel-klapana', (req, res) => {
     }
 });
 
+router.get('/lsp', (req, res) => {
+    try {
+        res.render('products/lsp', {
+            title: 'ЛСП',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/bystrosemnye-khomuty-mx', (req, res) => {
+    try {
+        res.render('products/bystrosemnye-khomuty-mx', {
+            title: 'Быстросъемные хомуты MX',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/ventilyacionnye-khomuty', (req, res) => {
+    try {
+        res.render('products/ventilyacionnye-khomuty', {
+            title: 'Вентиляционные хомуты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

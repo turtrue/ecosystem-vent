@@ -1,0 +1,21 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Перфорированные ленты
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/lsp.jpg' alt='перфорированные ленты')
+                .product__header-text
+                    p Перфорированные ленты ЛСП используются при монтажных работах для упрочнения различных металлических и деревянных конструкций.
+
+                    p Преимущества:
+
+                    ul
+                        li Универсальность;
+                        li Устойчивость к коррозии;
+                        li Простота и удобство использования;
+
+            include ../tables/lsp.pug

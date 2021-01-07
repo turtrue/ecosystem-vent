@@ -11,7 +11,7 @@ module.exports = function (name, email) {
             <p>Наш телефон: ${keys.PHONE_OFFICE}</p>
             <p>Наш адрес: ${keys.ADDRESS_OFFICE}</p>
             <hr/>
-            <a href='${keys.BASE_URL}'>Нажмите чтобы вернуться на сайт Ecosystem</a>
+            <a href='${keys.BASE_URL}'>Вернуться на сайт Ecosystem</a>
         `
     }
 }

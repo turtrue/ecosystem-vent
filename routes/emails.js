@@ -16,7 +16,6 @@ router.post('/statement', async (req, res) => {
         if (!req.body.isFormStatement) throw new Error('Обращение произошло не из формы');
 
         const { name, phone, email } = req.body;
-
         await transporter.sendMail(userStatementEmail(name, email));
         await transporter.sendMail(officeStatementEmail(name, phone, email));
         res.status(200).send(JSON.stringify('Заявка успешно отправлена'));
