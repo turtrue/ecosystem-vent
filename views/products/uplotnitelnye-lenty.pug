@@ -1,0 +1,15 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Уплотнительные ленты
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/uplotnitelnye-lenty.jpg' alt='уплотнительные ленты')
+                .product__header-text
+                    p Ленты уплотнительные используются для повышения герметичности швов при фланцевом соединении элементов и отдельных секций систем вентиляции, а также приточно-вытяжных установок.
+                    p Помимо обеспечения герметичности стыков, применение межфланцевых лент позволяет значительно снизить шум и вибрацию воздуховода.
+
+            include ../tables/uplotnitelnye-lenty.pug

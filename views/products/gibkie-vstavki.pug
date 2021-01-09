@@ -1,0 +1,21 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Гибкие вставки
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/gibkie-vstavki.jpg' alt='гибкие вставки')
+                .product__header-text
+                    p Гибкие вставки особенно актуально примененяются для вентиляции промышленной, где воздуховоды больших размеров, проходят либо близко к ограждениям, либо их пересекают.
+
+                    p Гибкие вставки выполняют следующие функции:
+
+                    ul
+                        li становятся на пути распространения вентиляторной вибрации и шума по всей системе в целом;
+                        li компенсируют температурные деформации;
+                        li обеспечивают герметичность соединений;
+
+            include ../tables/gibkie-vstavki.pug

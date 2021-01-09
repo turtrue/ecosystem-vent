@@ -1,0 +1,15 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Круглые врезки
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/kruglye-vrezki.jpg' alt='круглые врезки')
+                .product__header-text
+                    p Круглые врезки - фасонная часть системы вентиляции, предназначенная для присоединения воздуховодов различного диаметра друг к другу. Они изготовлены из оцинкованной стали.
+                    p Процесс монтажа круглой врезки достаточно простой. В воздуховоде делается отверстие необходимого диаметра, затем наносится слой силиконового уплотнения для надежной герметизации стыка. После чего с помощью рор-заклепок врезка прикрепляется прикрепляется к воздуховоду.
+
+            include ../tables/kruglye-vrezki.pug

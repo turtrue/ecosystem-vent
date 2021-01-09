@@ -56,4 +56,15 @@ router.get('/fasonnye-chasti', (req, res) => {
     }
 });
 
+router.get('/diffuzory', (req, res) => {
+    try {
+        res.render('diffuzory', {
+            title: 'Диффузоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

@@ -78,17 +78,6 @@ router.get('/kruglye-trojniki', (req, res) => {
     }
 });
 
-router.get('/kruglye-pryamye-vrezki', (req, res) => {
-    try {
-        res.render('products/kruglye-pryamye-vrezki', {
-            title: 'Круглые, прямые врезки',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/kruglye-zaglushki', (req, res) => {
     try {
         res.render('products/kruglye-zaglushki', {
@@ -104,6 +93,28 @@ router.get('/kruglye-zonty', (req, res) => {
     try {
         res.render('products/kruglye-zonty', {
             title: 'Круглые зонты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/kruglye-vrezki', (req, res) => {
+    try {
+        res.render('products/kruglye-vrezki', {
+            title: 'Круглые врезки',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/pryamye-vrezki', (req, res) => {
+    try {
+        res.render('products/pryamye-vrezki', {
+            title: 'Прямые врезки',
             isCatalog: true
         });
     } catch (e) {
@@ -214,6 +225,127 @@ router.get('/ventilyacionnye-khomuty', (req, res) => {
     try {
         res.render('products/ventilyacionnye-khomuty', {
             title: 'Вентиляционные хомуты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/gibkie-vstavki', (req, res) => {
+    try {
+        res.render('products/gibkie-vstavki', {
+            title: 'Гибкие вставки',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/skoby-m8-zn', (req, res) => {
+    try {
+        res.render('products/skoby-m8-zn', {
+            title: 'Скобы M8 ZN',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/uplotnitelnye-lenty', (req, res) => {
+    try {
+        res.render('products/uplotnitelnye-lenty', {
+            title: 'Уплотнительные ленты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/vibroopory', (req, res) => {
+    try {
+        res.render('products/vibroopory', {
+            title: 'Виброопоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/strubciny', (req, res) => {
+    try {
+        res.render('products/strubciny', {
+            title: 'Струбцины',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/shpilki', (req, res) => {
+    try {
+        res.render('products/shpilki', {
+            title: 'Шпильки',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/dvs-diffuzory', (req, res) => {
+    try {
+        res.render('products/dvs-diffuzory', {
+            title: 'DVS диффузоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/dvs-p-diffuzory', (req, res) => {
+    try {
+        res.render('products/dvs-p-diffuzory', {
+            title: 'DVS-P диффузоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/pav-b-diffuzory', (req, res) => {
+    try {
+        res.render('products/pav-b-diffuzory', {
+            title: 'PAV-B диффузоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/rad-diffuzory', (req, res) => {
+    try {
+        res.render('products/rad-diffuzory', {
+            title: 'RAD диффузоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/sad-diffuzory', (req, res) => {
+    try {
+        res.render('products/sad-diffuzory', {
+            title: 'SAD диффузоры',
             isCatalog: true
         });
     } catch (e) {
