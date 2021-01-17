@@ -6,5 +6,5 @@ module.exports = {
     EMAIL_OFFICE: 'runivankolyvan@gmail.com',
     PHONE_OFFICE: '+7(843)204-04-10 с 8:00 до 20:00',
     ADDRESS_OFFICE: 'г. Казань, Оренбургский тракт, 10 км, стр. 1',
-    BASE_URL: 'https://frozen-plains-86228.herokuapp.com'
+    BASE_URL: 'https://ecosystem-vent.ru'
 }

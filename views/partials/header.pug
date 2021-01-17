@@ -26,12 +26,12 @@ header.header
                 //-     li.nav__link
                 //-         a(href='/products') Продукция
 
-                //- if isServices
-                //-     li.nav__link
-                //-         a.active(href='/services') Услуги
-                //- else
-                //-     li.nav__link
-                //-         a(href='/services') Услуги
+                if isServices
+                    li.nav__link
+                        a.active(href='/services') Услуги
+                else
+                    li.nav__link
+                        a(href='/services') Услуги
 
         a.btn(href='tel:89514821173')
             svg.btn__logo
