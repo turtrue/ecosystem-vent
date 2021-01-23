@@ -66,6 +66,10 @@ a {
     position: fixed;
 }
 
+.pos-r {
+    position: relative;
+}
+
 .mt-3 {
     margin-top: 30px;
 }
@@ -81,7 +85,7 @@ a {
 }
 
 .banner-mini {
-    height: 20px;
+    height: 10px;
 
     background: $lightBlack;
 }

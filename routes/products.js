@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
     }
 });
 
+// Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {
     try {
         res.render('products/kruglye-vozdukhovody', {
@@ -34,6 +35,7 @@ router.get('/pryamougolnye-vozdukhovody', (req, res) => {
     }
 });
 
+// Фасонные части
 router.get('/kruglye-otvody', (req, res) => {
     try {
         res.render('products/kruglye-otvody', {
@@ -199,6 +201,7 @@ router.get('/drossel-klapana', (req, res) => {
     }
 });
 
+// Комплектующие
 router.get('/lsp', (req, res) => {
     try {
         res.render('products/lsp', {
@@ -298,6 +301,7 @@ router.get('/shpilki', (req, res) => {
     }
 });
 
+// Диффузоры
 router.get('/dvs-diffuzory', (req, res) => {
     try {
         res.render('products/dvs-diffuzory', {
@@ -346,6 +350,41 @@ router.get('/sad-diffuzory', (req, res) => {
     try {
         res.render('products/sad-diffuzory', {
             title: 'SAD диффузоры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Вентиляционные установки
+router.get('/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', (req, res) => {
+    try {
+        res.render('products/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', {
+            title: 'Приточно-вытяжные вентиляционные установки СВАН',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', (req, res) => {
+    try {
+        res.render('products/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', {
+            title: 'Составные приточные вентиляционные установки АВС',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Тепловые завесы
+router.get('/teplovye-zavesy-28p3137w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-28p3137w', {
+            title: 'Тепловые завесы 28P3137W',
             isCatalog: true
         });
     } catch (e) {

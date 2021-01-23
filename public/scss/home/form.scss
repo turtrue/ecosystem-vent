@@ -1,19 +1,18 @@
 .form {
     padding: 100px 0;
 
-    background: linear-gradient(
-        90deg,
-        rgba($darkGreen, 1) 0,
-        rgba($lightGreen, 1) 50%,
-        rgba($white, 1) 100%
-    );
+    // background: linear-gradient(
+    //     90deg,
+    //     rgba($darkGreen, 1) 0,
+    //     rgba($lightGreen, 1) 50%,
+    //     rgba($white, 1) 100%
+    // );
 
     &__title {
         margin-bottom: 20px;
 
         font-size: 4rem;
         text-align: center;
-        color: $white;
     }
 
     &__line {
@@ -21,7 +20,7 @@
         width: 50px;
         height: 4px;
 
-        background: $white;
+        background: $lightBlack;
     }
 
     &__body {

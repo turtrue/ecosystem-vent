@@ -30,8 +30,8 @@
         box-shadow: 0 0 10px 0 $lightBlack;
         background: $white;
 
-        &:hover .catalog__item-img {
-            transform: scale(1.05);
+        &:hover .catalog__item-text h2 {
+            color: $darkGreen;
         }
     }
 
@@ -48,6 +48,7 @@
             text-align: center;
             font-size: 1.6rem;
             text-transform: uppercase;
+            transition: color 0.2s ease;
         }
     }
 }

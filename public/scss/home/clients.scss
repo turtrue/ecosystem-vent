@@ -1,0 +1,51 @@
+.clients {
+    padding: 100px 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba($darkGreen, 1) 0,
+        rgba($lightGreen, 1) 50%,
+        rgba($white, 1) 100%
+    );
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-size: 4rem;
+        text-align: center;
+        color: $white;
+    }
+
+    &__line {
+        margin: 0 auto 40px;
+        width: 50px;
+        height: 4px;
+
+        background: $white;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 10px;
+        padding: 20px;
+        width: 350px;
+
+        border-radius: 10px;
+        background: $white;
+        box-shadow: 0 0 10px 0 $lightBlack;
+    }
+
+    &__img {
+        margin-bottom: 10px;
+        height: 30px;
+
+        img {
+            height: 100%;
+        }
+    }
+}

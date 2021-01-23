@@ -38,10 +38,10 @@ mixin catalogItem(href, src, alt, text)
             .catalog__item-text
                 h2=text
 
-//- Advantages
-mixin itemAdvantages(title, descr)
-    .advantages__item.mt-3(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
-        .advantages__item-title
-            h2=title
-        .advantages__item-descr
+//- Clients
+mixin clientsItem(src, alt, descr)
+    .clients__item(data-aos='flip-left' data-aos-duration='1000' data-aos-once='true')
+        .clients__img
+            img(src=src alt=alt)
+        .clients__descr
             p=descr
