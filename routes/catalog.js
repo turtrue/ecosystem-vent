@@ -67,37 +67,37 @@ router.get('/diffuzory', (req, res) => {
     }
 });
 
-// router.get('/ventilyacionnye-ustanovki', (req, res) => {
-//     try {
-//         res.render('ventilyacionnye-ustanovki', {
-//             title: 'Вентиляционные установки',
-//             isCatalog: true
-//         });
-//     } catch (e) {
-//         console.log(e);
-//     }
-// });
+router.get('/ventilyacionnye-ustanovki', (req, res) => {
+    try {
+        res.render('ventilyacionnye-ustanovki', {
+            title: 'Вентиляционные установки',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 
-// router.get('/teplovye-zavesy', (req, res) => {
-//     try {
-//         res.render('teplovye-zavesy', {
-//             title: 'Тепловые завесы',
-//             isCatalog: true
-//         });
-//     } catch (e) {
-//         console.log(e);
-//     }
-// });
+router.get('/teplovye-zavesy', (req, res) => {
+    try {
+        res.render('teplovye-zavesy', {
+            title: 'Тепловые завесы',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 
-// router.get('/vodyanye-teplovye-zavesy', (req, res) => {
-//     try {
-//         res.render('vodyanye-teplovye-zavesy', {
-//             title: 'Водяные тепловые завесы',
-//             isCatalog: true
-//         });
-//     } catch (e) {
-//         console.log(e);
-//     }
-// });
+router.get('/vodyanye-teplovye-zavesy', (req, res) => {
+    try {
+        res.render('vodyanye-teplovye-zavesy', {
+            title: 'Водяные тепловые завесы',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 
 module.exports = router;
