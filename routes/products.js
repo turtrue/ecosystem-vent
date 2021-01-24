@@ -380,11 +380,209 @@ router.get('/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', (req, res) => 
     }
 });
 
-// Тепловые завесы
+// Водяные тепловые завесы
 router.get('/teplovye-zavesy-28p3137w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-28p3137w', {
-            title: 'Тепловые завесы 28P3137W',
+            title: 'Тепловые завесы КЭВ 28P3137W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-20p2111w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-20p2111w', {
+            title: 'Тепловые завесы КЭВ 20P2111W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-20p2171w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-20p2171w', {
+            title: 'Тепловые завесы КЭВ 20P2171W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-28p3131w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-28p3131w', {
+            title: 'Тепловые завесы КЭВ 28P3131W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-28p3171w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-28p3171w', {
+            title: 'Тепловые завесы КЭВ 28P3171W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-29p2121w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-29p2121w', {
+            title: 'Тепловые завесы КЭВ 29P2121W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-42p3111w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-42p3111w', {
+            title: 'Тепловые завесы КЭВ 42P3111W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-42p3116w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-42p3116w', {
+            title: 'Тепловые завесы КЭВ 42P3116W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-42p3117w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-42p3117w', {
+            title: 'Тепловые завесы КЭВ 42P3117W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-42p3181w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-42p3181w', {
+            title: 'Тепловые завесы КЭВ 42P3181W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-44p4131w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-44p4131w', {
+            title: 'Тепловые завесы КЭВ 44P4131W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-60p3141w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-60p3141w', {
+            title: 'Тепловые завесы КЭВ 60P3141W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-60p3146w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-60p3146w', {
+            title: 'Тепловые завесы КЭВ 60P3146W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-60p3147w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-60p3147w', {
+            title: 'Тепловые завесы КЭВ 60P3147W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-60p3191w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-60p3191w', {
+            title: 'Тепловые завесы КЭВ 60P3191W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-70p4141w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-70p4141w', {
+            title: 'Тепловые завесы КЭВ 70P4141W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-75p4050w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-75p4050w', {
+            title: 'Тепловые завесы КЭВ 75P4050W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-98p4121w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-98p4121w', {
+            title: 'Тепловые завесы КЭВ 98P4121W',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/teplovye-zavesy-kehv-100p4060w', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy-kehv-100p4060w', {
+            title: 'Тепловые завесы КЭВ 100P4060W',
             isCatalog: true
         });
     } catch (e) {

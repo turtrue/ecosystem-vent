@@ -89,10 +89,10 @@ router.get('/teplovye-zavesy', (req, res) => {
     }
 });
 
-router.get('/vodnye-teplovye-zavesy', (req, res) => {
+router.get('/vodyanye-teplovye-zavesy', (req, res) => {
     try {
-        res.render('vodnye-teplovye-zavesy', {
-            title: 'Водные тепловые завесы',
+        res.render('vodyanye-teplovye-zavesy', {
+            title: 'Водяные тепловые завесы',
             isCatalog: true
         });
     } catch (e) {
