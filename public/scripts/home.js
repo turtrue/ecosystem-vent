@@ -27,6 +27,40 @@ menu.onmouseover = (e) => {
     }
 }
 
+
+
+// Clients
+// const clientsItems = document.querySelectorAll('.clients__item');
+// const clientsItemsDescr = document.querySelectorAll('.clients__item-descr');
+// const clientsItemsDescrCloseBtns =
+//     document.querySelectorAll('.clients__item-descr-close');
+
+// clientsItems.forEach(item => {
+//     item.addEventListener('click', () => {
+//         const descrId = item.dataset.descr_id;
+//         const descr = document.querySelector(`#${descrId}`);
+//         descr.classList.add('active');
+
+//         clientsItems.forEach(item => {
+//             item.classList.add('active');
+//         });
+//     });
+// });
+
+// clientsItemsDescrCloseBtns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         clientsItems.forEach(item => {
+//             item.classList.remove('active');
+//         });
+
+//         clientsItemsDescr.forEach(descr => {
+//             descr.classList.remove('active');
+//         });
+//     });
+// });
+
+
+
 // Form
 const form = document.querySelector('#form');
 const formMessage = document.querySelector('#form-message');

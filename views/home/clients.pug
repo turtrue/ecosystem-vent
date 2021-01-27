@@ -1,31 +1,47 @@
 section.clients
     .container
-        h1.clients__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Одни из наших клиентов
+        h1.clients__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Одни из наших заказчиков
 
         .clients__line(data-aos='fade-left' data-aos-duration='1000' data-aos-once='true')
 
         .clients__body
             +clientsItem(
+                'clients__item-descr-1',
                 'assets/home/img/mosinzhproekt.jpg',
                 'логотип мосинжпроект',
                 'Мосинжпроект – лидер на строительном рынке Москвы и один из крупнейших инжиниринговых холдингов России.')
+            +clientsItemDescr(
+                'clients__item-descr-1',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at, iusto dolores nihil repellat perferendis maxime error sint sunt sed est dolore tempora et provident ab voluptatem reprehenderit officia! Sequi.'
+            )
+
             +clientsItem(
+                'clients__item-descr-2',
                 'assets/home/img/moskovskij-metropoliten.jpg',
                 'логотип московский метрополитен',
                 'Московский метрополитен является исторически первым и крупнейшим метрополитеном в СССР, России и странах СНГ.')
+            +clientsItemDescr(
+                'clients__item-descr-2',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ipsum, illum harum deserunt provident error cum officia repudiandae dolor quisquam quidem beatae est. Modi cupiditate consequatur voluptate expedita tempore reiciendis.'
+            )
+
             +clientsItem(
+                'clients__item-descr-3',
                 'assets/home/img/transneft.jpg',
                 'логотип транснефть',
                 'Транснефть - одна из крупнейших компаний в области транспортировки нефти и нефтепродуктов.')
             +clientsItem(
+                'clients__item-descr-4',
                 'assets/home/img/infekcionnaya-bolnica.jpg',
                 'логотип республиканская клиническая больница им. проф. а.ф.агафонова',
                 'Республиканская клиническая инфекционная поликлиника им. проф. А. Ф. Агафонова.')
             +clientsItem(
+                'clients__item-descr-5',
                 'assets/home/img/mcdonald-s.jpg',
                 'логотип макдональдс',
                 'Крупнейшая в мире сеть ресторанов быстрого питания, работающая по системе франчайзинга.')
             +clientsItem(
+                'clients__item-descr-6',
                 'assets/home/img/vtb.jpg',
                 'логотип втб',
                 'Банк ВТБ - российский универсальный коммерческий банк c государственным участием.')
