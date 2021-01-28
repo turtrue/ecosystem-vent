@@ -29,31 +29,35 @@ menu.onmouseover = (e) => {
 
 
 
-// Clients
-// const clientsItems = document.querySelectorAll('.clients__item');
-// const clientsItemsDescr = document.querySelectorAll('.clients__item-descr');
-// const clientsItemsDescrCloseBtns =
-//     document.querySelectorAll('.clients__item-descr-close');
+// Client
+const clientBody = document.querySelector('.client__body');
+const clientItems = document.querySelectorAll('.client__item');
+const clientDescr = document.querySelectorAll('.client__descr');
+const clientCloseBtns = document.querySelectorAll('.client__btn-close');
 
-// clientsItems.forEach(item => {
+// clientBody.addEventListener('click', event => {
+//     console.log(event.target);
+// });
+
+// clientItems.forEach(item => {
 //     item.addEventListener('click', () => {
 //         const descrId = item.dataset.descr_id;
 //         const descr = document.querySelector(`#${descrId}`);
 //         descr.classList.add('active');
 
-//         clientsItems.forEach(item => {
+//         clientItems.forEach(item => {
 //             item.classList.add('active');
 //         });
 //     });
 // });
 
-// clientsItemsDescrCloseBtns.forEach(btn => {
+// clientCloseBtns.forEach(btn => {
 //     btn.addEventListener('click', () => {
-//         clientsItems.forEach(item => {
+//         clientItems.forEach(item => {
 //             item.classList.remove('active');
 //         });
 
-//         clientsItemsDescr.forEach(descr => {
+//         clientDescr.forEach(descr => {
 //             descr.classList.remove('active');
 //         });
 //     });

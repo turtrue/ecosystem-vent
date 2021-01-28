@@ -38,15 +38,16 @@ mixin catalogItem(href, src, alt, text)
             .catalog__item-text
                 h2=text
 
-//- Clients
-mixin clientsItem(descrId, src, alt, descr)
-    .clients__item(data-aos='flip-left' data-aos-duration='1000' data-aos-once='true' data-descr_id=descrId)
-        .clients__img
-            img(src=src alt=alt)
-        div
-            p=descr
+//- Client
+mixin clientItem(descrId, src, alt, descr)
+    div(data-aos='flip-left' data-aos-duration='1000' data-aos-once='true')
+        .client__item(data-descr_id=descrId)
+            .client__img
+                img(src=src alt=alt)
+            div
+                p=descr
 
-mixin clientsItemDescr(id, descr)
-    .clients__item-descr(id=id)
-        button.clients__item-descr-close Назад
+mixin clientDescr(id, descr)
+    .client__descr(id=id)
+        button.client__btn-close Назад
         p=descr
