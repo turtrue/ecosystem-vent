@@ -1,16 +1,38 @@
 .footer {
-    padding: 50px 50px;
+    padding: 40px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background: $lightBlack;
     color: $white;
 
+    @media (max-width: 680px) {
+        padding: 20px;
+    }
+
     &__col {
+        margin: 10px;
+        width: 300px;
+        min-width: 300px;
+
+        text-align: center;
+
+        @media (max-width: 780px) {
+            width: 100%;
+            min-width: auto;
+
+            text-align: left;
+        }
+
         h2 {
             font-size: 3rem;
             color: $darkGreen;
+
+            @media (max-width: 680px) {
+                font-size: 2.4rem;
+            }
         }
 
         p {
@@ -18,6 +40,10 @@
 
             &:last-child {
                 margin-bottom: 0;
+            }
+
+            @media (max-width: 680px) {
+                font-size: 1.5rem;
             }
         }
     }

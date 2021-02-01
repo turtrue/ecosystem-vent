@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1020px) {
+        flex-direction: column;
+    }
 }
 
 .about {
@@ -11,6 +15,10 @@
     background: center / cover no-repeat
         url("../../../assets/home/img/tubes.jpg");
     background-attachment: fixed;
+
+    @media (max-width: 680px) {
+        padding: 50px 0;
+    }
 
     &:before {
         content: "";
@@ -25,19 +33,33 @@
 
     &__content {
         padding: 50px;
-        height: 100%;
 
-        position: relative;
-        z-index: 1;
         color: $white;
         background: rgba($lightBlack, 0.7);
         border-radius: 20px;
+
+        @media (max-width: 1020px) {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 460px) {
+            padding: 30px;
+            width: 100%;
+
+            border-radius: 10px;
+        }
     }
 
     &__title {
         margin-bottom: 30px;
         font-size: 3rem;
         font-weight: normal;
+
+        @media (max-width: 680px) {
+            margin-bottom: 10px;
+
+            font-size: 2rem;
+        }
 
         span {
             font-weight: bold;
@@ -53,6 +75,20 @@
         border: 5px $white solid;
         border-radius: 10px;
         overflow: hidden;
+
+        @media (max-width: 1170px) {
+            width: 510px;
+            height: 340px;
+        }
+
+        @media (max-width: 1080px) {
+            width: 450px;
+            height: 300px;
+        }
+
+        @media (max-width: 1020px) {
+            display: none;
+        }
 
         &:before {
             content: "";
@@ -103,6 +139,10 @@
     &__item {
         margin-top: 10px;
 
+        @media (max-width: 680px) {
+            margin-top: 5px;
+        }
+
         a {
             position: relative;
             top: 0;
@@ -111,6 +151,14 @@
             text-transform: uppercase;
             color: $white;
             transition: color 0.2s ease, left 0.2s ease;
+
+            @media (max-width: 680px) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: 380px) {
+                text-transform: capitalize;
+            }
 
             &:before {
                 content: "";
@@ -146,4 +194,9 @@
 .btn--about {
     margin-top: 30px;
     width: 160px;
+
+    @media (max-width: 680px) {
+        margin-top: 15px;
+        width: 130px;
+    }
 }

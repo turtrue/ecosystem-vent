@@ -1,6 +1,14 @@
 .table {
+    @media (max-width: 580px) {
+        display: none;
+    }
+
     &__title {
         font-size: 3rem;
+
+        @media (max-width: 680px) {
+            font-size: 2.4rem;
+        }
     }
 
     table {
@@ -10,6 +18,10 @@
         font-size: 1.6rem;
         border-radius: 10px;
         box-shadow: 0 0 10px 0 $lightBlack;
+
+        @media (max-width: 680px) {
+            font-size: 1.5rem;
+        }
     }
 
     tbody {

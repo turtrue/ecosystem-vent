@@ -49,9 +49,14 @@ mixin clientItem(descrId, src, alt, descr)
 
 mixin clientDescr(id, descr)
     .client__descr(id=id)
-        span.btn-back.btn-back--client
-            svg.btn-back__logo
-                use(xlink:href='#back')
-            span.btn-back__text Назад
+        .client__descr-header
+            .btn-back
+                svg.btn-back__logo
+                    use(xlink:href='#back')
+                span.btn-back__text Назад
 
-        p=descr
+            .client__descr-header-logo
+                img(src='assets/home/img/mosinzhproekt.jpg' alt='логотип мосинжпроект')
+
+        .client__descr-body
+            p=descr

@@ -1,11 +1,25 @@
 .production {
     padding: 100px 0;
 
+    @media (max-width: 680px) {
+        padding: 50px 0;
+    }
+
     &__title {
         margin-bottom: 20px;
 
         font-size: 4rem;
         text-align: center;
+
+        @media (max-width: 910px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 680px) {
+            margin-bottom: 10px;
+
+            font-size: 2.4rem;
+        }
     }
 
     &__line {
@@ -14,6 +28,12 @@
         height: 4px;
 
         background: $lightBlack;
+
+        @media (max-width: 680px) {
+            margin: 0 auto 30px;
+
+            width: 30px;
+        }
     }
 
     &__item {
@@ -26,6 +46,10 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @media (max-width: 680px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__img-wrapper {
@@ -36,6 +60,34 @@
 
         border-radius: 10px;
         overflow: hidden;
+
+        @media (max-width: 910px) {
+            width: 320px;
+            height: 240px;
+            min-width: 320px;
+        }
+
+        @media (max-width: 780px) {
+            width: 280px;
+            height: 210px;
+            min-width: 280px;
+        }
+
+        @media (max-width: 680px) {
+            width: 240px;
+            height: 180px;
+            min-width: 240px;
+        }
+
+        @media (max-width: 580px) {
+            width: 160px;
+            height: 120px;
+            min-width: 160px;
+        }
+
+        @media (max-width: 460px) {
+            display: none;
+        }
     }
 
     &__img {
@@ -48,10 +100,18 @@
 
         h2 {
             font-size: 2.4rem;
+
+            @media (max-width: 680px) {
+                font-size: 2rem;
+            }
         }
 
         p {
             margin-bottom: 10px;
+
+            @media (max-width: 680px) {
+                font-size: 1.5rem;
+            }
 
             &:last-child {
                 margin-bottom: 0;
