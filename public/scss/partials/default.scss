@@ -66,15 +66,15 @@ a {
 .page {
     margin: 0 auto;
     min-width: 320px;
+
+    // AOS дает скролл
+    overflow-x: hidden;
 }
 
 .container {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1200px;
-
-    // AOS дает скролл
-    overflow: hidden;
 }
 
 .pos-f {
