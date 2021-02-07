@@ -246,10 +246,10 @@ router.get('/gibkie-vstavki', (req, res) => {
     }
 });
 
-router.get('/skoby-m8-zn', (req, res) => {
+router.get('/skoby', (req, res) => {
     try {
-        res.render('products/skoby-m8-zn', {
-            title: 'Скобы M8 ZN',
+        res.render('products/skoby', {
+            title: 'Скобы купить в Казани, цены от производителя, недорого',
             isCatalog: true
         });
     } catch (e) {

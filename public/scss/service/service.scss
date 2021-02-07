@@ -152,11 +152,7 @@
 
     &--service-media {
         @media (max-width: 580px) {
-            margin: 0 0 20px 0;
-            padding-bottom: 20px;
-
             border-top: none;
-            border-bottom: 2px solid $darkGreen;
         }
     }
 
@@ -180,18 +176,6 @@
     }
 
     &__title {
-        margin-bottom: 20px;
-
-        font-size: 2.4rem;
-
-        @media (max-width: 680px) {
-            margin-bottom: 10px;
-
-            font-size: 2rem;
-        }
-    }
-
-    &__subtitle {
         margin: 10px 30px 0 0;
         padding: 5px;
 
@@ -209,42 +193,42 @@
         }
     }
 
-    ul {
-        padding-left: 30px;
+    // ul {
+    //     padding-left: 30px;
 
-        li {
-            margin-bottom: 5px;
+    //     li {
+    //         margin-bottom: 5px;
 
-            a {
-                position: relative;
-                transition: color 0.2s ease;
+    //         a {
+    //             position: relative;
+    //             transition: color 0.2s ease;
 
-                @media (max-width: 680px) {
-                    font-size: 1.5rem;
-                }
+    //             @media (max-width: 680px) {
+    //                 font-size: 1.5rem;
+    //             }
 
-                &:before {
-                    content: "";
-                    width: 9px;
-                    height: 9px;
+    //             &:before {
+    //                 content: "";
+    //                 width: 9px;
+    //                 height: 9px;
 
-                    position: absolute;
-                    top: 50%;
-                    left: -20px;
-                    transform: translateY(-50%);
-                    background: $lightBlack;
-                    border-radius: 50%;
-                    transition: background 0.2s ease;
-                }
+    //                 position: absolute;
+    //                 top: 50%;
+    //                 left: -20px;
+    //                 transform: translateY(-50%);
+    //                 background: $lightBlack;
+    //                 border-radius: 50%;
+    //                 transition: background 0.2s ease;
+    //             }
 
-                &:hover {
-                    color: $darkGreen;
+    //             &:hover {
+    //                 color: $darkGreen;
 
-                    &:before {
-                        background: $darkGreen;
-                    }
-                }
-            }
-        }
-    }
+    //                 &:before {
+    //                     background: $darkGreen;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
