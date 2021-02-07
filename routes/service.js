@@ -3,9 +3,9 @@ const router = Router();
 
 router.get('/', (req, res) => {
     try {
-        res.render('services', {
+        res.render('service', {
             title: 'Услуги',
-            isServices: true
+            isService: true
         });
     } catch (e) {
         console.log(e);

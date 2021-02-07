@@ -30,32 +30,31 @@ menu.onmouseover = (e) => {
 
 
 // Client
-// const clientItems = document.querySelectorAll('.client__item');
-// const clientDescr = document.querySelectorAll('.client__descr');
+// const clientItemLogos = document.querySelectorAll('.client__item-logo');
+// const clientItemDescrs = document.querySelectorAll('.client__item-descr');
 // const clientBackBtns = document.querySelectorAll('.btn-back__text');
 
-// Show client description and hide client items
-// clientItems.forEach(item => {
-//     item.addEventListener('click', () => {
-//         const descrId = item.dataset.descr_id;
-//         const descr = document.querySelector(`#${descrId}`);
-//         descr.classList.add('active');
-
-//         clientItems.forEach(item => {
-//             item.classList.add('active');
+// Show client item description and hide client item logos
+// clientItemLogos.forEach(logo => {
+//     logo.addEventListener('click', () => {
+//         clientItemLogos.forEach(logo => {
+//             logo.style.display = 'none';
 //         });
+
+//         const descr = logo.parentNode.querySelector('.client__item-descr');
+//         descr.style.display = 'block';
 //     });
 // });
 
-// Hide client descriptions and show client items
+// Hide client item descriptions and show client item logos
 // clientBackBtns.forEach(btn => {
 //     btn.addEventListener('click', () => {
-//         clientItems.forEach(item => {
-//             item.classList.remove('active');
+//         clientItemLogos.forEach(logo => {
+//             logo.style.display = 'block';
 //         });
 
-//         clientDescr.forEach(descr => {
-//             descr.classList.remove('active');
+//         clientItemDescrs.forEach(descr => {
+//             descr.style.display = 'none';
 //         });
 //     });
 // });

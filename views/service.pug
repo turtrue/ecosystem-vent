@@ -8,10 +8,11 @@ block links
 block content
     main
         .banner-mini
-        include services/ventilation.pug
-        include services/naruzhnye-teplovye-seti.pug
+        include service/ventilyaciya.pug
+        include service/naruzhnye-teplovye-seti.pug
+        include service/kondicionirovanie.pug
 
 block scripts
     //- https://michalsnik.github.io/aos/
     script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
-    script(src='/scripts/services.js')
+    script(src='/scripts/service.js')

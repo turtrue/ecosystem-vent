@@ -4,7 +4,7 @@ const compileSass = require('express-compile-sass');
 const homeRoutes = require('./routes/home');
 const catalogRoutes = require('./routes/catalog');
 const productsRoutes = require('./routes/products');
-const servicesRoutes = require('./routes/services');
+const serviceRoutes = require('./routes/service');
 const emailsRoutes = require('./routes/emails');
 const favicon = require('serve-favicon');
 const app = express();
@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', homeRoutes);
 app.use('/catalog', catalogRoutes);
 app.use('/products', productsRoutes);
-app.use('/services', servicesRoutes);
+app.use('/service', serviceRoutes);
 app.use('/emails', emailsRoutes);
 
 const PORT = process.env.PORT || 3000;

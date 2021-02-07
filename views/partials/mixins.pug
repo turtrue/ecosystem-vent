@@ -39,24 +39,30 @@ mixin catalogItem(href, src, alt, text)
                 h2=text
 
 //- Client
-mixin clientItem(descrId, src, alt, descr)
-    div(data-aos='flip-left' data-aos-duration='1000' data-aos-once='true')
-        .client__item(data-descr_id=descrId)
+mixin clientItem(src, alt, minDescr, descr)
+    .client__item(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+        .client__item-logo
             .client__img
                 img(src=src alt=alt)
             div
+                p=minDescr
+        .client__item-descr
+            .client__item-descr-header
+                .btn-back
+                    svg.btn-back__logo
+                        use(xlink:href='#back')
+                    span.btn-back__text Назад
+                .client__item-descr-header-logo
+                    img(src=src alt=alt)
+            .client__item-descr-body
                 p=descr
 
-mixin clientDescr(id, descr)
-    .client__descr(id=id)
-        .client__descr-header
-            .btn-back
-                svg.btn-back__logo
-                    use(xlink:href='#back')
-                span.btn-back__text Назад
-
-            .client__descr-header-logo
-                img(src='assets/home/img/mosinzhproekt.jpg' alt='логотип мосинжпроект')
-
-        .client__descr-body
-            p=descr
+//- Service
+mixin serviceItem(title, mb0='', active='')
+    div(class='service__item ' + mb0)
+        h2 #{title}
+            span(class='pos-r')
+                span(class='service__arrow ' + active)
+        div(class='service__item-content ' + active)
+            .content-h
+                block
