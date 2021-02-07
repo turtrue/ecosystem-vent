@@ -4,7 +4,7 @@ const router = Router();
 router.get('/', (req, res) => {
     try {
         res.render('home', {
-            title: 'Ecosystem - вентиляционное оборудование и системы вентиляции в Казани',
+            title: 'ECOSYSTEM - вентиляционное оборудование и системы вентиляции в Казани',
             isHome: true
         });
     } catch (e) {
