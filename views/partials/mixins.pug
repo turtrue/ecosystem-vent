@@ -58,8 +58,8 @@ mixin clientItem(src, alt, minDescr, descr)
                 p=descr
 
 //- Service
-mixin serviceItem(title, mb0='', active='')
-    div(class='service__item ' + mb0)
+mixin serviceItem(title, active='')
+    div(class='service__item')
         h2 #{title}
             span(class='pos-r')
                 span(class='service__arrow ' + active)
