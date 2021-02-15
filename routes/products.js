@@ -650,4 +650,39 @@ router.get('/teplovye-zavesy-kehv-100p4060w', (req, res) => {
     }
 });
 
+router.get('/alyuminievyj-skotch', (req, res) => {
+    try {
+        res.render('products/alyuminievyj-skotch', {
+            title: 'Алюминиевый скотч купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/flancevaya-shina', (req, res) => {
+    try {
+        res.render('products/flancevaya-shina', {
+            title: 'Фланцевая шина купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/anker-zabivnoj', (req, res) => {
+    try {
+        res.render('products/anker-zabivnoj', {
+            title: 'Анкер забивной купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 module.exports = router;

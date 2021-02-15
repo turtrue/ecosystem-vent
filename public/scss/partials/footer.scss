@@ -1,5 +1,5 @@
 .footer {
-    padding: 30px 15px;
+    padding: 60px 40px;
 
     display: flex;
     justify-content: space-between;
@@ -12,6 +12,8 @@
     }
 
     @media (max-width: 680px) {
+        padding: 60px 15px;
+
         font-size: 1.5rem;
     }
 
@@ -68,6 +70,11 @@
 
             font-size: 1.5rem;
             border-right: 2px solid $darkGreen;
+
+            @media (max-width: 360px) {
+                margin-right: 15px;
+                padding-right: 15px;
+            }
         }
 
         p {
@@ -80,6 +87,7 @@
     }
 
     &__logo {
+        margin-bottom: 5px;
         padding: 10px;
 
         display: inline-block;
