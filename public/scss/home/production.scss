@@ -1,39 +1,8 @@
 .production {
-    padding: 100px 0;
+    padding: 80px 0;
 
     @media (max-width: 680px) {
         padding: 50px 0;
-    }
-
-    &__title {
-        margin-bottom: 20px;
-
-        font-size: 4rem;
-        text-align: center;
-
-        @media (max-width: 910px) {
-            font-size: 3rem;
-        }
-
-        @media (max-width: 680px) {
-            margin-bottom: 10px;
-
-            font-size: 2.4rem;
-        }
-    }
-
-    &__line {
-        margin: 0 auto 50px;
-        width: 50px;
-        height: 4px;
-
-        background: $lightBlack;
-
-        @media (max-width: 680px) {
-            margin: 0 auto 30px;
-
-            width: 30px;
-        }
     }
 
     &__item {
@@ -58,7 +27,7 @@
         height: 300px;
         min-width: 400px;
 
-        border-radius: 10px;
+        border-radius: 5px;
         overflow: hidden;
 
         @media (max-width: 910px) {
@@ -103,6 +72,7 @@
 
             @media (max-width: 680px) {
                 font-size: 2rem;
+                line-height: 1.2;
             }
         }
 
@@ -110,6 +80,8 @@
             margin-bottom: 10px;
 
             @media (max-width: 680px) {
+                margin-bottom: 5px;
+
                 font-size: 1.5rem;
             }
 

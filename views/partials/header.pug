@@ -1,9 +1,7 @@
 header.header
     .header__body
         a(href='/').header__logo
-            img(src='/assets/header/img/logo.png' alt='ecosystem производство и поставка воздуховодов')
-        a(href='/').header__logo-mini
-            img(src='/assets/header/img/logo-mini.png' alt='ecosystem производство и поставка воздуховодов')
+            img(src='/assets/header/img/logo.jpg' alt='ecosystem производство и поставка воздуховодов')
 
         nav
             ul.nav
@@ -35,7 +33,11 @@ header.header
                     li.nav__link
                         a(href='/service') Услуги
 
-        a.btn.btn--header-media(href='tel:+78435052775')
-            svg.btn__logo.btn__logo--header-media
-                use(xlink:href='#phone')
-            p.btn__text.btn__text--header-media Позвоните нам
+        +btn(
+            'tel:+78435052775',
+            '#phone',
+            'Позвоните нам',
+            '',
+            'btn--header-media',
+            'btn__logo--header-media',
+            'btn__text--header-media')

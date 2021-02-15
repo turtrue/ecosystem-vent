@@ -1,5 +1,5 @@
 .catalog {
-    padding: 100px 0;
+    padding: 80px 0;
 
     background: linear-gradient(
         90deg,
@@ -13,9 +13,9 @@
     }
 
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
 
-        font-size: 4rem;
+        font-size: 3.4rem;
         color: $white;
 
         @media (max-width: 680px) {
@@ -32,11 +32,11 @@
     }
 
     &__item {
-        margin: 10px;
-        padding: 20px;
-        width: 270px;
+        margin: 5px;
+        padding: 15px;
+        width: 200px;
 
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 0 10px 0 $lightBlack;
         background: $white;
 
@@ -45,33 +45,21 @@
         }
 
         @media (max-width: 680px) {
-            width: 200px;
-        }
-
-        @media (max-width: 470px) {
             width: 150px;
-
-            border-radius: 5px;
         }
 
         @media (max-width: 370px) {
-            margin: 5px;
             width: 135px;
         }
     }
 
     &__item-img {
-        margin: 0 auto 40px;
-        height: 150px;
+        margin: 0 auto 20px;
+        height: 100px;
 
         display: block;
 
         @media (max-width: 680px) {
-            margin: 0 auto 20px;
-            height: 100px;
-        }
-
-        @media (max-width: 470px) {
             margin: 0 auto 10px;
             height: 75px;
         }
@@ -84,15 +72,13 @@
     &__item-text {
         h2 {
             text-align: center;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
+            font-weight: normal;
+            line-height: 1.2;
             text-transform: uppercase;
             transition: color 0.2s ease;
 
             @media (max-width: 680px) {
-                font-size: 1.4rem;
-            }
-
-            @media (max-width: 470px) {
                 font-size: 1.2rem;
             }
 

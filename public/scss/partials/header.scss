@@ -1,65 +1,38 @@
 .header {
     &__body {
-        padding: 10px 50px;
+        padding: 10px;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @media (max-width: 910px) {
-            padding: 10px 20px;
-        }
     }
 
     &__logo {
-        height: 80px;
-
-        @media (max-width: 910px) {
-            height: 60px;
-        }
-
         @media (max-width: 680px) {
             display: none;
         }
 
         img {
-            height: 100%;
-        }
-    }
-
-    &__logo-mini {
-        display: none;
-
-        @media (max-width: 680px) {
-            height: 40px;
+            height: 15px;
 
             display: block;
-        }
 
-        @media (max-width: 380px) {
-            display: none;
-        }
-
-        img {
-            height: 100%;
+            @media (max-width: 910px) {
+                height: 10px;
+            }
         }
     }
 }
 
 .nav {
     display: flex;
-    font-size: 2rem;
 
-    @media (max-width: 680px) {
+    @media (max-width: 910px) {
         font-size: 1.5rem;
     }
 
     &__link {
-        padding: 0 15px;
-
-        @media (max-width: 680px) {
-            padding: 0 10px;
-        }
+        margin-right: 20px;
 
         a {
             transition: color 0.2s ease;

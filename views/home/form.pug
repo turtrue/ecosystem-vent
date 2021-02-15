@@ -1,8 +1,8 @@
 form#form.form(action='/emails/statement' method='POST')
     .container
-        h1.form__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Заявка на расчет вентиляции
+        h1.title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Заявка на расчет
 
-        .form__line(data-aos='fade-left' data-aos-duration='1000' data-aos-once='true')
+        .title__line(data-aos='fade-left' data-aos-duration='1000' data-aos-once='true')
 
         .form__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
             .form__item
@@ -13,13 +13,14 @@ form#form.form(action='/emails/statement' method='POST')
                 +formGroup('phone', 'Телефон', 'tel', 'phone')
                 +formGroup('email', 'Email', 'email', 'email')
 
-                a#form-btn.btn.mt-5(href='#')
-                    svg.btn__logo
-                        use(xlink:href='#letter')
-                    p.btn__text Отправить
+                .f-end
+                    +btn('/', '#letter', 'Отправить', 'form-btn')
 
             .form__text
                 p Заполните форму заявки и в ближайшее время менеджер вам перезвонит
                 p Позвоните нам и получите эксклюзивное предложение на системы вентиляции
-                p +7(843)505-27-75
-                p +7(939)505-27-75
+                span с 8:00 до 20:00
+                p
+                    a(href='tel:+78435052775') +7(843)505-27-75
+                p
+                    a(href='tel:+79395052775') +7(939)505-27-75

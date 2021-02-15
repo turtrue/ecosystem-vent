@@ -1,11 +1,19 @@
 const { Router } = require('express');
 const router = Router();
 
+const info = {
+    supText: 'Свяжитесь с нами и мы подберем для вас необходимый продукт подходящий под ваши требования.',
+    phones: ['+78435052775', '+79395052775'],
+    time: 'с 8:00 до 20:00',
+    subText: 'В нашем каталоге присутствуют товарные позиции разных форм и размеров. Детальные характеристики которых представлены в нижеприведенной таблице.'
+}
+
 router.get('/', (req, res) => {
     try {
         res.render('products', {
             title: 'Продукция',
-            isProducts: true
+            isProducts: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -16,8 +24,9 @@ router.get('/', (req, res) => {
 router.get('/kruglye-vozdukhovody', (req, res) => {
     try {
         res.render('products/kruglye-vozdukhovody', {
-            title: 'Круглые воздуховоды',
-            isCatalog: true
+            title: 'Круглые воздуховоды купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -27,8 +36,9 @@ router.get('/kruglye-vozdukhovody', (req, res) => {
 router.get('/pryamougolnye-vozdukhovody', (req, res) => {
     try {
         res.render('products/pryamougolnye-vozdukhovody', {
-            title: 'Прямоугольные воздуховоды',
-            isCatalog: true
+            title: 'Прямоугольные воздуховоды купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -39,8 +49,9 @@ router.get('/pryamougolnye-vozdukhovody', (req, res) => {
 router.get('/kruglye-otvody', (req, res) => {
     try {
         res.render('products/kruglye-otvody', {
-            title: 'Круглые отводы',
-            isCatalog: true
+            title: 'Круглые отводы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -50,8 +61,9 @@ router.get('/kruglye-otvody', (req, res) => {
 router.get('/pryamougolnye-otvody', (req, res) => {
     try {
         res.render('products/pryamougolnye-otvody', {
-            title: 'Прямоугольные отводы',
-            isCatalog: true
+            title: 'Прямоугольные отводы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -61,8 +73,9 @@ router.get('/pryamougolnye-otvody', (req, res) => {
 router.get('/kruglye-perekhody', (req, res) => {
     try {
         res.render('products/kruglye-perekhody', {
-            title: 'Круглые переходы',
-            isCatalog: true
+            title: 'Круглые переходы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -72,8 +85,9 @@ router.get('/kruglye-perekhody', (req, res) => {
 router.get('/kruglye-trojniki', (req, res) => {
     try {
         res.render('products/kruglye-trojniki', {
-            title: 'Круглые тройники',
-            isCatalog: true
+            title: 'Круглые тройники купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -83,8 +97,9 @@ router.get('/kruglye-trojniki', (req, res) => {
 router.get('/kruglye-zaglushki', (req, res) => {
     try {
         res.render('products/kruglye-zaglushki', {
-            title: 'Круглые заглушки',
-            isCatalog: true
+            title: 'Круглые заглушки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -94,8 +109,9 @@ router.get('/kruglye-zaglushki', (req, res) => {
 router.get('/kruglye-zonty', (req, res) => {
     try {
         res.render('products/kruglye-zonty', {
-            title: 'Круглые зонты',
-            isCatalog: true
+            title: 'Круглые зонты купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -105,8 +121,9 @@ router.get('/kruglye-zonty', (req, res) => {
 router.get('/kruglye-vrezki', (req, res) => {
     try {
         res.render('products/kruglye-vrezki', {
-            title: 'Круглые врезки',
-            isCatalog: true
+            title: 'Круглые врезки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -116,8 +133,9 @@ router.get('/kruglye-vrezki', (req, res) => {
 router.get('/pryamye-vrezki', (req, res) => {
     try {
         res.render('products/pryamye-vrezki', {
-            title: 'Прямые врезки',
-            isCatalog: true
+            title: 'Прямые врезки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -127,8 +145,9 @@ router.get('/pryamye-vrezki', (req, res) => {
 router.get('/pryamougolnye-trojniki', (req, res) => {
     try {
         res.render('products/pryamougolnye-trojniki', {
-            title: 'Прямоугольные тройники',
-            isCatalog: true
+            title: 'Прямоугольные тройники купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -138,8 +157,9 @@ router.get('/pryamougolnye-trojniki', (req, res) => {
 router.get('/pryamougolnye-perekhody', (req, res) => {
     try {
         res.render('products/pryamougolnye-perekhody', {
-            title: 'Прямоугольные переходы',
-            isCatalog: true
+            title: 'Прямоугольные переходы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -149,8 +169,9 @@ router.get('/pryamougolnye-perekhody', (req, res) => {
 router.get('/perekhody-s-pryamougolnykh-na-kruglye-secheniya', (req, res) => {
     try {
         res.render('products/perekhody-s-pryamougolnykh-na-kruglye-secheniya', {
-            title: 'Переходы с прямоугольных на круглые сечения',
-            isCatalog: true
+            title: 'Переходы с прямоугольных на круглые сечения купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -160,8 +181,9 @@ router.get('/perekhody-s-pryamougolnykh-na-kruglye-secheniya', (req, res) => {
 router.get('/pryamougolnye-zonty', (req, res) => {
     try {
         res.render('products/pryamougolnye-zonty', {
-            title: 'Прямоугольные зонты',
-            isCatalog: true
+            title: 'Прямоугольные зонты купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -171,8 +193,9 @@ router.get('/pryamougolnye-zonty', (req, res) => {
 router.get('/pryamougolnye-utki', (req, res) => {
     try {
         res.render('products/pryamougolnye-utki', {
-            title: 'Прямоугольные утки',
-            isCatalog: true
+            title: 'Прямоугольные утки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -182,8 +205,9 @@ router.get('/pryamougolnye-utki', (req, res) => {
 router.get('/nippeli', (req, res) => {
     try {
         res.render('products/nippeli', {
-            title: 'Ниппели',
-            isCatalog: true
+            title: 'Ниппели купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -193,8 +217,9 @@ router.get('/nippeli', (req, res) => {
 router.get('/drossel-klapana', (req, res) => {
     try {
         res.render('products/drossel-klapana', {
-            title: 'Дроссель клапана',
-            isCatalog: true
+            title: 'Дроссель клапана купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -205,8 +230,9 @@ router.get('/drossel-klapana', (req, res) => {
 router.get('/lsp', (req, res) => {
     try {
         res.render('products/lsp', {
-            title: 'ЛСП',
-            isCatalog: true
+            title: 'ЛСП купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -216,8 +242,9 @@ router.get('/lsp', (req, res) => {
 router.get('/bystrosemnye-khomuty-mx', (req, res) => {
     try {
         res.render('products/bystrosemnye-khomuty-mx', {
-            title: 'Быстросъемные хомуты MX',
-            isCatalog: true
+            title: 'Быстросъемные хомуты MX купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -227,8 +254,9 @@ router.get('/bystrosemnye-khomuty-mx', (req, res) => {
 router.get('/ventilyacionnye-khomuty', (req, res) => {
     try {
         res.render('products/ventilyacionnye-khomuty', {
-            title: 'Вентиляционные хомуты',
-            isCatalog: true
+            title: 'Вентиляционные хомуты купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -238,8 +266,9 @@ router.get('/ventilyacionnye-khomuty', (req, res) => {
 router.get('/gibkie-vstavki', (req, res) => {
     try {
         res.render('products/gibkie-vstavki', {
-            title: 'Гибкие вставки',
-            isCatalog: true
+            title: 'Гибкие вставки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -249,8 +278,9 @@ router.get('/gibkie-vstavki', (req, res) => {
 router.get('/skoby', (req, res) => {
     try {
         res.render('products/skoby', {
-            title: 'Скобы купить в Казани, цены от производителя, недорого',
-            isCatalog: true
+            title: 'Скобы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -260,8 +290,9 @@ router.get('/skoby', (req, res) => {
 router.get('/uplotnitelnye-lenty', (req, res) => {
     try {
         res.render('products/uplotnitelnye-lenty', {
-            title: 'Уплотнительные ленты',
-            isCatalog: true
+            title: 'Уплотнительные ленты купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -271,8 +302,9 @@ router.get('/uplotnitelnye-lenty', (req, res) => {
 router.get('/vibroopory', (req, res) => {
     try {
         res.render('products/vibroopory', {
-            title: 'Виброопоры',
-            isCatalog: true
+            title: 'Виброопоры купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -282,8 +314,9 @@ router.get('/vibroopory', (req, res) => {
 router.get('/strubciny', (req, res) => {
     try {
         res.render('products/strubciny', {
-            title: 'Струбцины',
-            isCatalog: true
+            title: 'Струбцины купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -293,8 +326,9 @@ router.get('/strubciny', (req, res) => {
 router.get('/shpilki', (req, res) => {
     try {
         res.render('products/shpilki', {
-            title: 'Шпильки',
-            isCatalog: true
+            title: 'Шпильки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -305,8 +339,9 @@ router.get('/shpilki', (req, res) => {
 router.get('/dvs-diffuzory', (req, res) => {
     try {
         res.render('products/dvs-diffuzory', {
-            title: 'DVS диффузоры',
-            isCatalog: true
+            title: 'DVS диффузоры купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -316,8 +351,9 @@ router.get('/dvs-diffuzory', (req, res) => {
 router.get('/dvs-p-diffuzory', (req, res) => {
     try {
         res.render('products/dvs-p-diffuzory', {
-            title: 'DVS-P диффузоры',
-            isCatalog: true
+            title: 'DVS-P диффузоры купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -327,8 +363,9 @@ router.get('/dvs-p-diffuzory', (req, res) => {
 router.get('/pav-b-diffuzory', (req, res) => {
     try {
         res.render('products/pav-b-diffuzory', {
-            title: 'PAV-B диффузоры',
-            isCatalog: true
+            title: 'PAV-B диффузоры купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -338,8 +375,9 @@ router.get('/pav-b-diffuzory', (req, res) => {
 router.get('/rad-diffuzory', (req, res) => {
     try {
         res.render('products/rad-diffuzory', {
-            title: 'RAD диффузоры',
-            isCatalog: true
+            title: 'RAD диффузоры купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -349,8 +387,9 @@ router.get('/rad-diffuzory', (req, res) => {
 router.get('/sad-diffuzory', (req, res) => {
     try {
         res.render('products/sad-diffuzory', {
-            title: 'SAD диффузоры',
-            isCatalog: true
+            title: 'SAD диффузоры купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -361,8 +400,9 @@ router.get('/sad-diffuzory', (req, res) => {
 router.get('/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', (req, res) => {
     try {
         res.render('products/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', {
-            title: 'Приточно-вытяжные вентиляционные установки СВАН',
-            isCatalog: true
+            title: 'Приточно-вытяжные вентиляционные установки СВАН купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -372,8 +412,9 @@ router.get('/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', (req, res) =>
 router.get('/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', (req, res) => {
     try {
         res.render('products/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', {
-            title: 'Составные приточные вентиляционные установки АВС',
-            isCatalog: true
+            title: 'Составные приточные вентиляционные установки АВС купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -384,8 +425,9 @@ router.get('/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', (req, res) => 
 router.get('/teplovye-zavesy-28p3137w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-28p3137w', {
-            title: 'Тепловые завесы КЭВ 28P3137W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 28P3137W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -395,8 +437,9 @@ router.get('/teplovye-zavesy-28p3137w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-20p2111w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-20p2111w', {
-            title: 'Тепловые завесы КЭВ 20P2111W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 20P2111W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -406,8 +449,9 @@ router.get('/teplovye-zavesy-kehv-20p2111w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-20p2171w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-20p2171w', {
-            title: 'Тепловые завесы КЭВ 20P2171W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 20P2171W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -417,8 +461,9 @@ router.get('/teplovye-zavesy-kehv-20p2171w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-28p3131w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-28p3131w', {
-            title: 'Тепловые завесы КЭВ 28P3131W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 28P3131W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -428,8 +473,9 @@ router.get('/teplovye-zavesy-kehv-28p3131w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-28p3171w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-28p3171w', {
-            title: 'Тепловые завесы КЭВ 28P3171W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 28P3171W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -439,8 +485,9 @@ router.get('/teplovye-zavesy-kehv-28p3171w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-29p2121w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-29p2121w', {
-            title: 'Тепловые завесы КЭВ 29P2121W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 29P2121W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -450,8 +497,9 @@ router.get('/teplovye-zavesy-kehv-29p2121w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-42p3111w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-42p3111w', {
-            title: 'Тепловые завесы КЭВ 42P3111W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 42P3111W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -461,8 +509,9 @@ router.get('/teplovye-zavesy-kehv-42p3111w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-42p3116w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-42p3116w', {
-            title: 'Тепловые завесы КЭВ 42P3116W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 42P3116W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -472,8 +521,9 @@ router.get('/teplovye-zavesy-kehv-42p3116w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-42p3117w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-42p3117w', {
-            title: 'Тепловые завесы КЭВ 42P3117W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 42P3117W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -483,8 +533,9 @@ router.get('/teplovye-zavesy-kehv-42p3117w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-42p3181w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-42p3181w', {
-            title: 'Тепловые завесы КЭВ 42P3181W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 42P3181W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -494,8 +545,9 @@ router.get('/teplovye-zavesy-kehv-42p3181w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-44p4131w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-44p4131w', {
-            title: 'Тепловые завесы КЭВ 44P4131W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 44P4131W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -505,8 +557,9 @@ router.get('/teplovye-zavesy-kehv-44p4131w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-60p3141w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-60p3141w', {
-            title: 'Тепловые завесы КЭВ 60P3141W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 60P3141W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -516,8 +569,9 @@ router.get('/teplovye-zavesy-kehv-60p3141w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-60p3146w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-60p3146w', {
-            title: 'Тепловые завесы КЭВ 60P3146W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 60P3146W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -527,8 +581,9 @@ router.get('/teplovye-zavesy-kehv-60p3146w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-60p3147w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-60p3147w', {
-            title: 'Тепловые завесы КЭВ 60P3147W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 60P3147W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -538,8 +593,9 @@ router.get('/teplovye-zavesy-kehv-60p3147w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-60p3191w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-60p3191w', {
-            title: 'Тепловые завесы КЭВ 60P3191W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 60P3191W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -549,8 +605,9 @@ router.get('/teplovye-zavesy-kehv-60p3191w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-70p4141w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-70p4141w', {
-            title: 'Тепловые завесы КЭВ 70P4141W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 70P4141W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -560,8 +617,9 @@ router.get('/teplovye-zavesy-kehv-70p4141w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-75p4050w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-75p4050w', {
-            title: 'Тепловые завесы КЭВ 75P4050W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 75P4050W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -571,8 +629,9 @@ router.get('/teplovye-zavesy-kehv-75p4050w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-98p4121w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-98p4121w', {
-            title: 'Тепловые завесы КЭВ 98P4121W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 98P4121W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);
@@ -582,8 +641,9 @@ router.get('/teplovye-zavesy-kehv-98p4121w', (req, res) => {
 router.get('/teplovye-zavesy-kehv-100p4060w', (req, res) => {
     try {
         res.render('products/teplovye-zavesy-kehv-100p4060w', {
-            title: 'Тепловые завесы КЭВ 100P4060W',
-            isCatalog: true
+            title: 'Тепловые завесы КЭВ 100P4060W купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
         });
     } catch (e) {
         console.log(e);

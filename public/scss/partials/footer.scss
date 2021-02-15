@@ -1,38 +1,73 @@
 .footer {
-    padding: 40px;
+    padding: 30px 15px;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background: $lightBlack;
     color: $white;
+    line-height: 1.2;
+    background: $lightBlack;
 
-    @media (max-width: 680px) {
-        padding: 20px;
+    @media (max-width: 910px) {
+        flex-direction: column;
     }
 
-    &__col {
-        margin: 10px;
-        width: 300px;
-        min-width: 300px;
+    @media (max-width: 680px) {
+        font-size: 1.5rem;
+    }
 
-        text-align: center;
+    a {
+        color: $darkGreen;
+        text-decoration: underline;
+    }
 
-        @media (max-width: 780px) {
-            width: 100%;
-            min-width: auto;
+    &__item {
+    }
 
-            text-align: left;
+    &__address {
+        height: 100%;
+
+        font-style: initial;
+
+        @media (max-width: 910px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__address-item {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 910px) {
+            flex-direction: column;
         }
 
-        h2 {
-            font-size: 3rem;
-            color: $darkGreen;
+        span {
+            margin-right: 20px;
+            padding-right: 20px;
 
-            @media (max-width: 680px) {
-                font-size: 2.4rem;
+            border-right: 2px solid $darkGreen;
+
+            @media (max-width: 910px) {
+                display: none;
             }
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__contact {
+        margin-top: 20px;
+
+        display: flex;
+
+        span {
+            margin-right: 20px;
+            padding-right: 20px;
+
+            font-size: 1.5rem;
+            border-right: 2px solid $darkGreen;
         }
 
         p {
@@ -41,9 +76,23 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    &__logo {
+        padding: 10px;
+
+        display: inline-block;
+        background: $white;
+        border-radius: 3px;
+
+        img {
+            height: 15px;
+
+            display: block;
 
             @media (max-width: 680px) {
-                font-size: 1.5rem;
+                height: 10px;
             }
         }
     }

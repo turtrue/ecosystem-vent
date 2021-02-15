@@ -9,11 +9,16 @@ block content
                 .product__header-img
                     img(src='/assets/product/img/teplovye-zavesy-kehv-42p3116w.jpg' alt='тепловые завесы кэв 42p3116w')
                 .product__header-text
-                    p Тепловая завеса Призма-1 с двумя лицевыми панелями, под углом.
+                    p=info.supText
+                    each phone in info.phones
+                        a(href='tel:' + phone)=phone
+                    span=info.time
+                    p=info.subText
 
-                    p Комплектация:
-
-                    ul
-                        li Воздушно-тепловая завеса Призма-1, пульт управления завесой HL10, паспорт.
+            .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                p Тепловая завеса Призма-1 с двумя лицевыми панелями, под углом.
+                p Комплектация:
+                ul
+                    li Воздушно-тепловая завеса Призма-1, пульт управления завесой HL10, паспорт.
 
             include ../tables/teplovye-zavesy-kehv-42p3116w.pug

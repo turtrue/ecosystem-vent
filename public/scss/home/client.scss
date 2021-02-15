@@ -1,5 +1,5 @@
 .client {
-    padding: 100px 0;
+    padding: 80px 0;
 
     @media (max-width: 680px) {
         padding: 50px 0;
@@ -12,83 +12,26 @@
         rgba($white, 1) 100%
     );
 
-    &__title {
-        margin-bottom: 20px;
-
-        font-size: 4rem;
-        text-align: center;
-        color: $white;
-
-        @media (max-width: 910px) {
-            font-size: 3rem;
-        }
-
-        @media (max-width: 680px) {
-            margin-bottom: 10px;
-
-            font-size: 2.4rem;
-        }
-    }
-
-    &__line {
-        margin: 0 auto 40px;
-        width: 50px;
-        height: 4px;
-
-        background: $white;
-
-        @media (max-width: 910px) {
-            margin: 0 auto 50px;
-        }
-
-        @media (max-width: 680px) {
-            margin: 0 auto 30px;
-            width: 30px;
-        }
-    }
-
     &__body {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
-        @media (max-width: 1100px) {
-            justify-content: space-evenly;
-        }
     }
 
     &__item {
-    }
+        margin-bottom: 10px;
+        width: 32%;
 
-    &__item-logo {
-        margin: 10px 0;
-        padding: 20px;
-        width: 350px;
-
-        border-radius: 10px;
-        background: $white;
-        box-shadow: 0 0 10px 0 $lightBlack;
         cursor: pointer;
 
-        @media (max-width: 1100px) {
-            width: 360px;
-            height: calc(100% - 10px);
-        }
-
-        @media (max-width: 780px) {
-            width: 300px;
+        @media (max-width: 910px) {
+            width: 49%;
         }
 
         @media (max-width: 680px) {
-            width: 250px;
-
             p {
                 font-size: 1.5rem;
             }
-        }
-
-        @media (max-width: 580px) {
-            width: 400px;
         }
 
         @media (max-width: 460px) {
@@ -96,31 +39,13 @@
         }
     }
 
-    &__item-descr {
-        margin: 10px 0;
+    &__item-logo {
         padding: 20px;
+        height: 100%;
 
-        display: none;
+        border-radius: 5px;
         background: $white;
-        border-radius: 10px;
         box-shadow: 0 0 10px 0 $lightBlack;
-    }
-
-    &__item-descr-header {
-    }
-
-    &__item-descr-header-logo {
-        margin-bottom: 20px;
-
-        img {
-            margin: 0 auto;
-            height: 30px;
-
-            display: block;
-        }
-    }
-
-    &__item-descr-body {
     }
 
     &__img {

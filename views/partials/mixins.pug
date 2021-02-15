@@ -1,18 +1,9 @@
-//- About
-mixin menuAboutItem(linkValue, linkHref, dataSlide, active='')
-    li(class='menu-about__item')
-        a(class='menu-about__link ' + active href=linkHref data-slide=dataSlide)=linkValue
-
-mixin aboutSlide(slideClasses, imgSrc, alt)
-    img(class='about__slide ' + slideClasses src=imgSrc alt=alt)
-
-//- Waranty
-mixin itemWarranty(idIcon, descr, dataAosDelay)
-    .item-warranty.mt-3(data-aos='fade-up' data-aos-delay=dataAosDelay data-aos-duration='1000' data-aos-once='true')
-        svg.item-warranty__icon
-            use(xlink:href=idIcon)
-        .item-warranty__descr
-            p=descr
+//- Deafault
+mixin btn(href='', idSvg='', btnText='', id='', btnCls='', btnLogoCls='', btnTextCls='')
+    a(id=id class='btn ' + btnCls href=href)
+        svg(class='btn__logo ' + btnLogoCls)
+            use(xlink:href=idSvg)
+        p(class='btn__text ' + btnTextCls)=btnText
 
 //- Production
 mixin productionItem(src, alt, title, text1, text2)
@@ -39,23 +30,13 @@ mixin catalogItem(href, src, alt, text)
                 h2=text
 
 //- Client
-mixin clientItem(src, alt, minDescr, descr)
+mixin clientItem(src, alt, minDescr)
     .client__item(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
         .client__item-logo
             .client__img
                 img(src=src alt=alt)
             div
                 p=minDescr
-        .client__item-descr
-            .client__item-descr-header
-                .btn-back
-                    svg.btn-back__logo
-                        use(xlink:href='#back')
-                    span.btn-back__text Назад
-                .client__item-descr-header-logo
-                    img(src=src alt=alt)
-            .client__item-descr-body
-                p=descr
 
 //- Service
 mixin serviceItem(title, active='')
