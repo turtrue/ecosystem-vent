@@ -1,0 +1,19 @@
+extends layouts/catalog.pug
+
+block content
+    .catalog__body
+            +catalogItem(
+                '/products/plastikovaya-gofrotruba',
+                '/assets/product/img/plastikovaya-gofrotruba.jpg',
+                'пластиковая гофротруба',
+                'пластиковая гофротруба')
+            +catalogItem(
+                '/products/gofrotruba-iz-alyuminievoj-folgi',
+                '/assets/product/img/gofrotruba-iz-alyuminievoj-folgi.jpg',
+                'гофротруба из алюминиевой фольги',
+                'гофротруба из алюминиевой фольги')
+            +catalogItem(
+                '/products/uteplennaya-gofrotruba',
+                '/assets/product/img/uteplennaya-gofrotruba.jpg',
+                'утепленная гофротруба',
+                'утепленная гофротруба')

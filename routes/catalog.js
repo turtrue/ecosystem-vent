@@ -121,4 +121,28 @@ router.get('/raskhodnye-materialy', (req, res) => {
     }
 });
 
+router.get('/gofrirovannye-truby', (req, res) => {
+    try {
+        res.render('gofrirovannye-truby', {
+            title: 'Гофрированные трубы в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Гофрированные трубы',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/khomuty', (req, res) => {
+    try {
+        res.render('khomuty', {
+            title: 'Хомуты в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Хомуты',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

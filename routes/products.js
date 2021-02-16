@@ -239,18 +239,6 @@ router.get('/lsp', (req, res) => {
     }
 });
 
-router.get('/bystrosemnye-khomuty-mx', (req, res) => {
-    try {
-        res.render('products/bystrosemnye-khomuty-mx', {
-            title: 'Быстросъемные хомуты MX купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/ventilyacionnye-khomuty', (req, res) => {
     try {
         res.render('products/ventilyacionnye-khomuty', {
@@ -685,4 +673,79 @@ router.get('/anker-zabivnoj', (req, res) => {
         console.log(e);
     }
 });
+
+// Гофровые трубы
+router.get('/plastikovaya-gofrotruba', (req, res) => {
+    try {
+        res.render('products/plastikovaya-gofrotruba', {
+            title: 'Пластиковая гофротруба купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/gofrotruba-iz-alyuminievoj-folgi', (req, res) => {
+    try {
+        res.render('products/gofrotruba-iz-alyuminievoj-folgi', {
+            title: 'Гофротруба из алюминиевой фольги купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/uteplennaya-gofrotruba', (req, res) => {
+    try {
+        res.render('products/uteplennaya-gofrotruba', {
+            title: 'Утепленная гофротруба купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Хомуты
+router.get('/bystrosemnye-khomuty-mx', (req, res) => {
+    try {
+        res.render('products/bystrosemnye-khomuty-mx', {
+            title: 'Быстросъемные хомуты MX купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/nejlonovyj-khomut', (req, res) => {
+    try {
+        res.render('products/nejlonovyj-khomut', {
+            title: 'Нейлоновый хомут купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/chervyachnyj-khomut', (req, res) => {
+    try {
+        res.render('products/chervyachnyj-khomut', {
+            title: 'Червячный хомут купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

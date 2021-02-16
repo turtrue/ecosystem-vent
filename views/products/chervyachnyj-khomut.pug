@@ -1,0 +1,21 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Червяный хомут
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/chervyachnyj-khomut.jpg' alt='червячный хомут')
+                .product__header-text
+                    p=info.supText
+                    each phone in info.phones
+                        a(href='tel:' + phone)=phone
+                    span=info.time
+                    p=info.subText
+
+            .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                p Хомут червячный - соединительный элемент, применяемый для крепления и герметизации соединения шлангов, патрубков и других жёстких и гибких трубопроводов. Хомуты способны обеспечивать надежную герметичность соединений в условиях умеренного и тропического климата.
+                p Материал - высококачественная углеродистая сталь российского производства.
+                p Хомут состоит из ленты с зубчатой дорожкой, корпуса и специального винта для затяжки хомута. Детали червячного хомута имеют цинковое покрытие с хроматированием 6 мкм (бесцветное) по ГОСТ 9301-86. Лента поставляется с сертификатом качества и проверяется в аккредитованной лаборатории.
