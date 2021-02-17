@@ -748,4 +748,41 @@ router.get('/chervyachnyj-khomut', (req, res) => {
     }
 });
 
+router.get('/pruzhinnyj-khomut', (req, res) => {
+    try {
+        res.render('products/pruzhinnyj-khomut', {
+            title: 'Пружинный хомут купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/trubnyj-khomut', (req, res) => {
+    try {
+        res.render('products/trubnyj-khomut', {
+            title: 'Трубный хомут купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Трубы
+router.get('/mednaya-otozhzhennaya-truba', (req, res) => {
+    try {
+        res.render('products/mednaya-otozhzhennaya-truba', {
+            title: 'Медная отожженная труба купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

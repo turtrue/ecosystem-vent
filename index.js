@@ -7,7 +7,11 @@ const productsRoutes = require('./routes/products');
 const serviceRoutes = require('./routes/service');
 const emailsRoutes = require('./routes/emails');
 const favicon = require('serve-favicon');
+const fileUpload = require('express-fileupload');
 const app = express();
+
+// Express file upload
+app.use(fileUpload());
 
 // Sass
 app.use(compileSass({

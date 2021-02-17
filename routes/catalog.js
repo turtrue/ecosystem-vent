@@ -145,4 +145,16 @@ router.get('/khomuty', (req, res) => {
     }
 });
 
+router.get('/truby', (req, res) => {
+    try {
+        res.render('truby', {
+            title: 'Трубы в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Трубы',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

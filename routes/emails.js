@@ -12,16 +12,17 @@ const transporter = nodemailer.createTransport(sendgrid({
 }));
 
 router.post('/statement', async (req, res) => {
+    console.log('req.files', req.files);
+
     try {
         if (!req.body.isFormStatement) throw new Error('Обращение произошло не из формы');
 
         const { name, phone, email } = req.body;
         await transporter.sendMail(userStatementEmail(name, email));
         await transporter.sendMail(officeStatementEmail(name, phone, email));
-        res.status(200).send(JSON.stringify('Заявка успешно отправлена'));
+        res.status(200).send();
     } catch (e) {
         console.log(e);
-        res.status(200).send(JSON.stringify(''));
     }
 });
 
