@@ -413,235 +413,6 @@ router.get('/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', (req, res) => 
     }
 });
 
-// Водяные тепловые завесы
-router.get('/teplovye-zavesy-28p3137w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-28p3137w', {
-            title: 'Тепловые завесы КЭВ 28P3137W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-20p2111w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-20p2111w', {
-            title: 'Тепловые завесы КЭВ 20P2111W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-20p2171w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-20p2171w', {
-            title: 'Тепловые завесы КЭВ 20P2171W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-28p3131w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-28p3131w', {
-            title: 'Тепловые завесы КЭВ 28P3131W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-28p3171w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-28p3171w', {
-            title: 'Тепловые завесы КЭВ 28P3171W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-29p2121w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-29p2121w', {
-            title: 'Тепловые завесы КЭВ 29P2121W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-42p3111w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-42p3111w', {
-            title: 'Тепловые завесы КЭВ 42P3111W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-42p3116w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-42p3116w', {
-            title: 'Тепловые завесы КЭВ 42P3116W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-42p3117w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-42p3117w', {
-            title: 'Тепловые завесы КЭВ 42P3117W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-42p3181w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-42p3181w', {
-            title: 'Тепловые завесы КЭВ 42P3181W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-44p4131w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-44p4131w', {
-            title: 'Тепловые завесы КЭВ 44P4131W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-60p3141w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-60p3141w', {
-            title: 'Тепловые завесы КЭВ 60P3141W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-60p3146w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-60p3146w', {
-            title: 'Тепловые завесы КЭВ 60P3146W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-60p3147w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-60p3147w', {
-            title: 'Тепловые завесы КЭВ 60P3147W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-60p3191w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-60p3191w', {
-            title: 'Тепловые завесы КЭВ 60P3191W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-70p4141w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-70p4141w', {
-            title: 'Тепловые завесы КЭВ 70P4141W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-75p4050w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-75p4050w', {
-            title: 'Тепловые завесы КЭВ 75P4050W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-98p4121w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-98p4121w', {
-            title: 'Тепловые завесы КЭВ 98P4121W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/teplovye-zavesy-kehv-100p4060w', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy-kehv-100p4060w', {
-            title: 'Тепловые завесы КЭВ 100P4060W купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/alyuminievyj-skotch', (req, res) => {
     try {
         res.render('products/alyuminievyj-skotch', {
@@ -781,6 +552,31 @@ router.get('/mednye-truby', (req, res) => {
     try {
         res.render('products/mednye-truby', {
             title: 'Медные трубы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/stalnye-truby', (req, res) => {
+    try {
+        res.render('products/stalnye-truby', {
+            title: 'Стальные трубы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Тепловые завесы
+router.get('/teplovye-zavesy', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy', {
+            title: 'Тепловые завесы в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });

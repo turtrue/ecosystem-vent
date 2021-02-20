@@ -159,19 +159,18 @@
         }
 
         img {
-            margin-right: 50px;
+            margin-right: 20px;
             height: 150px;
 
             border-radius: 5px;
 
             @media (max-width: 680px) {
-                margin-right: 30px;
                 height: 100px;
             }
 
             @media (max-width: 460px) {
                 margin-right: 0;
-                width: 100%;
+                width: 80%;
                 height: auto;
             }
         }

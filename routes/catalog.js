@@ -85,18 +85,6 @@ router.get('/ventilyacionnye-ustanovki', (req, res) => {
     }
 });
 
-router.get('/teplovye-zavesy', (req, res) => {
-    try {
-        res.render('teplovye-zavesy', {
-            title: 'Тепловые завесы в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Тепловые завесы',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/vodyanye-teplovye-zavesy', (req, res) => {
     try {
         res.render('vodyanye-teplovye-zavesy', {
