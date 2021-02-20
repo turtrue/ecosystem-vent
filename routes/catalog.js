@@ -73,30 +73,6 @@ router.get('/diffuzory', (req, res) => {
     }
 });
 
-router.get('/ventilyacionnye-ustanovki', (req, res) => {
-    try {
-        res.render('ventilyacionnye-ustanovki', {
-            title: 'Вентиляционные установки в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Вентиляционные установки',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/vodyanye-teplovye-zavesy', (req, res) => {
-    try {
-        res.render('vodyanye-teplovye-zavesy', {
-            title: 'Водяные тепловые завесы в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Водяные тепловые завесы',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/raskhodnye-materialy', (req, res) => {
     try {
         res.render('raskhodnye-materialy', {

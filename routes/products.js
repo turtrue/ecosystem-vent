@@ -388,31 +388,6 @@ router.get('/sad-diffuzory', (req, res) => {
     }
 });
 
-// Вентиляционные установки
-router.get('/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', (req, res) => {
-    try {
-        res.render('products/pritochno-vytyazhnye-ventilyacionnye-ustanovki-svan', {
-            title: 'Приточно-вытяжные вентиляционные установки СВАН купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', (req, res) => {
-    try {
-        res.render('products/sostavnye-pritochnye-ventilyacionnye-ustanovki-avs', {
-            title: 'Составные приточные вентиляционные установки АВС купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/alyuminievyj-skotch', (req, res) => {
     try {
         res.render('products/alyuminievyj-skotch', {
@@ -585,4 +560,16 @@ router.get('/teplovye-zavesy', (req, res) => {
     }
 });
 
+// Вентиляционные установки
+router.get('/ventilyacionnye-ustanovki', (req, res) => {
+    try {
+        res.render('products/ventilyacionnye-ustanovki', {
+            title: 'Вентиляционные установки в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 module.exports = router;
