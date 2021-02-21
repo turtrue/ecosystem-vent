@@ -572,4 +572,18 @@ router.get('/ventilyacionnye-ustanovki', (req, res) => {
         console.log(e);
     }
 });
+
+// Диффузоры
+router.get('/diffuzory', (req, res) => {
+    try {
+        res.render('products/diffuzory', {
+            title: 'Диффузоры в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

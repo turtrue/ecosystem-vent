@@ -61,18 +61,6 @@ router.get('/fasonnye-chasti', (req, res) => {
     }
 });
 
-router.get('/diffuzory', (req, res) => {
-    try {
-        res.render('diffuzory', {
-            title: 'Диффузоры в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Диффузоры',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/raskhodnye-materialy', (req, res) => {
     try {
         res.render('raskhodnye-materialy', {
