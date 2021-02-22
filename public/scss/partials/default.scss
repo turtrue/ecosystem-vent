@@ -54,6 +54,12 @@ input {
 
 ul {
     list-style: none;
+
+    li {
+        &::marker {
+            color: $darkGreen;
+        }
+    }
 }
 
 a {
