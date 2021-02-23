@@ -550,10 +550,35 @@ router.get('/diffuzory', (req, res) => {
     }
 });
 
+// Кондиционеры
 router.get('/bytovye-kondicionery', (req, res) => {
     try {
         res.render('products/bytovye-kondicionery', {
             title: 'Бытовые кондиционеры в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/kommercheskie-kondicionery', (req, res) => {
+    try {
+        res.render('products/kommercheskie-kondicionery', {
+            title: 'Коммерческие кондиционеры в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/promyshlennye-kondicionery', (req, res) => {
+    try {
+        res.render('products/promyshlennye-kondicionery', {
+            title: 'Промышленные кондиционеры в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });
