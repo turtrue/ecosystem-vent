@@ -23,8 +23,8 @@ form.addEventListener('submit', event => {
     const name = form.querySelector('#name').value.trim();
     const phone = form.querySelector('#phone').value.trim();
     const email = form.querySelector('#email').value.trim();
-    // const file = form.querySelector('#file');
     const isFormStatement = form.querySelector('#isFormStatement').value;
+    const file = form.querySelector('#file');
 
     if (name && phone && email) {
         formLoader.classList.add('active');
@@ -33,8 +33,17 @@ form.addEventListener('submit', event => {
         formData.append('name', name);
         formData.append('phone', phone);
         formData.append('email', email);
-        // formData.append('file', file.files[0]);
+        formData.append('file', file.files[0]);
         formData.append('isFormStatement', isFormStatement);
+
+        const fileSize = formData.get('file').size;
+        if (fileSize > 500000) {
+            formLoader.classList.remove('active');
+            const message = 'Размер файла превышает 5MB';
+            notificationMessage(formMessage, message, 'error');
+            return true;
+        }
+
         form.reset();
 
         fetch('/emails/statement', {

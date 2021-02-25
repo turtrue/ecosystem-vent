@@ -12,7 +12,7 @@ form#form.form(method='POST' encType='multipart/form-data')
                 +formGroup('name', '* Имя', 'text', 'name', 'required')
                 +formGroup('phone', '* Телефон', 'tel', 'phone', 'required')
                 +formGroup('email', '* Email', 'email', 'email', 'required')
-                //- +formGroup('file', 'Файл', 'file', 'file')
+                +formGroup('file', 'Файл', 'file', 'file')
                 input(id='isFormStatement' name='isFormStatement' type='hidden' value='isFormStatement')
 
                 .form__btn-submit
