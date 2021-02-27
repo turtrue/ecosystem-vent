@@ -54,6 +54,10 @@
             border: none;
             border-bottom: $lightBlack 2px solid;
 
+            &[type="file"] {
+                cursor: pointer;
+            }
+
             @media (max-width: 680px) {
                 padding: 5px;
             }
@@ -68,6 +72,7 @@
 
         input {
             padding-bottom: 2px;
+
             color: $darkGreen;
             line-height: 1;
             outline: none;

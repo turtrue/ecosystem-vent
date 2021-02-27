@@ -8,16 +8,12 @@ block content
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
                     img(src='/assets/product/img/kruglye-zonty.jpg' alt='круглые зонты')
-                .product__header-text
-                    p=info.supText
-                    each phone in info.phones
-                        a(href='tel:' + phone)=phone
-                    span=info.time
-                    p=info.subText
+                include ../partials/info-contact.pug
 
             .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 p Зонты круглые обеспечивают защиту вентиляционной шахты от попадания атмосферных осадков в виде дождя, снега, а также другого мусора и инородных предметов.
                 p Зонты как правило устанавливаются на выхлопных шахтах от вытяжных вентиляторов. Все соединительные элементы имеют зиг, который облегчает сборку системы на объекте. Зонт крышный крепится механически при помощи рор - заклепок, или винтов саморезов. Перед установкой необходимо нанести слой силиконового уплотнения.
                 p Производим круглые зонты по любым нестандартным размерам.
+                include ../partials/info-service.pug
 
             include ../tables/kruglye-zonty.pug

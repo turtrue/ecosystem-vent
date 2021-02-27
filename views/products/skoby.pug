@@ -8,18 +8,10 @@ block content
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
                     img(src='/assets/product/img/skoby.jpg' alt='скобы')
-                .product__header-text
-                    p=info.supText
-                    each phone in info.phones
-                        a(href='tel:' + phone)=phone
-                    span=info.time
-                    p=info.subText
+                include ../partials/info-contact.pug
 
             .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 p Скоба для стяжки фланцев применяется при монтаже прямоугольных воздуховодов вентиляционных систем и систем кондиционирования.
                 p Скоба для стяжки фланцев служит дополнительным креплением фланцев прямоугольных воздуховодов и обеспечивает повышенную герметичность вентиляционной системы.
                 p Скоба изготавливается из оцинкованной стали , толщина скобы составляет 2,5 мм или 3мм, в комплектацию также входит крепежный болт диаметром 8мм. Воздуховоды крепятся дополнительно скобой при условии, что точки крепления расположены на расстоянии свыше 300 мм, а при присоединении вентиляционного оборудования 150 мм, для повышения герметичности.
-                .product__body-service
-                    h3=info.service.title
-                    each p in info.service.text
-                        p=p
+                include ../partials/info-service.pug

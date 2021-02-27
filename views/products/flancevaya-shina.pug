@@ -8,12 +8,7 @@ block content
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
                     img(src='/assets/product/img/flancevaya-shina.jpg' alt='фланцевая шина')
-                .product__header-text
-                    p=info.supText
-                    each phone in info.phones
-                        a(href='tel:' + phone)=phone
-                    span=info.time
-                    p=info.subText
+                include ../partials/info-contact.pug
 
             .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 p Монтажная шина для создания фланцевых соединений на воздуховодах прямоугольного сечения.
@@ -29,7 +24,4 @@ block content
                     li Разнообразных переходов систем вентиляции;
                 p С помощью фланцев воздуховоды вентиляции соединяются между собой. Фланцы, которые состоят из шинореек и металлических уголков, надежно соединяют вентиляционные короба и фасонные изделия. Шинорейки 20 можно использовать, когда любая сторона трубы системы вентиляции равна или меньше полуметра. Если она больше 500 мм нужно применить шину 30.
                 p Фланцы из монтажных шин можно изготовить непосредственно на производстве или смонтировать их на самом объекте перед тем, как установить вентиляцию. Оцинкованные стальные шинорейки применяются для изготовления воздуховодов из такого же материала.
-                .product__body-service
-                    h3=info.service.title
-                    each p in info.service.text
-                        p=p
+                include ../partials/info-service.pug

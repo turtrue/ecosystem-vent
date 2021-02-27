@@ -110,6 +110,18 @@ router.get('/kruglye-zaglushki', (req, res) => {
     }
 });
 
+router.get('/pryamougolnye-zaglushki', (req, res) => {
+    try {
+        res.render('products/pryamougolnye-zaglushki', {
+            title: 'Прямоугольные заглушки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 router.get('/kruglye-zonty', (req, res) => {
     try {
         res.render('products/kruglye-zonty', {
@@ -126,6 +138,18 @@ router.get('/kruglye-vrezki', (req, res) => {
     try {
         res.render('products/kruglye-vrezki', {
             title: 'Круглые врезки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/pryamougolnye-vrezki', (req, res) => {
+    try {
+        res.render('products/pryamougolnye-vrezki', {
+            title: 'Прямоугольные врезки купить в Казани, цены от производителя',
             isCatalog: true,
             info
         });
@@ -218,10 +242,22 @@ router.get('/nippeli', (req, res) => {
     }
 });
 
-router.get('/drossel-klapana', (req, res) => {
+router.get('/kruglye-drossel-klapany', (req, res) => {
     try {
-        res.render('products/drossel-klapana', {
-            title: 'Дроссель клапана купить в Казани, цены от производителя',
+        res.render('products/kruglye-drossel-klapany', {
+            title: 'Круглые дроссель-клапаны купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/pryamougolnye-drossel-klapany', (req, res) => {
+    try {
+        res.render('products/pryamougolnye-drossel-klapany', {
+            title: 'Прямоугольные дроссель-клапаны купить в Казани, цены от производителя',
             isCatalog: true,
             info
         });

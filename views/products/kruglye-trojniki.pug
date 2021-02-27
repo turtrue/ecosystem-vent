@@ -8,12 +8,7 @@ block content
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
                     img(src='/assets/product/img/kruglye-trojniki.jpg' alt='круглые тройники')
-                .product__header-text
-                    p=info.supText
-                    each phone in info.phones
-                        a(href='tel:' + phone)=phone
-                    span=info.time
-                    p=info.subText
+                include ../partials/info-contact.pug
 
             .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 p Круглые тройники предназначенны для обеспечения горизонтального или вертикального ответвления вентиляционной сети.
@@ -25,5 +20,6 @@ block content
                     li Легко монтируются;
                     li Доступны по стоимости;
                 p Тройники круглого сечения позволяют направить воздушные потоки по необходимым траекториям. Ответвления тройника могут располагаться под прямым углом друг к другу, иметь другой радиус наклона, быть противоположно направленными. Тройники способны соединять воздуховоды разного диаметра, иметь ответвления разной длины. Участок производства круглых тройников оснащен современными высокотехнологичными станками, что гарантирует точность размеров и полное соответствие стандартам Российской Федерации (класс П и Н). Все готовые изделия проходят контроль качества и инспектируются на предмет геометрической точности изготовления.
+                include ../partials/info-service.pug
 
             include ../tables/kruglye-trojniki.pug

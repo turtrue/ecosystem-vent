@@ -8,12 +8,7 @@ block content
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
                     img(src='/assets/product/img/kruglye-otvody.jpg' alt='круглые отводы')
-                .product__header-text
-                    p=info.supText
-                    each phone in info.phones
-                        a(href='tel:' + phone)=phone
-                    span=info.time
-                    p=info.subText
+                include ../partials/info-contact.pug
 
             .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 p Ecosystem предлагает приобрести круглые вентиляционные отводы, служащие для поворота сети воздуховодов под различными углами.
@@ -30,7 +25,6 @@ block content
                     li Оперативное формирование заказа;
                     li Доставку воздуховодов по Казани и другим регионам;
                     li Оказание консультативной и практической помощи покупателям;
-
                 .product__body-images.f-wrap
                     div
                         h3 Отвод (90&deg;)
@@ -57,5 +51,6 @@ block content
                         .product__body-group
                             img(src='/assets/product/img/kruglye-otvody-15.jpg' alt='круглые отводы 15 градусов')
                             img(src='/assets/product/img/kruglye-otvody-15-skhema.jpg' alt='схема круглых отводов 15 градусов')
+                include ../partials/info-service.pug
 
             include ../tables/kruglye-otvody.pug

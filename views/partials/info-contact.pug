@@ -1,0 +1,6 @@
+.info__contact
+    p=info.supText
+    each phone in info.phones
+        a(href='tel:' + phone)=phone
+    span=info.time
+    p=info.subText

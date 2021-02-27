@@ -3,22 +3,18 @@ extends ../layouts/product.pug
 block content
     section.product
         .container
-            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Дроссель клапана
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true') Круглые дроссель-клапаны
 
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
-                    img(src='/assets/product/img/drossel-klapana.jpg' alt='дроссель клапана')
-                .product__header-text
-                    p=info.supText
-                    each phone in info.phones
-                        a(href='tel:' + phone)=phone
-                    span=info.time
-                    p=info.subText
+                    img(src='/assets/product/img/kruglye-drossel-klapany.jpg' alt='круглые дроссель-клапаны')
+                include ../partials/info-contact.pug
 
             .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 p Дроссель-клапана представляют собой элементы системы вентиляции, применяемые для регулирования количества проходящего воздуха.
                 p Управление ручными дроссель-клапанами осуществляется с помощью ручки, расположенной на одной из сторон клапана. При повороте ручки поворачивается перекрывающее полотно внутри дроссель клапана. Для того, чтобы зафиксировать ручку в нужном положении, на узле управления дроссель клапаном имеется болт с гайкой/барашком.
                 p Шаг фиксации ручки, как правило, составляет 10-15 градусов. Установив полотно в нужно положении, и зафиксировав его с помощью болта, получаем на выходе уменьшенное количество проходящего через систему воздушного потока.
                 p Следует учитывать, что дроссель-клапан не предназначен для 100% перекрывания воздушного потока, т.к. даже при вертикальном расположении полотна, через клапан проходит примерно 10% потока.
+                include ../partials/info-service.pug
 
-            include ../tables/drossel-klapana.pug
+            include ../tables/kruglye-drossel-klapany.pug

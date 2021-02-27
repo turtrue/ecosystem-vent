@@ -1,0 +1,64 @@
+.info {
+    &__contact {
+        padding-bottom: 20px;
+
+        border-bottom: 2px solid $darkGreen;
+
+        p {
+            @media (max-width: 680px) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: 460px) {
+                margin-bottom: 5px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        a {
+            margin: 5px 5px 5px 0;
+            padding: 5px 10px;
+
+            display: inline-block;
+            font-size: 1.5rem;
+            color: $white;
+            background: $darkGreen;
+            border-radius: 3px;
+        }
+
+        span {
+            margin-bottom: 5px;
+
+            display: inline-block;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+    }
+
+    &__service {
+        margin-top: 20px;
+        padding-left: 20px;
+
+        border-left: 2px solid $darkGreen;
+
+        h3 {
+            margin: 0 0 10px 0;
+
+            font-size: 2rem;
+            color: $darkGreen;
+        }
+
+        p {
+            @media (max-width: 680px) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: 460px) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
