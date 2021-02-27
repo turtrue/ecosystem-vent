@@ -511,6 +511,18 @@ router.get('/gofrirovannye-truby', (req, res) => {
     }
 });
 
+router.get('/polipropilenovye-truby', (req, res) => {
+    try {
+        res.render('products/polipropilenovye-truby', {
+            title: 'Полипропиленовые трубы в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 // Тепловые завесы
 router.get('/teplovye-zavesy', (req, res) => {
     try {
