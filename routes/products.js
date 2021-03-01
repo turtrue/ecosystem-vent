@@ -609,4 +609,28 @@ router.get('/ventilyacionnye-ustanovki', (req, res) => {
     }
 });
 
+router.get('/metizy', (req, res) => {
+    try {
+        res.render('products/metizy', {
+            title: 'Метизы в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/kronshtejny-dlya-kondicionerov', (req, res) => {
+    try {
+        res.render('products/kronshtejny-dlya-kondicionerov', {
+            title: 'Кронштейны для кондиционеров в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;
