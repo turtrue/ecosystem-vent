@@ -24,6 +24,10 @@ router.get('/', (req, res) => {
     }
 });
 
+
+
+
+
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {
     try {
@@ -48,6 +52,10 @@ router.get('/pryamougolnye-vozdukhovody', (req, res) => {
         console.log(e);
     }
 });
+
+
+
+
 
 // Фасонные части
 router.get('/kruglye-otvody', (req, res) => {
@@ -266,35 +274,44 @@ router.get('/pryamougolnye-drossel-klapany', (req, res) => {
     }
 });
 
+
+
+
+
 // Комплектующие
-router.get('/lsp', (req, res) => {
-    try {
-        res.render('products/lsp', {
-            title: 'ЛСП купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/ventilyacionnye-khomuty', (req, res) => {
-    try {
-        res.render('products/ventilyacionnye-khomuty', {
-            title: 'Вентиляционные хомуты купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/gibkie-vstavki', (req, res) => {
     try {
         res.render('products/gibkie-vstavki', {
             title: 'Гибкие вставки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/diffuzory', (req, res) => {
+    try {
+        res.render('products/diffuzory', {
+            title: 'Диффузоры в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+
+
+
+
+// Расходные материалы
+router.get('/lsp', (req, res) => {
+    try {
+        res.render('products/lsp', {
+            title: 'ЛСП купить в Казани, цены от производителя',
             isCatalog: true,
             info
         });
@@ -363,67 +380,6 @@ router.get('/shpilki', (req, res) => {
     }
 });
 
-// Диффузоры
-router.get('/dvs-diffuzory', (req, res) => {
-    try {
-        res.render('products/dvs-diffuzory', {
-            title: 'DVS диффузоры купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/dvs-p-diffuzory', (req, res) => {
-    try {
-        res.render('products/dvs-p-diffuzory', {
-            title: 'DVS-P диффузоры купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/pav-b-diffuzory', (req, res) => {
-    try {
-        res.render('products/pav-b-diffuzory', {
-            title: 'PAV-B диффузоры купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/rad-diffuzory', (req, res) => {
-    try {
-        res.render('products/rad-diffuzory', {
-            title: 'RAD диффузоры купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/sad-diffuzory', (req, res) => {
-    try {
-        res.render('products/sad-diffuzory', {
-            title: 'SAD диффузоры купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/alyuminievyj-skotch', (req, res) => {
     try {
         res.render('products/alyuminievyj-skotch', {
@@ -460,7 +416,35 @@ router.get('/anker-zabivnoj', (req, res) => {
     }
 });
 
-// Гофровые трубы
+router.get('/khomuty', (req, res) => {
+    try {
+        res.render('products/khomuty', {
+            title: 'Хомуты купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/fitingi', (req, res) => {
+    try {
+        res.render('products/fitingi', {
+            title: 'Фитинги купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+
+
+
+
+// Гофрированные трубы
 router.get('/plastikovaya-gofrotruba', (req, res) => {
     try {
         res.render('products/plastikovaya-gofrotruba', {
@@ -497,18 +481,9 @@ router.get('/uteplennaya-gofrotruba', (req, res) => {
     }
 });
 
-// Хомуты
-router.get('/khomuty', (req, res) => {
-    try {
-        res.render('products/khomuty', {
-            title: 'Хомуты купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
+
+
+
 
 // Трубы
 router.get('/mednye-truby', (req, res) => {
@@ -559,44 +534,9 @@ router.get('/polipropilenovye-truby', (req, res) => {
     }
 });
 
-// Тепловые завесы
-router.get('/teplovye-zavesy', (req, res) => {
-    try {
-        res.render('products/teplovye-zavesy', {
-            title: 'Тепловые завесы в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
 
-// Вентиляционные установки
-router.get('/ventilyacionnye-ustanovki', (req, res) => {
-    try {
-        res.render('products/ventilyacionnye-ustanovki', {
-            title: 'Вентиляционные установки в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
 
-// Диффузоры
-router.get('/diffuzory', (req, res) => {
-    try {
-        res.render('products/diffuzory', {
-            title: 'Диффузоры в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
+
 
 // Кондиционеры
 router.get('/bytovye-kondicionery', (req, res) => {
@@ -627,6 +567,40 @@ router.get('/promyshlennye-kondicionery', (req, res) => {
     try {
         res.render('products/promyshlennye-kondicionery', {
             title: 'Промышленные кондиционеры в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+
+
+
+
+// Тепловые завесы
+router.get('/teplovye-zavesy', (req, res) => {
+    try {
+        res.render('products/teplovye-zavesy', {
+            title: 'Тепловые завесы в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+
+
+
+
+// Вентиляционные установки
+router.get('/ventilyacionnye-ustanovki', (req, res) => {
+    try {
+        res.render('products/ventilyacionnye-ustanovki', {
+            title: 'Вентиляционные установки в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });
