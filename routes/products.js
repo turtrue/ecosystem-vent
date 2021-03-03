@@ -534,6 +534,18 @@ router.get('/polipropilenovye-truby', (req, res) => {
     }
 });
 
+router.get('/kanalizacionnye-truby', (req, res) => {
+    try {
+        res.render('products/kanalizacionnye-truby', {
+            title: 'Канализационные трубы в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 
 
 
