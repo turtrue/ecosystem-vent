@@ -266,19 +266,7 @@ router.get('/pryamougolnye-drossel-klapany', (req, res) => {
     }
 });
 
-// Комплектующие
-router.get('/gibkie-vstavki', (req, res) => {
-    try {
-        res.render('products/gibkie-vstavki', {
-            title: 'Гибкие вставки купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
+// Диффузоры и решетки
 router.get('/diffuzory', (req, res) => {
     try {
         res.render('products/diffuzory', {
@@ -292,6 +280,18 @@ router.get('/diffuzory', (req, res) => {
 });
 
 // Расходные материалы
+router.get('/gibkie-vstavki', (req, res) => {
+    try {
+        res.render('products/gibkie-vstavki', {
+            title: 'Гибкие вставки купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 router.get('/lsp', (req, res) => {
     try {
         res.render('products/lsp', {
@@ -388,10 +388,10 @@ router.get('/khomuty', (req, res) => {
     }
 });
 
-router.get('/fitingi', (req, res) => {
+router.get('/metizy', (req, res) => {
     try {
-        res.render('products/fitingi', {
-            title: 'Фитинги купить в Казани, цены от производителя',
+        res.render('products/metizy', {
+            title: 'Метизы в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });
@@ -400,11 +400,10 @@ router.get('/fitingi', (req, res) => {
     }
 });
 
-// Гофрированные трубы
-router.get('/plastikovaya-gofrotruba', (req, res) => {
+router.get('/kronshtejny-dlya-kondicionerov', (req, res) => {
     try {
-        res.render('products/plastikovaya-gofrotruba', {
-            title: 'Пластиковая гофротруба купить в Казани, цены от производителя',
+        res.render('products/kronshtejny-dlya-kondicionerov', {
+            title: 'Кронштейны для кондиционеров в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });
@@ -413,22 +412,10 @@ router.get('/plastikovaya-gofrotruba', (req, res) => {
     }
 });
 
-router.get('/gofrotruba-iz-alyuminievoj-folgi', (req, res) => {
+router.get('/protivopozharnye-klapany', (req, res) => {
     try {
-        res.render('products/gofrotruba-iz-alyuminievoj-folgi', {
-            title: 'Гофротруба из алюминиевой фольги купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/uteplennaya-gofrotruba', (req, res) => {
-    try {
-        res.render('products/uteplennaya-gofrotruba', {
-            title: 'Утепленная гофротруба купить в Казани, цены от производителя',
+        res.render('products/protivopozharnye-klapany', {
+            title: 'Противопожарные клапаны в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });
@@ -562,22 +549,11 @@ router.get('/ventilyacionnye-ustanovki', (req, res) => {
     }
 });
 
-router.get('/metizy', (req, res) => {
+// Вентиляторы
+router.get('/ventilyatory', (req, res) => {
     try {
-        res.render('products/metizy', {
-            title: 'Метизы в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/kronshtejny-dlya-kondicionerov', (req, res) => {
-    try {
-        res.render('products/kronshtejny-dlya-kondicionerov', {
-            title: 'Кронштейны для кондиционеров в Казани купить по выгодной цене от производителя',
+        res.render('products/ventilyatory', {
+            title: 'Вентиляторы в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });

@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 router.get('/vozdukhovody-i-fasonnye-chasti', (req, res) => {
     try {
-        res.render('vozdukhovody-i-fasonnye-chasti', {
+        res.render('catalog/vozdukhovody-i-fasonnye-chasti', {
             title: 'Воздуховоды и фасонные части в Казани купить по выгодной цене от производителя',
             pageHeader: 'Воздуховоды и фасонные части',
             isCatalog: true
@@ -27,7 +27,7 @@ router.get('/vozdukhovody-i-fasonnye-chasti', (req, res) => {
 
 router.get('/diffuzory-i-reshetki', (req, res) => {
     try {
-        res.render('diffuzory-i-reshetki', {
+        res.render('catalog/diffuzory-i-reshetki', {
             title: 'Диффузоры и решетки в Казани купить по выгодной цене от производителя',
             pageHeader: 'Диффузоры и решетки',
             isCatalog: true
@@ -39,7 +39,7 @@ router.get('/diffuzory-i-reshetki', (req, res) => {
 
 router.get('/vozdukhovody', (req, res) => {
     try {
-        res.render('vozdukhovody', {
+        res.render('catalog/vozdukhovody', {
             title: 'Воздуховоды в Казани купить по выгодной цене от производителя',
             pageHeader: 'Воздуховоды',
             isCatalog: true
@@ -51,7 +51,7 @@ router.get('/vozdukhovody', (req, res) => {
 
 router.get('/fasonnye-chasti', (req, res) => {
     try {
-        res.render('fasonnye-chasti', {
+        res.render('catalog/fasonnye-chasti', {
             title: 'Фасонные части в Казани купить по выгодной цене от производителя',
             pageHeader: 'Фасонные части',
             isCatalog: true
@@ -63,7 +63,7 @@ router.get('/fasonnye-chasti', (req, res) => {
 
 router.get('/raskhodnye-materialy', (req, res) => {
     try {
-        res.render('raskhodnye-materialy', {
+        res.render('catalog/raskhodnye-materialy', {
             title: 'Расходные материалы в Казани купить по выгодной цене от производителя',
             pageHeader: 'Расходные материалы',
             isCatalog: true
@@ -75,7 +75,7 @@ router.get('/raskhodnye-materialy', (req, res) => {
 
 router.get('/metalloprokat', (req, res) => {
     try {
-        res.render('metalloprokat', {
+        res.render('catalog/metalloprokat', {
             title: 'Металлопрокат в Казани купить по выгодной цене от производителя',
             pageHeader: 'Металлопрокат',
             isCatalog: true
@@ -87,7 +87,7 @@ router.get('/metalloprokat', (req, res) => {
 
 router.get('/kondicionery', (req, res) => {
     try {
-        res.render('kondicionery', {
+        res.render('catalog/kondicionery', {
             title: 'Кондиционеры в Казани купить по выгодной цене от производителя',
             pageHeader: 'Кондиционеры',
             isCatalog: true
@@ -99,7 +99,7 @@ router.get('/kondicionery', (req, res) => {
 
 router.get('/polipropilenovye-truby-i-fitingi', (req, res) => {
     try {
-        res.render('polipropilenovye-truby-i-fitingi', {
+        res.render('catalog/polipropilenovye-truby-i-fitingi', {
             title: 'Полипропиленовые трубы и фитинги в Казани купить по выгодной цене от производителя',
             pageHeader: 'Полипропиленовые трубы и фитинги',
             isCatalog: true

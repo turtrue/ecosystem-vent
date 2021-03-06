@@ -1,0 +1,14 @@
+extends ../layouts/catalog.pug
+
+block content
+    .catalog__body
+        +catalogItem(
+            '/products/kruglye-vozdukhovody',
+            '/assets/product/img/kruglye-vozdukhovody.jpg',
+            'круглые воздуховоды',
+            'Круглые воздуховоды')
+        +catalogItem(
+            '/products/pryamougolnye-vozdukhovody',
+            '/assets/product/img/pryamougolnye-vozdukhovody.jpg',
+            'прямоугольные воздуховоды',
+            'Прямоугольные воздуховоды')
