@@ -303,6 +303,18 @@ router.get('/diffuzory', (req, res) => {
     }
 });
 
+router.get('/protivopozharnye-klapany', (req, res) => {
+    try {
+        res.render('products/protivopozharnye-klapany', {
+            title: 'Противопожарные клапаны в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 
 
 
@@ -625,6 +637,18 @@ router.get('/kronshtejny-dlya-kondicionerov', (req, res) => {
     try {
         res.render('products/kronshtejny-dlya-kondicionerov', {
             title: 'Кронштейны для кондиционеров в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/ventilyatory', (req, res) => {
+    try {
+        res.render('products/ventilyatory', {
+            title: 'Вентиляторы в Казани купить по выгодной цене от производителя',
             isCatalog: true,
             info
         });
