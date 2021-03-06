@@ -25,11 +25,11 @@ router.get('/vozdukhovody-i-fasonnye-chasti', (req, res) => {
     }
 });
 
-router.get('/komplektuyushchie', (req, res) => {
+router.get('/diffuzory-i-reshetki', (req, res) => {
     try {
-        res.render('komplektuyushchie', {
-            title: 'Комплектующие в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Комплектующие',
+        res.render('diffuzory-i-reshetki', {
+            title: 'Диффузоры и решетки в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Диффузоры и решетки',
             isCatalog: true
         });
     } catch (e) {
@@ -73,11 +73,11 @@ router.get('/raskhodnye-materialy', (req, res) => {
     }
 });
 
-router.get('/truby', (req, res) => {
+router.get('/metalloprokat', (req, res) => {
     try {
-        res.render('truby', {
-            title: 'Трубы в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Трубы',
+        res.render('metalloprokat', {
+            title: 'Металлопрокат в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Металлопрокат',
             isCatalog: true
         });
     } catch (e) {
@@ -90,6 +90,18 @@ router.get('/kondicionery', (req, res) => {
         res.render('kondicionery', {
             title: 'Кондиционеры в Казани купить по выгодной цене от производителя',
             pageHeader: 'Кондиционеры',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/polipropilenovye-truby-i-fitingi', (req, res) => {
+    try {
+        res.render('polipropilenovye-truby-i-fitingi', {
+            title: 'Полипропиленовые трубы и фитинги в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Полипропиленовые трубы и фитинги',
             isCatalog: true
         });
     } catch (e) {

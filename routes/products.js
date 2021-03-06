@@ -24,10 +24,6 @@ router.get('/', (req, res) => {
     }
 });
 
-
-
-
-
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {
     try {
@@ -52,10 +48,6 @@ router.get('/pryamougolnye-vozdukhovody', (req, res) => {
         console.log(e);
     }
 });
-
-
-
-
 
 // Фасонные части
 router.get('/kruglye-otvody', (req, res) => {
@@ -274,10 +266,6 @@ router.get('/pryamougolnye-drossel-klapany', (req, res) => {
     }
 });
 
-
-
-
-
 // Комплектующие
 router.get('/gibkie-vstavki', (req, res) => {
     try {
@@ -302,10 +290,6 @@ router.get('/diffuzory', (req, res) => {
         console.log(e);
     }
 });
-
-
-
-
 
 // Расходные материалы
 router.get('/lsp', (req, res) => {
@@ -368,18 +352,6 @@ router.get('/strubciny', (req, res) => {
     }
 });
 
-router.get('/shpilki', (req, res) => {
-    try {
-        res.render('products/shpilki', {
-            title: 'Шпильки купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
 router.get('/alyuminievyj-skotch', (req, res) => {
     try {
         res.render('products/alyuminievyj-skotch', {
@@ -396,18 +368,6 @@ router.get('/flancevaya-shina', (req, res) => {
     try {
         res.render('products/flancevaya-shina', {
             title: 'Фланцевая шина купить в Казани, цены от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/anker-zabivnoj', (req, res) => {
-    try {
-        res.render('products/anker-zabivnoj', {
-            title: 'Анкер забивной купить в Казани, цены от производителя',
             isCatalog: true,
             info
         });
@@ -439,10 +399,6 @@ router.get('/fitingi', (req, res) => {
         console.log(e);
     }
 });
-
-
-
-
 
 // Гофрированные трубы
 router.get('/plastikovaya-gofrotruba', (req, res) => {
@@ -481,11 +437,7 @@ router.get('/uteplennaya-gofrotruba', (req, res) => {
     }
 });
 
-
-
-
-
-// Трубы
+// Металлопрокат
 router.get('/mednye-truby', (req, res) => {
     try {
         res.render('products/mednye-truby', {
@@ -510,18 +462,7 @@ router.get('/stalnye-truby', (req, res) => {
     }
 });
 
-router.get('/gofrirovannye-truby', (req, res) => {
-    try {
-        res.render('products/gofrirovannye-truby', {
-            title: 'Гофрированные трубы в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
+// Полипропиленовые трубы и фитинги
 router.get('/polipropilenovye-truby', (req, res) => {
     try {
         res.render('products/polipropilenovye-truby', {
@@ -534,9 +475,29 @@ router.get('/polipropilenovye-truby', (req, res) => {
     }
 });
 
+router.get('/gofrirovannye-truby', (req, res) => {
+    try {
+        res.render('products/gofrirovannye-truby', {
+            title: 'Гофрированные трубы в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 
-
-
+router.get('/fitingi', (req, res) => {
+    try {
+        res.render('products/fitingi', {
+            title: 'Фитинги купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 
 // Кондиционеры
 router.get('/bytovye-kondicionery', (req, res) => {
@@ -575,10 +536,6 @@ router.get('/promyshlennye-kondicionery', (req, res) => {
     }
 });
 
-
-
-
-
 // Тепловые завесы
 router.get('/teplovye-zavesy', (req, res) => {
     try {
@@ -591,10 +548,6 @@ router.get('/teplovye-zavesy', (req, res) => {
         console.log(e);
     }
 });
-
-
-
-
 
 // Вентиляционные установки
 router.get('/ventilyacionnye-ustanovki', (req, res) => {

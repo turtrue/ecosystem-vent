@@ -1,0 +1,14 @@
+extends layouts/catalog.pug
+
+block content
+    .catalog__body
+        +catalogItem(
+            '/products/mednye-truby',
+            '/assets/product/img/mednye-truby.jpg',
+            'медные трубы',
+            'медные трубы')
+        +catalogItem(
+            '/products/stalnye-truby',
+            '/assets/product/img/stalnye-truby.jpg',
+            'стальные трубы',
+            'стальные трубы')
