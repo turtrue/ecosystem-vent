@@ -23,9 +23,8 @@
 
     &__content {
         padding: 50px;
+        max-width: 50%;
 
-        position: relative;
-        z-index: 1;
         font-size: 2rem;
         border-radius: 5px;
         background: $white;
@@ -90,6 +89,33 @@
         a {
             color: $darkGreen;
             text-decoration: underline;
+        }
+    }
+
+    &__slider {
+        width: 600px;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: white;
+        border-left: $lightBlack 10px solid;
+        border-top: $lightBlack 10px solid;
+        overflow: hidden;
+    }
+
+    // &__slider-row {
+    //     position: relative;
+    //     top: 0;
+    //     left: 0;
+    // }
+
+    &__slider-item {
+        height: 100%;
+
+        img {
+            height: 100%;
         }
     }
 }
