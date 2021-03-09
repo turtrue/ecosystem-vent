@@ -424,6 +424,18 @@ router.get('/protivopozharnye-klapany', (req, res) => {
     }
 });
 
+router.get('/izolyaciya-truboprovodov', (req, res) => {
+    try {
+        res.render('products/izolyaciya-truboprovodov', {
+            title: 'Изоляция трубопроводов в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 // Металлопрокат
 router.get('/mednye-truby', (req, res) => {
     try {
