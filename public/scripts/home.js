@@ -1,3 +1,18 @@
+// About
+const aboutMenuLinks = document.querySelectorAll('#about-menu > li > a');
+const aboutSLiderCol = document.querySelector('#about-slider-col');
+
+aboutMenuLinks.forEach(link => {
+    link.onmouseover = () => {
+        aboutMenuLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        link.classList.add('active');
+        aboutSLiderCol.style.top = `${link.dataset.posTop}px`;
+    }
+});
+
 // Form
 const form = document.querySelector('#form');
 const formMessage = document.querySelector('#form-message');
