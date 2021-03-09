@@ -1,37 +1,38 @@
 article.about
-    .container.d-flex
-        .about__content(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true')
-            h1.about__title <span>Ecosystem</span> занимается производством и поставкой:
-            ul
-                li
-                    <a href='catalog/vozdukhovody'>Воздуховодов</a>
-                li
-                    <a href='catalog/fasonnye-chasti'>Фасонных изделий</a>
-                li
-                    <a href='catalog/komplektuyushchie'>Комплектующих</a>
-                li
-                    <a href='catalog/raskhodnye-materialy'>Расходных материалов</a>
-                li
-                    <a href='#'>Деталей для систем вентиляции</a>
-                li
-                    <a href='#'>Блоков управления и автоматизации</a>
+    .container
+        div.d-flex(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true')
+            .about__content
+                h1.about__title <span>Ecosystem</span> занимается производством и поставкой:
+                ul#about-menu
+                    li
+                        a.active(href='catalog/vozdukhovody-i-fasonnye-chasti' data-pos-top='0') Воздуховодов и фасонных изделий
+                    li
+                        a(href='catalog/raskhodnye-materialy' data-pos-top='-500') Расходных материалов
+                    li
+                        a(href='catalog' data-pos-top='-1000') Блоков управления и автоматизации
+                    li
+                        a(href='catalog/kondicionery' data-pos-top='-1500') Кондиционеров
+                    li
+                        a(href='products/ventilyacionnye-ustanovki' data-pos-top='-2000') Вентиляционных установок
+                    li
+                        a(href='products/teplovye-zavesy' data-pos-top='-2500') Тепловых завес
+                    li
+                        a(href='products/ventilyatory' data-pos-top='-3000') Вентиляторов
+                p И многой другой продукцией - ознакомиться с которой можно в <a href='catalog'>каталоге</a>
 
-            p И многой другой продукцией - ознакомиться с которой можно в <a href='catalog'>каталоге</a>
-
-        //- .about__slider
-        //-     .about__slider-row
-        //-         .about__slider-item
-        //-             img(src='assets/home/img/slide-1.jpg', alt='')
-        //-             img(src='assets/home/img/slide-1.jpg', alt='')
-        //-         .about__slider-item
-        //-             img(src='assets/home/img/slide-2.jpg', alt='')
-        //-             img(src='assets/home/img/slide-2.jpg', alt='')
-        //-         .about__slider-item
-        //-             img(src='assets/home/img/slide-3.jpg', alt='')
-        //-             img(src='assets/home/img/slide-3.jpg', alt='')
-        //-         .about__slider-item
-        //-             img(src='assets/home/img/slide-4.jpg', alt='')
-        //-             img(src='assets/home/img/slide-4.jpg', alt='')
-        //-         .about__slider-item
-        //-             img(src='assets/home/img/slide-5.jpg', alt='')
-        //-             img(src='assets/home/img/slide-5.jpg', alt='')
+            .about__slider
+                .about__slider-col#about-slider-col
+                    .about__slider-item
+                        img(src='assets/home/img/slide-1.jpg', alt='воздуховоды и фасонные изделия')
+                    .about__slider-item
+                        img(src='assets/home/img/slide-2.jpg', alt='расходные материалы')
+                    .about__slider-item
+                        img(src='assets/home/img/slide-3.jpg', alt='блоки управления и автоматизации')
+                    .about__slider-item
+                        img(src='assets/home/img/slide-4.jpg', alt='кондиционеры')
+                    .about__slider-item
+                        img(src='assets/home/img/slide-5.jpg', alt='вентиляционные установки')
+                    .about__slider-item
+                        img(src='assets/home/img/slide-6.jpg', alt='тепловые завесы')
+                    .about__slider-item
+                        img(src='assets/home/img/slide-7.jpg', alt='вентиляторы')
