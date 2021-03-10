@@ -97,11 +97,23 @@ router.get('/kondicionery', (req, res) => {
     }
 });
 
-router.get('/polipropilenovye-truby-i-fitingi', (req, res) => {
+router.get('/truby-i-fitingi', (req, res) => {
     try {
-        res.render('catalog/polipropilenovye-truby-i-fitingi', {
-            title: 'Полипропиленовые трубы и фитинги в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Полипропиленовые трубы и фитинги',
+        res.render('catalog/truby-i-fitingi', {
+            title: 'Трубы и фитинги в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Трубы и фитинги',
+            isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/ognezashchita-i-teploizolyaciya', (req, res) => {
+    try {
+        res.render('catalog/ognezashchita-i-teploizolyaciya', {
+            title: 'Огнезащита и теплоизоляция в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Огнезащита и теплоизоляция',
             isCatalog: true
         });
     } catch (e) {
