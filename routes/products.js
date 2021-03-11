@@ -279,6 +279,18 @@ router.get('/diffuzory', (req, res) => {
     }
 });
 
+router.get('/ventilyacionnye-reshetki', (req, res) => {
+    try {
+        res.render('products/ventilyacionnye-reshetki', {
+            title: 'Вентиляционные решетки в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 // Расходные материалы
 router.get('/gibkie-vstavki', (req, res) => {
     try {
