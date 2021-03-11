@@ -412,31 +412,6 @@ router.get('/kronshtejny-dlya-kondicionerov', (req, res) => {
     }
 });
 
-router.get('/protivopozharnye-klapany', (req, res) => {
-    try {
-        res.render('products/protivopozharnye-klapany', {
-            title: 'Противопожарные клапаны в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/izolyaciya-truboprovodov', (req, res) => {
-    try {
-        res.render('products/izolyaciya-truboprovodov', {
-            title: 'Изоляция трубопроводов в Казани купить по выгодной цене от производителя',
-            isCatalog: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-// Металлопрокат
 router.get('/mednye-truby', (req, res) => {
     try {
         res.render('products/mednye-truby', {
@@ -449,6 +424,45 @@ router.get('/mednye-truby', (req, res) => {
     }
 });
 
+// Противопожарные клапаны
+router.get('/protivopozharnye-klapany', (req, res) => {
+    try {
+        res.render('products/protivopozharnye-klapany', {
+            title: 'Противопожарные клапаны в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Огнезащита и теплоизоляция
+router.get('/izolyaciya-truboprovodov', (req, res) => {
+    try {
+        res.render('products/izolyaciya-truboprovodov', {
+            title: 'Изоляция трубопроводов в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/ognezashchita-truboprovodov', (req, res) => {
+    try {
+        res.render('products/ognezashchita-truboprovodov', {
+            title: 'Огнезащита трубопроводов в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+// Металлопрокат
 router.get('/stalnye-truby', (req, res) => {
     try {
         res.render('products/stalnye-truby', {
@@ -461,7 +475,7 @@ router.get('/stalnye-truby', (req, res) => {
     }
 });
 
-// Полипропиленовые трубы и фитинги
+// Трубы и фитинги
 router.get('/polipropilenovye-truby', (req, res) => {
     try {
         res.render('products/polipropilenovye-truby', {
