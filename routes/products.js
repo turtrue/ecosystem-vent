@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const Product = require('../models/Product');
 const router = Router();
 
 const info = {
@@ -12,10 +13,31 @@ const info = {
     }
 }
 
+function getProduct(route, id) {
+    router.get(route, async (req, res) => {
+        try {
+            const product = await Product.findById(id);
+
+            if (!product) res.redirect('/catalog');
+
+            res.render('products/product', {
+                title: product.title + ' купить в Казани, цены от производителя',
+                isProducts: true,
+                product,
+                info
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    });
+}
+
+getProduct('/alyuminievyj-skotch-db', '604e127a9279bd0f34209255');
+
 router.get('/', (req, res) => {
     try {
         res.render('products', {
-            title: 'Продукция',
+            title: 'Список продукции',
             isProducts: true,
             info
         });

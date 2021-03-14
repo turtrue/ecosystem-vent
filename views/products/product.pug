@@ -1,0 +1,44 @@
+extends ../layouts/product.pug
+
+block content
+    section.product
+        .container
+            h1.product__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true')=product.title
+
+            .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                .product__header-img
+                    img(src='/assets/product/img/'+product.image.src alt=product.image.alt)
+                include ../partials/info-contact.pug
+
+            .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                each obj in product.content
+                    case obj.type
+                        when 'p'
+                            if obj.sectionTitle
+                                h3=obj.sectionTitle
+                            each p in obj.data
+                                p=p
+                        when 'list'
+                            p=obj.listTitle
+                            ul
+                                each li in obj.data
+                                    li=li
+                        when 'image'
+                            if obj.images.length === 1
+                                .product__body-images
+                                    each image in obj.images
+                                        .product__body-group
+                                            img(src='/assets/product/img/'+image.src alt=image.alt)
+                                            if image.name
+                                                i=image.name
+                            else
+                                .product__body-images.f-wrap
+                                    each image in obj.images
+                                        .product__body-group
+                                            div
+                                                img(src='/assets/product/img/'+image.src alt=image.alt)
+                                                if image.name
+                                                    i=image.name
+                        default
+                            p Контент отсутствует
+                include ../partials/info-service.pug

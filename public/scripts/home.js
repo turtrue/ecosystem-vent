@@ -1,3 +1,5 @@
+'use strict';
+
 // About
 const aboutMenuLinks = document.querySelectorAll('#about-menu > li > a');
 const aboutSLiderCol = document.querySelector('#about-slider-col');
