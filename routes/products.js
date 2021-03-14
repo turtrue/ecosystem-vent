@@ -436,6 +436,54 @@ router.get('/mednye-truby', (req, res) => {
     }
 });
 
+router.get('/freon', (req, res) => {
+    try {
+        res.render('products/freon', {
+            title: 'Фреон купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/refnety-i-fitingi', (req, res) => {
+    try {
+        res.render('products/refnety-i-fitingi', {
+            title: 'Рефнеты и фитинги купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/montazhnaya-pena', (req, res) => {
+    try {
+        res.render('products/montazhnaya-pena', {
+            title: 'Монтажная пена купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/germetik', (req, res) => {
+    try {
+        res.render('products/germetik', {
+            title: 'Герметик купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 // Противопожарные клапаны
 router.get('/protivopozharnye-klapany', (req, res) => {
     try {
