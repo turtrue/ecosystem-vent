@@ -474,11 +474,35 @@ router.get('/ognezashchita-truboprovodov', (req, res) => {
     }
 });
 
+router.get('/klej-dlya-teploizolyacii', (req, res) => {
+    try {
+        res.render('products/klej-dlya-teploizolyacii', {
+            title: 'Клей для теплоизоляции в Казани купить по выгодной цене от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 // Металлопрокат
 router.get('/stalnye-truby', (req, res) => {
     try {
         res.render('products/stalnye-truby', {
             title: 'Стальные трубы купить в Казани, цены от производителя',
+            isCatalog: true,
+            info
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/profilnye-truby', (req, res) => {
+    try {
+        res.render('products/profilnye-truby', {
+            title: 'Профильные трубы купить в Казани, цены от производителя',
             isCatalog: true,
             info
         });
