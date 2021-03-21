@@ -78,7 +78,7 @@ router.post('/create-product', async (req, res) => {
             },
             content
         });
-        // await product.save();
+        await product.save();
 
         res.render('admin/id-product', {
             title: 'ID',
@@ -117,17 +117,19 @@ function getFilesHandler(files, keyBody) {
     return result;
 }
 
-function fileUpload(file, direction) {
+async function fileUpload(file, direction) {
     const extension = path.extname(file.name);
     const name = path.basename(file.name, extension).toLowerCase();
     const fullPath = direction + file.md5 + extension;
-
     const absolutePath = path.resolve('./public/assets/product/img-db');
-    sharp(file.data)
+
+    await sharp(file.data)
         .resize(null, 300)
-        .toFile(absolutePath + '/' + file.md5 + extension, err => {
-            console.log(err);
+        .toFile(absolutePath + '/' + file.md5 + extension, (err, info) => {
+            if (err) console.log(err);
+            if (info) console.log(info);
         });
+
     return {
         name,
         fullPath
