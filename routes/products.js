@@ -13,11 +13,10 @@ const info = {
     }
 }
 
-function getProduct(route, id) {
+function productRoute(route, id) {
     router.get(route, async (req, res) => {
         try {
             const product = await Product.findById(id);
-
             if (!product) res.redirect('/catalog');
 
             res.render('products/product', {
@@ -32,19 +31,7 @@ function getProduct(route, id) {
     });
 }
 
-getProduct('/alyuminievyj-skotch-db', '604e127a9279bd0f34209255');
-
-router.get('/', (req, res) => {
-    try {
-        res.render('products', {
-            title: 'Список продукции',
-            isProducts: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
+productRoute('/test-db', '605765fd63dcf326482d251f');
 
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {

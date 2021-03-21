@@ -1,6 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const schema = new Schema({
+    category: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true
@@ -15,9 +19,8 @@ const schema = new Schema({
                 type: String,
                 required: true
             },
-            sectionTitle: String,
-            listTitle: String,
             data: [String],
+            title: String,
             images: [
                 {
                     src: String,
@@ -26,11 +29,7 @@ const schema = new Schema({
                 }
             ]
         }
-    ],
-    category: {
-        type: String,
-        required: true
-    }
+    ]
 });
 
 module.exports = model('Product', schema);

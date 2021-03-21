@@ -7,38 +7,30 @@ block content
 
             .product__header(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
                 .product__header-img
-                    img(src='/assets/product/img/'+product.image.src alt=product.image.alt)
+                    img(src=product.image.src alt=product.image.alt)
                 include ../partials/info-contact.pug
 
-            .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
-                each obj in product.content
-                    case obj.type
-                        when 'p'
-                            if obj.sectionTitle
-                                h3=obj.sectionTitle
-                            each p in obj.data
-                                p=p
-                        when 'list'
-                            p=obj.listTitle
-                            ul
-                                each li in obj.data
-                                    li=li
-                        when 'image'
-                            if obj.images.length === 1
-                                .product__body-images
-                                    each image in obj.images
-                                        .product__body-group
-                                            img(src='/assets/product/img/'+image.src alt=image.alt)
-                                            if image.name
-                                                i=image.name
-                            else
+            if product.content
+                .product__body(data-aos='fade-up' data-aos-duration='1000' data-aos-once='true')
+                    each obj in product.content
+                        case obj.type
+                            when 'paragraph'
+                                each p in obj.data
+                                    p=p
+                            when 'title'
+                                h3=obj.title
+                            when 'list'
+                                ul
+                                    each li in obj.data
+                                        li=li
+                            when 'images'
                                 .product__body-images.f-wrap
                                     each image in obj.images
                                         .product__body-group
                                             div
-                                                img(src='/assets/product/img/'+image.src alt=image.alt)
+                                                img(src=image.src alt=image.alt)
                                                 if image.name
                                                     i=image.name
-                        default
-                            p Контент отсутствует
-                include ../partials/info-service.pug
+                            default
+                                p Default
+                    include ../partials/info-service.pug

@@ -2,6 +2,7 @@ doctype html
 html(lang='ru')
     head
         include ../partials/head.pug
+        link(rel='stylesheet', href='/scss/admin/admin.scss')
         link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
     body
         nav(class='navbar fixed-top navbar-expand-lg navbar-dark bg-dark')
@@ -13,47 +14,30 @@ html(lang='ru')
                         a(class='nav-link' href='#') Список продукции
                     li(class='nav-item')
                         a(class='nav-link active' href='/admin/create-product') Создать продукт
+                select(id='nav-select' class='form-select')
+                    option(selected) Создать HTML элемент
+                    option(value='TEXT_BLOCK') Текстовый блок
+                    option(value='TITLE') Заголовок
+                    option(value='LIST') Список
+                    option(value='IMG_BLOCK') Вставить картинку
+                    option(value='IMG_AND_I_BLOCK') Вставить картинку с подписью
 
-        div(class='container-md' style='margin-top: 150px')
-            form
-                h3(style='text-align: center') Продукт
+        div(class='container-md')
+            form(id='form' method='POST' enctype='multipart/form-data')
+                h3(class='text-center') Создать продукт
                 div(id='product' class='mb-5')
+                    select(class='form-select d-block mb-3' name='productCategory' required)
+                        option(value='') Выберите категорию
+                        option(value='1') Расходные материалы
+                        option(value='2') Металлопрокат
+                        option(value='3') Фасонные изделия
+
                     label(class='form-label') Название продукта
-                    input(class='form-control mb-2')
+                    input(class='form-control mb-3' type='text' name='productName' required)
 
-                    label(class='form-label') Фотография товара
-                    input(class='form-control mb-2' type='file' name='photo')
+                    label(class='form-label') Изображение продукта
+                    input(class='form-control' type='file' name='productImage' required)
 
-                    label(class='form-label') Описание фотографии товара
-                    input(class='form-control')
-
-                h3(style='text-align: center') Параграф
-                div(id='main' class='mb-5')
-                    label(class='form-label') Параграф
-                    textarea(class='form-control' rows='1')
-
-                h3(style='text-align: center') Список
-                div(id='list' class='mb-5')
-                    label(class='form-label') Заглавие списка
-                    input(class='form-control')
-
-                    label(class='form-label') 1. Элемент списка
-                    textarea(class='form-control' rows='1')
-
-                h3(style='text-align: center') Заглавие секции
-                div(id='sectionTitle' class='mb-5')
-                    label(class='form-label') Заглавие секции
-                    input(class='form-control')
-
-                h3(style='text-align: center') Картинки
-                div(id='images' class='mb-5')
-                    label(class='form-label') Картинка №1
-                    input(class='form-control mb-2' type='file' name='image')
-
-                    label(class='form-label') Описание картинки №1
-                    input(class='form-control')
-
-                div(style='text-align: right')
-                    button(type='submit' class='btn btn-outline-primary') Создать страницу
+                button(id='form-button' class='btn btn-outline-primary' type='submit') Создать страницу
 
         script(src='/scripts/create-product.js')

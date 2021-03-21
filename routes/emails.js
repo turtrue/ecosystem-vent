@@ -19,9 +19,7 @@ const mailHandler = async (name, phone, email, fileName, filePathAbsolute) => {
 }
 
 router.post('/statement', async (req, res) => {
-    if (!req.body.isFormStatement) {
-        res.status(404).send();
-    }
+    if (!req.body.isFormStatement) res.status(404).send();
 
     const { name, phone, email } = req.body;
     const file = req.files ? req.files.file : false;

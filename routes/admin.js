@@ -1,11 +1,11 @@
+const path = require('path');
 const { Router } = require('express');
 const Product = require('../models/Product');
+const sharp = require('sharp');
 const router = Router();
 
-router.get('/create-product', async (req, res) => {
+router.get('/create-product', (req, res) => {
     try {
-        // await product.save();
-
         res.render('admin/create-product', {
             title: 'Создать продукт'
         });
@@ -14,56 +14,122 @@ router.get('/create-product', async (req, res) => {
     }
 });
 
+router.post('/create-product', async (req, res) => {
+    try {
+        let types = req.body.types;
+        delete req.body.types;
+        const keysBody = Object.keys(req.body);
+        const keysFiles = Object.keys(req.files);
+        let fileCounter = 0;
+        let typeCounter = 0;
+        const content = [];
+
+        if (!Array.isArray(types)) types = [types];
+        types.forEach(type => {
+            const keyBody = keysBody[typeCounter];
+            typeCounter++;
+            switch (type) {
+                case 'paragraph':
+                    content.push({
+                        type: 'paragraph',
+                        data: req.body[keyBody]
+                    });
+                    break;
+                case 'title':
+                    content.push({
+                        type: 'title',
+                        title: req.body[keyBody]
+                    });
+                    break;
+                case 'list':
+                    content.push({
+                        type: 'list',
+                        data: req.body[keyBody]
+                    });
+                    break;
+                case 'images':
+                    content.push({
+                        type: 'images',
+                        images: getFiles(keysFiles, fileCounter, req.files)
+                    });
+                    fileCounter++;
+                    typeCounter--;
+                    break;
+                case 'images-and-i':
+                    content.push({
+                        type: 'images',
+                        images: getFiles(keysFiles, fileCounter, req.files, req.body[keyBody])
+                    });
+                    fileCounter++;
+                    break;
+                default:
+                    console.log('Default');
+                    break;
+            }
+        });
+
+        const f = fileUpload(req.files.productImage, '/assets/product/img-db/');
+        const product = new Product({
+            category: req.body.productCategory,
+            title: req.body.productName,
+            image: {
+                src: f.fullPath,
+                alt: f.name
+            },
+            content
+        });
+        // await product.save();
+
+        res.render('admin/id-product', {
+            title: 'ID',
+            id: product._id
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;
 
-const product = new Product({
-    title: 'Алюминиевый скотч',
-    image: {
-        src: 'alyuminievyj-skotch.jpg',
-        alt: 'алюминиевый скотч'
-    },
-    content: [
-        {
-            type: 'list',
-            listTitle: 'Клейкая алюминиевая лента, которую чаще всего называют скотчем, представляет собой фольгу из алюминия с клеевым слоем. Клеевая основа располагается на моносиликонизированной прокладке из бумаги. Специалисты компании Ecosystem применяют такой скотч в следующих ситуациях:',
-            data: [
-                'Соединение стыков узлов, панелей, труб во время монтажных, строительных и ремонтных работ;',
-                'Защита деталей оборудования от проникновения влаги, пыли, пара, грязи;',
-                'Обеспечение антикоррозийной защиты;',
-                'Герметизация и соединение стыков труб при монтаже вентиляционного оборудования;'
-            ]
-        },
-        {
-            type: 'p',
-            data: [
-                'Эта лента имеет отличную отражающую способность, а также хорошую теплопроводность. Это позволяет отражать ультрафиолетовые лучи и защищать пластиковые детали от высоких температурных нагрузок.'
-            ]
-        },
-        {
-            type: 'list',
-            listTitle: 'Правила применения алюминиевого скотча:',
-            data: [
-                'Проверьте поверхность скотча на сухость, отсутствие жира и загрязнений;',
-                'Отделите ленту от основы и прикрепите на необходимую поверхность;',
-                'Не используйте скотч, если влажность в помещении выше 100%;',
-                'Одна и та же часть ленты не предназначена для повторного использования;'
-            ]
-        },
-        {
-            type: 'image',
-            images: [
-                {
-                    src: 'ventilyacionnaya-reshetka-5.jpg',
-                    alt: 'вентиляционная решетка',
-                    name: 'Вентилционная решетка наружного применения'
-                },
-                {
-                    src: 'ventilyacionnaya-reshetka-5.jpg',
-                    alt: 'вентиляционная решетка',
-                    name: 'Вентилционная решетка наружного применения'
-                }
-            ]
-        }
-    ],
-    category: 'auto'
-});
+function getFiles(keysFiles, counter, reqFiles, keyBody = null) {
+    const keyFile = keysFiles[counter];
+    let files = reqFiles[keyFile];
+    if (!Array.isArray(files)) files = [files];
+
+    if (keyBody) {
+        if (!Array.isArray(keyBody)) keyBody = [keyBody];
+        return getFilesHandler(files, keyBody);
+    } else {
+        return getFilesHandler(files, null);
+    }
+}
+
+function getFilesHandler(files, keyBody) {
+    const result = [];
+    files.forEach((file, index) => {
+        const f = fileUpload(file, '/assets/product/img-db/');
+        result.push({
+            src: f.fullPath,
+            alt: f.name,
+            name: keyBody ? keyBody[index] : null
+        });
+    });
+    return result;
+}
+
+function fileUpload(file, direction) {
+    const extension = path.extname(file.name);
+    const name = path.basename(file.name, extension).toLowerCase();
+    const fullPath = direction + file.md5 + extension;
+
+    const absolutePath = path.resolve('./public/assets/product/img-db');
+    sharp(file.data)
+        .resize(null, 300)
+        .toFile(absolutePath + '/' + file.md5 + extension, err => {
+            console.log(err);
+        });
+    return {
+        name,
+        fullPath
+    }
+}
