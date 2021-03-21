@@ -121,8 +121,8 @@ async function fileUpload(file, direction) {
     const extension = path.extname(file.name);
     const name = path.basename(file.name, extension).toLowerCase();
     const fullPath = direction + file.md5 + extension;
-    const absolutePath = path.resolve('./public/assets/product/img-db');
 
+    const absolutePath = path.resolve('./public/assets/product/img-db');
     await sharp(file.data)
         .resize(null, 300)
         .toFile(absolutePath + '/' + file.md5 + extension, (err, info) => {
