@@ -1,3 +1,5 @@
+'use strict';
+
 // https://michalsnik.github.io/aos/
 AOS.init({
     disable: function () {

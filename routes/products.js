@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const Product = require('../models/Product');
 const router = Router();
 
 const info = {
@@ -12,17 +13,25 @@ const info = {
     }
 }
 
-router.get('/', (req, res) => {
-    try {
-        res.render('products', {
-            title: 'Продукция',
-            isProducts: true,
-            info
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
+function productRoute(route, id) {
+    router.get(route, async (req, res) => {
+        try {
+            const product = await Product.findById(id);
+            if (!product) res.redirect('/catalog');
+
+            res.render('products/product', {
+                title: product.title + ' купить в Казани, цены от производителя',
+                isProducts: true,
+                product,
+                info
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    });
+}
+
+productRoute('/test-db', '605765fd63dcf326482d251f');
 
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {

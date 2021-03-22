@@ -1,0 +1,49 @@
+body {
+    background: lightgray;
+}
+
+form {
+    padding: 150px 0;
+}
+
+select {
+    width: auto !important;
+
+    display: inline-block !important;
+}
+
+label {
+    padding: 0 5px;
+
+    color: white;
+    background: mediumseagreen;
+    border-radius: 3px;
+}
+
+span {
+    padding: 0 5px;
+    height: 100%;
+
+    font-weight: bold;
+    color: white;
+    background: tomato;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+b {
+    padding: 0 5px;
+
+    color: white;
+    background: mediumpurple;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+ul {
+    li {
+        &::marker {
+            color: mediumseagreen;
+        }
+    }
+}

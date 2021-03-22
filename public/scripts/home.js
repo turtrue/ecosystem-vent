@@ -1,3 +1,5 @@
+'use strict';
+
 // About
 const aboutMenuLinks = document.querySelectorAll('#about-menu > li > a');
 const aboutSLiderCol = document.querySelector('#about-slider-col');
@@ -52,9 +54,9 @@ form.addEventListener('submit', event => {
         formData.append('isFormStatement', isFormStatement);
 
         const fileSize = formData.get('file').size;
-        if (fileSize > 500000) {
+        if (fileSize > 1000000) {
             formLoader.classList.remove('active');
-            const message = 'Размер файла превышает 5MB';
+            const message = 'Размер файла превышает 10MB';
             notificationMessage(formMessage, message, 'error');
             return true;
         }
