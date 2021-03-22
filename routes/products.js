@@ -21,7 +21,7 @@ function productRoute(route, id) {
 
             res.render('products/product', {
                 title: product.title + ' купить в Казани, цены от производителя',
-                isProducts: true,
+                isCatalog: true,
                 product,
                 info
             });
