@@ -32,6 +32,7 @@ function productRoute(route, id) {
 }
 
 productRoute('/stalnye-ugolki', '6058a4d299b7da357c35fa15');
+
 productRoute('/stalnye-shvellera', '6058c679131c981938d6b4dc');
 
 // Воздуховоды
