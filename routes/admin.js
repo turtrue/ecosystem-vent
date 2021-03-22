@@ -6,6 +6,7 @@ const router = Router();
 
 router.get('/create-product', (req, res) => {
     try {
+        if (!(req.query.password === 'ecosystem')) res.redirect('/');
         res.render('admin/create-product', {
             title: 'Создать продукт'
         });
