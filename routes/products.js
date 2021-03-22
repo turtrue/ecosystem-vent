@@ -31,7 +31,7 @@ function productRoute(route, id) {
     });
 }
 
-productRoute('/test-db', '605765fd63dcf326482d251f');
+productRoute('/stalnye-ugolki', '6058a4d299b7da357c35fa15');
 
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {
