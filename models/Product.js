@@ -9,6 +9,10 @@ const schema = new Schema({
         type: String,
         required: true
     },
+    translitTitle: {
+        type: String,
+        required: true
+    },
     image: {
         src: String,
         alt: String

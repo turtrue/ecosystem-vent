@@ -2,6 +2,13 @@ extends ../layouts/catalog.pug
 
 block content
     .catalog__body
+        each product in products
+            +catalogItem(
+                `/products/${product.translitTitle}`,
+                `${product.image.src}`,
+                `${product.title}`,
+                `${product.title}`)
+
         +catalogItem(
             '/products/stalnye-truby',
             '/assets/product/img/stalnye-truby.jpg',
@@ -12,13 +19,3 @@ block content
             '/assets/product/img/profilnye-truby.jpg',
             'профильные трубы',
             'профильные трубы')
-        +catalogItem(
-            '/products/stalnye-ugolki',
-            '/assets/product/img-db/5e4d991a212640ad7988fa05c75d9fd7.jpg',
-            'стальные уголки',
-            'стальные уголки')
-        +catalogItem(
-            '/products/stalnye-shvellera',
-            '/assets/product/img-db/0ddffd25962ffcea78e4e52d9823a2a8.jpg',
-            'стальные швеллера',
-            'стальные швеллера')

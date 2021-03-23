@@ -1,8 +1,10 @@
 const path = require('path');
 const { Router } = require('express');
 const Product = require('../models/Product');
+const CyrillicToTranslit = require('cyrillic-to-translit-js');
 const sharp = require('sharp');
 const router = Router();
+const cyrillicToTranslit = new CyrillicToTranslit();
 
 router.get('/create-product', (req, res) => {
     try {
@@ -69,10 +71,15 @@ router.post('/create-product', async (req, res) => {
             }
         });
 
+        const translitTitle = cyrillicToTranslit
+            .transform(req.body.productName, '-')
+            .toLowerCase();
         const f = fileUpload(req.files.productImage, '/assets/product/img-db/');
+
         const product = new Product({
             category: req.body.productCategory,
             title: req.body.productName,
+            translitTitle,
             image: {
                 src: f.fullPath,
                 alt: f.name
@@ -81,10 +88,7 @@ router.post('/create-product', async (req, res) => {
         });
         await product.save();
 
-        res.render('admin/id-product', {
-            title: 'ID',
-            id: product._id
-        });
+        res.redirect('/admin/create-product?password=ecosystem');
     } catch (e) {
         console.log(e);
     }
@@ -95,6 +99,7 @@ module.exports = router;
 function getFiles(keysFiles, counter, reqFiles, keyBody = null) {
     const keyFile = keysFiles[counter];
     let files = reqFiles[keyFile];
+
     if (!Array.isArray(files)) files = [files];
 
     if (keyBody) {
@@ -122,15 +127,12 @@ function fileUpload(file, direction) {
     const extension = path.extname(file.name);
     const name = path.basename(file.name, extension).toLowerCase();
     const fullPath = direction + file.md5 + extension;
-
     const absolutePath = path.resolve('./public/assets/product/img-db');
     sharp(file.data)
         .resize(null, 300)
-        .toFile(absolutePath + '/' + file.md5 + extension, (err, info) => {
+        .toFile(absolutePath + '/' + file.md5 + extension, err => {
             if (err) console.log(err);
-            if (info) console.log(info);
         });
-
     return {
         name,
         fullPath

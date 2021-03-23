@@ -1,4 +1,7 @@
 const { Router } = require('express');
+const Product = require('../models/Product');
+const CyrillicToTranslit = require('cyrillic-to-translit-js');
+const cyrillicToTranslit = new CyrillicToTranslit();
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -7,6 +10,20 @@ router.get('/', (req, res) => {
             title: 'Каталог вентиляционного оборудования в Казани',
             pageHeader: 'Каталог',
             isCatalog: true
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+router.get('/metalloprokat', async (req, res) => {
+    try {
+        const products = await Product.find({ category: 2 });
+        res.render('catalog/metalloprokat', {
+            title: 'Металлопрокат в Казани купить по выгодной цене от производителя',
+            pageHeader: 'Металлопрокат',
+            isCatalog: true,
+            products
         });
     } catch (e) {
         console.log(e);
@@ -66,18 +83,6 @@ router.get('/raskhodnye-materialy', (req, res) => {
         res.render('catalog/raskhodnye-materialy', {
             title: 'Расходные материалы в Казани купить по выгодной цене от производителя',
             pageHeader: 'Расходные материалы',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
-
-router.get('/metalloprokat', (req, res) => {
-    try {
-        res.render('catalog/metalloprokat', {
-            title: 'Металлопрокат в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Металлопрокат',
             isCatalog: true
         });
     } catch (e) {

@@ -13,27 +13,28 @@ const info = {
     }
 }
 
-function productRoute(route, id) {
-    router.get(route, async (req, res) => {
-        try {
-            const product = await Product.findById(id);
-            if (!product) res.redirect('/catalog');
-
-            res.render('products/product', {
-                title: product.title + ' купить в Казани, цены от производителя',
-                isCatalog: true,
-                product,
-                info
+async function productRoutes() {
+    try {
+        const products = await Product.find({});
+        products.forEach(product => {
+            router.get(`/${product.translitTitle}`, (req, res) => {
+                try {
+                    res.render('products/product', {
+                        title: product.title + ' купить в Казани, цены от производителя',
+                        isCatalog: true,
+                        product,
+                        info
+                    });
+                } catch (e) {
+                    console.log(e);
+                }
             });
-        } catch (e) {
-            console.log(e);
-        }
-    });
+        });
+    } catch (e) {
+        console.log(e);
+    }
 }
-
-productRoute('/stalnye-ugolki', '6058a4d299b7da357c35fa15');
-
-productRoute('/stalnye-shvellera', '6058c679131c981938d6b4dc');
+productRoutes();
 
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {
