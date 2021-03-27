@@ -1,7 +1,5 @@
 const { Router } = require('express');
-const Product = require('../models/Product');
-const CyrillicToTranslit = require('cyrillic-to-translit-js');
-const cyrillicToTranslit = new CyrillicToTranslit();
+const Category = require('../models/Category');
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -16,19 +14,48 @@ router.get('/', (req, res) => {
     }
 });
 
-router.get('/metalloprokat', async (req, res) => {
-    try {
-        const products = await Product.find({ category: 2 });
-        res.render('catalog/metalloprokat', {
-            title: 'Металлопрокат в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Металлопрокат',
-            isCatalog: true,
-            products
-        });
-    } catch (e) {
-        console.log(e);
+function getCatalogRoute(category, translit) {
+    router.get(`/${translit}`, async (req, res) => {
+        console.log(`Отработал роут /${translit}`);
+        try {
+            const productData = await Category
+                .find({ 'translit': translit })
+                .populate('product');
+
+            const products = [];
+            productData.forEach(obj => products.push(obj.product));
+
+            res.render(`catalog/${translit}`, {
+                title: `${category} в Казани купить по выгодной цене от производителя`,
+                pageHeader: category,
+                isCatalog: true,
+                products
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    });
+}
+
+async function catalogRoutes() {
+    console.log('Роуты каталога перестроены');
+    const categoryData = await Category.find({});
+    const result = [];
+    categoryData.forEach(obj => result.push(obj.category));
+    const categories = new Set(result);
+
+    for (category of categories) {
+        let translit;
+        for (let i = 0; i < categoryData.length; i++) {
+            if (categoryData[i].category === category) {
+                translit = categoryData[i].translit;
+                break;
+            }
+        }
+        getCatalogRoute(category, translit);
     }
-});
+}
+catalogRoutes();
 
 router.get('/vozdukhovody-i-fasonnye-chasti', (req, res) => {
     try {
@@ -78,17 +105,17 @@ router.get('/fasonnye-chasti', (req, res) => {
     }
 });
 
-router.get('/raskhodnye-materialy', (req, res) => {
-    try {
-        res.render('catalog/raskhodnye-materialy', {
-            title: 'Расходные материалы в Казани купить по выгодной цене от производителя',
-            pageHeader: 'Расходные материалы',
-            isCatalog: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
-});
+// router.get('/raskhodnye-materialy', (req, res) => {
+//     try {
+//         res.render('catalog/raskhodnye-materialy', {
+//             title: 'Расходные материалы в Казани купить по выгодной цене от производителя',
+//             pageHeader: 'Расходные материалы',
+//             isCatalog: true
+//         });
+//     } catch (e) {
+//         console.log(e);
+//     }
+// });
 
 router.get('/kondicionery', (req, res) => {
     try {

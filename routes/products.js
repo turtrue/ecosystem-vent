@@ -14,13 +14,16 @@ const info = {
 }
 
 async function productRoutes() {
+    console.log('Роуты продукции перестроены');
     try {
         const products = await Product.find({});
         products.forEach(product => {
-            router.get(`/${product.translitTitle}`, (req, res) => {
+            router.get(`/${product.translit}`, (req, res) => {
+                console.log(`Отработал роут /${product.translit}`);
+
                 try {
                     res.render('products/product', {
-                        title: product.title + ' купить в Казани, цены от производителя',
+                        title: `${product.title} купить в Казани, цены от производителя`,
                         isCatalog: true,
                         product,
                         info
@@ -35,6 +38,15 @@ async function productRoutes() {
     }
 }
 productRoutes();
+
+router.get('/routes', (req, res) => {
+    if (req.query.reload === 'true') {
+        productRoutes();
+        res.redirect('/admin/create-product?password=true');
+        return;
+    }
+    res.redirect('/');
+});
 
 // Воздуховоды
 router.get('/kruglye-vozdukhovody', (req, res) => {

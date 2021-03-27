@@ -2,6 +2,13 @@ extends ../layouts/catalog.pug
 
 block content
     .catalog__body
+        each product in products
+            +catalogItem(
+                `/products/${product.translit}`,
+                `${product.image.src}`,
+                `${product.title}`,
+                `${product.title}`)
+
         +catalogItem(
             '/products/lsp',
             '/assets/product/img/lsp.jpg',

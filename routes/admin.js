@@ -1,6 +1,7 @@
 const path = require('path');
 const { Router } = require('express');
 const Product = require('../models/Product');
+const Category = require('../models/Category');
 const CyrillicToTranslit = require('cyrillic-to-translit-js');
 const sharp = require('sharp');
 const router = Router();
@@ -8,10 +9,13 @@ const cyrillicToTranslit = new CyrillicToTranslit();
 
 router.get('/create-product', (req, res) => {
     try {
-        if (!(req.query.password === 'ecosystem')) res.redirect('/');
-        res.render('admin/create-product', {
-            title: 'Создать продукт'
-        });
+        if (req.query.password === 'true') {
+            res.render('admin/create-product', {
+                title: 'Создать продукт'
+            });
+            return;
+        }
+        res.redirect('/');
     } catch (e) {
         console.log(e);
     }
@@ -29,25 +33,25 @@ router.post('/create-product', async (req, res) => {
 
         if (!Array.isArray(types)) types = [types];
         types.forEach(type => {
-            const keyBody = keysBody[typeCounter];
+            const key = keysBody[typeCounter];
             typeCounter++;
             switch (type) {
                 case 'paragraph':
                     content.push({
                         type: 'paragraph',
-                        data: req.body[keyBody]
+                        data: req.body[key]
                     });
                     break;
                 case 'title':
                     content.push({
                         type: 'title',
-                        title: req.body[keyBody]
+                        title: req.body[key]
                     });
                     break;
                 case 'list':
                     content.push({
                         type: 'list',
-                        data: req.body[keyBody]
+                        data: req.body[key]
                     });
                     break;
                 case 'images':
@@ -61,34 +65,35 @@ router.post('/create-product', async (req, res) => {
                 case 'images-and-i':
                     content.push({
                         type: 'images',
-                        images: getFiles(keysFiles, fileCounter, req.files, req.body[keyBody])
+                        images: getFiles(keysFiles, fileCounter, req.files, req.body[key])
                     });
                     fileCounter++;
                     break;
                 default:
                     console.log('Default');
-                    break;
             }
         });
 
-        const translitTitle = cyrillicToTranslit
-            .transform(req.body.productName, '-')
-            .toLowerCase();
         const f = fileUpload(req.files.productImage, '/assets/product/img-db/');
-
         const product = new Product({
-            category: req.body.productCategory,
             title: req.body.productName,
-            translitTitle,
+            translit: translit(req.body.productName),
             image: {
                 src: f.fullPath,
                 alt: f.name
             },
             content
         });
-        await product.save();
 
-        res.redirect('/admin/create-product?password=ecosystem');
+        await product.save(async () => {
+            const category = new Category({
+                category: req.body.productCategory,
+                translit: translit(req.body.productCategory),
+                product: product._id
+            });
+            await category.save();
+            res.redirect('/products/routes?reload=true');
+        });
     } catch (e) {
         console.log(e);
     }
@@ -96,28 +101,35 @@ router.post('/create-product', async (req, res) => {
 
 module.exports = router;
 
-function getFiles(keysFiles, counter, reqFiles, keyBody = null) {
+function translit(words) {
+    const result = cyrillicToTranslit
+        .transform(words, '-')
+        .toLowerCase();
+    return result;
+}
+
+function getFiles(keysFiles, counter, reqFiles, key = null) {
     const keyFile = keysFiles[counter];
     let files = reqFiles[keyFile];
 
     if (!Array.isArray(files)) files = [files];
 
-    if (keyBody) {
-        if (!Array.isArray(keyBody)) keyBody = [keyBody];
-        return getFilesHandler(files, keyBody);
+    if (key) {
+        if (!Array.isArray(key)) key = [key];
+        return getFilesHandler(files, key);
     } else {
         return getFilesHandler(files, null);
     }
 }
 
-function getFilesHandler(files, keyBody) {
+function getFilesHandler(files, key) {
     const result = [];
     files.forEach((file, index) => {
         const f = fileUpload(file, '/assets/product/img-db/');
         result.push({
             src: f.fullPath,
             alt: f.name,
-            name: keyBody ? keyBody[index] : null
+            name: key ? key[index] : null
         });
     });
     return result;

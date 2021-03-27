@@ -1,15 +1,11 @@
 const { Schema, model } = require('mongoose');
 
 const schema = new Schema({
-    category: {
-        type: String,
-        required: true
-    },
     title: {
         type: String,
         required: true
     },
-    translitTitle: {
+    translit: {
         type: String,
         required: true
     },

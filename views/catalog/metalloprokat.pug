@@ -4,7 +4,7 @@ block content
     .catalog__body
         each product in products
             +catalogItem(
-                `/products/${product.translitTitle}`,
+                `/products/${product.translit}`,
                 `${product.image.src}`,
                 `${product.title}`,
                 `${product.title}`)
