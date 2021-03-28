@@ -11,7 +11,7 @@ router.get('/create-product', (req, res) => {
     try {
         if (req.query.password === 'true') {
             res.render('admin/create-product', {
-                title: 'Создать продукт'
+                title: 'Создать'
             });
             return;
         }
@@ -73,13 +73,14 @@ router.post('/create-product', async (req, res) => {
             }
         });
 
-        const f = fileUpload(req.files.image, '/assets/product/img-db/');
+        const file = fileUpload(req.files.image, '/assets/product/img-db/');
         const product = new Product({
+            isSubcategory: !!req.body.isSubcategory,
             name: req.body.name,
             translit: toTranslit(req.body.name),
             image: {
-                src: f.fullPath,
-                alt: f.name
+                src: file.fullPath,
+                alt: file.name
             },
             content
         });

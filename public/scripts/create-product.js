@@ -81,7 +81,7 @@ navSelect.addEventListener('change', () => {
 function getTextBlock() {
     nodeCounter++;
     return `
-        <div id='text-block-${nodeCounter}' class='mb-5'>
+        <div id='text-block-${nodeCounter}' class='mb-5 remove'>
             <p class='text-center'>Текстовый блок</p>
             <div id='paragraph-${nodeCounter}' class='mb-3 counter'>
                 <div class='d-flex justify-content-between'>
@@ -112,7 +112,7 @@ function getParagraph(name, parentId) {
 function getTitle() {
     nodeCounter++;
     return `
-        <div id='title-${nodeCounter}' class='mb-5'>
+        <div id='title-${nodeCounter}' class='mb-5 remove'>
             <p class='text-center'>Заголовок</p>
             <div class='d-flex justify-content-between counter'>
                 <label class='form-label'>h3</label>
@@ -127,7 +127,7 @@ function getTitle() {
 function getList() {
     nodeCounter++;
     return `
-        <ul id='list-${nodeCounter}' class='mb-5'>
+        <ul id='list-${nodeCounter}' class='mb-5 remove'>
             <p class='text-center'>Список</p>
             <li id='li-${nodeCounter}' class='mb-3 counter'>
                 <div class='d-flex justify-content-between'>
@@ -158,7 +158,7 @@ function getListItem(name, parentId) {
 function getImgBlock() {
     nodeCounter++;
     return `
-        <div id='img-block-${nodeCounter}' class='mb-5'>
+        <div id='img-block-${nodeCounter}' class='mb-5 remove'>
             <p class='text-center'>Изображения</p>
             <div id='img-${nodeCounter}' class='mb-3 counter'>
                 <div class='d-flex justify-content-between'>
@@ -189,7 +189,7 @@ function getImg(name, parentId) {
 function getImgAndIBlock() {
     nodeCounter++;
     return `
-        <div id='img-and-i-block-${nodeCounter}' class='mb-5'>
+        <div id='img-and-i-block-${nodeCounter}' class='mb-5 remove'>
             <p class='text-center'>Изображения с подписью</p>
             <div id='img-and-i-${nodeCounter}' class='mb-3 counter'>
                 <div class='d-flex justify-content-between'>
@@ -220,3 +220,34 @@ function getImgAndI(name, parentId) {
         </div>
     `;
 }
+
+const formCheckProduct = document.querySelector('#form-check-product');
+const formCheckSubcategory = document.querySelector('#form-check-subcategory');
+const formTitle = document.querySelector('#form-title');
+
+formCheckProduct.addEventListener('click', () => {
+    formTitle.textContent = 'Создать продукт';
+    navSelect.removeAttribute('disabled');
+});
+
+formCheckSubcategory.addEventListener('click', () => {
+    formTitle.textContent = 'Создать подкатегорию';
+    navSelect.setAttribute('disabled', 'disabled');
+    document.querySelectorAll('.remove').forEach(node => node.remove());
+});
+
+const newCategory = document.querySelector('#new-category');
+const newCategoryButton = document.querySelector('#new-category-button');
+const formSelect = document.querySelector('#form-select');
+
+newCategoryButton.addEventListener('click', event => {
+    event.preventDefault();
+    let value = newCategory.value.trim();
+
+    if (!value) return;
+
+    value = value[0].toUpperCase() + value.slice(1);
+    const option = `<option value='${value}'>${value}</option>`;
+    formSelect.insertAdjacentHTML('beforeend', option);
+    newCategory.value = '';
+});

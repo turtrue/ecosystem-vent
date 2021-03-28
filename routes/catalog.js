@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     }
 });
 
-function getCatalogRoute(category, translit) {
+function catalogRoute(category, translit) {
     router.get(`/${translit}`, async (req, res) => {
         console.log(`Отработал роут /${translit}`);
         try {
@@ -52,7 +52,7 @@ async function catalogRoutes() {
                 break;
             }
         }
-        getCatalogRoute(category, translit);
+        catalogRoute(category, translit);
     }
 }
 catalogRoutes();
