@@ -26,17 +26,17 @@ html(lang='ru')
             form(id='form' method='POST' enctype='multipart/form-data')
                 h3(class='text-center') Создать продукт
                 div(class='mb-5')
-                    select(class='form-select d-block mb-3' name='productCategory' required)
+                    select(class='form-select d-block mb-3' name='category' required)
                         option(value='') Выберите категорию
                         option(value='Расходные материалы') Расходные материалы
                         option(value='Металлопрокат') Металлопрокат
                         option(value='Фасонные изделия') Фасонные изделия
 
                     label(class='form-label') Название продукта
-                    input(class='form-control mb-3' type='text' name='productName' required)
+                    input(class='form-control mb-3' type='text' name='name' required)
 
                     label(class='form-label') Изображение продукта
-                    input(class='form-control' type='file' name='productImage' required)
+                    input(class='form-control' type='file' name='image' required)
 
                 button(id='form-button' class='btn btn-outline-primary' type='submit') Создать страницу
 

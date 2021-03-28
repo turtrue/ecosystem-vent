@@ -23,7 +23,7 @@ async function productRoutes() {
 
                 try {
                     res.render('products/product', {
-                        title: `${product.title} купить в Казани, цены от производителя`,
+                        title: `${product.name} купить в Казани, цены от производителя`,
                         isCatalog: true,
                         product,
                         info
