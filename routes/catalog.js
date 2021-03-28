@@ -23,7 +23,19 @@ function catalogRoute(category, translit) {
                 .populate('product');
 
             const products = [];
-            productData.forEach(obj => products.push(obj.product));
+            productData.forEach(obj => {
+                products.push(obj.product);
+                // if (obj.product.isSubcategory) {
+                //     catalogRoute(obj.product.name, obj.product.translit);
+                // }
+            });
+
+            // res.render(`catalog/catalog`, {
+            //     title: `${category} в Казани купить по выгодной цене от производителя`,
+            //     pageHeader: category,
+            //     isCatalog: true,
+            //     products
+            // });
 
             res.render(`catalog/${translit}`, {
                 title: `${category} в Казани купить по выгодной цене от производителя`,
