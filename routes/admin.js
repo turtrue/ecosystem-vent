@@ -11,7 +11,7 @@ router.get('/create-product', (req, res) => {
     try {
         if (req.query.password === 'true') {
             res.render('admin/create-product', {
-                title: 'Создать продукт'
+                title: 'Создать'
             });
             return;
         }
@@ -24,7 +24,6 @@ router.get('/create-product', (req, res) => {
 router.post('/create-product', async (req, res) => {
     try {
         let types = req.body.types;
-        delete req.body.types;
         const keysBody = Object.keys(req.body);
         const keysFiles = Object.keys(req.files);
         let fileCounter = 0;
@@ -74,21 +73,22 @@ router.post('/create-product', async (req, res) => {
             }
         });
 
-        const f = fileUpload(req.files.productImage, '/assets/product/img-db/');
+        const file = fileUpload(req.files.image, '/assets/product/img-db/');
         const product = new Product({
-            title: req.body.productName,
-            translit: translit(req.body.productName),
+            isSubcategory: !!req.body.isSubcategory,
+            name: req.body.name,
+            translit: toTranslit(req.body.name),
             image: {
-                src: f.fullPath,
-                alt: f.name
+                src: file.fullPath,
+                alt: file.name
             },
             content
         });
 
         await product.save(async () => {
             const category = new Category({
-                category: req.body.productCategory,
-                translit: translit(req.body.productCategory),
+                category: req.body.category,
+                translit: toTranslit(req.body.category),
                 product: product._id
             });
             await category.save();
@@ -101,14 +101,14 @@ router.post('/create-product', async (req, res) => {
 
 module.exports = router;
 
-function translit(words) {
+function toTranslit(words) {
     const result = cyrillicToTranslit
         .transform(words, '-')
         .toLowerCase();
     return result;
 }
 
-function getFiles(keysFiles, counter, reqFiles, key = null) {
+function getFiles(keysFiles, counter, reqFiles, key) {
     const keyFile = keysFiles[counter];
     let files = reqFiles[keyFile];
 
