@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport(sendgrid({
     auth: { api_key: keys.SENDGRID_API_KEY }
 }));
 
-const mailHandler = async (name, phone, email, fileName, filePathAbsolute) => {
+async function mailHandler(name, phone, email, fileName, filePathAbsolute) {
     await transporter.sendMail(userStatementEmail(name, email));
     await transporter.sendMail(officeStatementEmail(name, phone, email, fileName, filePathAbsolute));
 }
@@ -41,7 +41,7 @@ router.post('/statement', async (req, res) => {
             const filePathAbsolute = path.dirname(__dirname) + '/public' + filePath;
             await mailHandler(name, phone, email, fileName, filePathAbsolute);
             res.status(200).send();
-            return true;
+            return;
         }
 
         await mailHandler(name, phone, email);
