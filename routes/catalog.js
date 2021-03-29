@@ -50,21 +50,25 @@ function catalogRoute(category, translit) {
 }
 
 async function catalogRoutes() {
-    console.log('Роуты каталога перестроены');
-    const categoryData = await Category.find({});
-    const result = [];
-    categoryData.forEach(obj => result.push(obj.category));
-    const categories = new Set(result);
+    try {
+        const categoryData = await Category.find({});
+        const result = [];
+        categoryData.forEach(obj => result.push(obj.category));
+        const categories = new Set(result);
 
-    for (category of categories) {
-        let translit;
-        for (let i = 0; i < categoryData.length; i++) {
-            if (categoryData[i].category === category) {
-                translit = categoryData[i].translit;
-                break;
+        for (category of categories) {
+            let translit;
+            for (let i = 0; i < categoryData.length; i++) {
+                if (categoryData[i].category === category) {
+                    translit = categoryData[i].translit;
+                    break;
+                }
             }
+            catalogRoute(category, translit);
         }
-        catalogRoute(category, translit);
+        console.log('Роуты каталога перестроены');
+    } catch (e) {
+        console.log(e);
     }
 }
 catalogRoutes();

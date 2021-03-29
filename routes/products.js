@@ -14,7 +14,6 @@ const info = {
 }
 
 async function productRoutes() {
-    console.log('Роуты продукции перестроены');
     try {
         const products = await Product.find({});
         products.forEach(product => {
@@ -33,6 +32,7 @@ async function productRoutes() {
                 }
             });
         });
+        console.log('Роуты продукции перестроены');
     } catch (e) {
         console.log(e);
     }
