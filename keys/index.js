@@ -1,8 +1,8 @@
 module.exports = {
     MONGODB_URI: 'mongodb+srv://turtrue:A7Vth89fJ0GSZGtn@cluster0.bq5d1.mongodb.net/ecosystem',
     SESSION_SECRET: 'some secret value',
-    SENDGRID_API_KEY: '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',
-    EMAIL_FROM: 'turaltrueandfalse@gmail.com',
+    SENDGRID_API_KEY: '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',
+    EMAIL_FROM: 'ecosystem.kazan@gmail.com',
 
     // EMAIL_OFFICE: 'turaltrueandfalse@gmail.com',
     EMAIL_OFFICE: 'ecosystem.vent@gmail.com',
