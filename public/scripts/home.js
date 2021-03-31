@@ -54,9 +54,9 @@ form.addEventListener('submit', event => {
         formData.append('isFormStatement', isFormStatement);
 
         const fileSize = formData.get('file').size;
-        if (fileSize > 1000000) {
+        if (fileSize > 50000000) {
             formLoader.classList.remove('active');
-            const message = 'Размер файла превышает 10MB';
+            const message = 'Размер файла превышает 50MB';
             notificationMessage(formMessage, message, 'error');
             return true;
         }
@@ -73,6 +73,8 @@ form.addEventListener('submit', event => {
                 notificationMessage(formMessage, message, 'success');
             } else {
                 formLoader.classList.remove('active');
+                const message = 'Что-то пошло не так';
+                notificationMessage(formMessage, message, 'error');
             }
         }).catch((e) => {
             console.error(e);
