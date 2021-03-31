@@ -44,7 +44,6 @@ app.use('/admin', adminRoutes);
 
 async function start() {
     const PORT = process.env.PORT || 3000;
-
     try {
         await mongoose.connect(keys.MONGODB_URI, {
             useNewUrlParser: true,
@@ -53,11 +52,10 @@ async function start() {
         });
 
         app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
+            console.log(`Server listening at http://localhost:${PORT}`);
         });
     } catch (e) {
         console.log(e);
     }
 }
-
 start();
