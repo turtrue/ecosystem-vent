@@ -1,58 +1,17 @@
 extends layouts/catalog.pug
 
 block content
-    +catalogItem(
-        '/catalog/vozdukhovody-i-fasonnye-chasti',
-        '/assets/catalog/img/vozdukhovody-i-fasonnye-chasti.jpg',
-        'воздуховоды и фасонные части',
-        'воздуховоды и фасонные части')
-    +catalogItem(
-        '/catalog/diffuzory-i-reshetki',
-        '/assets/catalog/img/diffuzory-i-reshetki.jpg',
-        'диффузоры и решетки',
-        'диффузоры и решетки')
-    +catalogItem(
-        '/catalog/raskhodnie-materiali',
-        '/assets/catalog/img/raskhodnye-materialy.jpg',
-        'расходные материалы',
-        'расходные материалы')
-    +catalogItem(
-        '/products/ventilyacionnye-ustanovki',
-        '/assets/product/img/ventilyacionnye-ustanovki.jpg',
-        'вентиляционные установки',
-        'вентиляционные установки')
-    +catalogItem(
-        '/products/teplovye-zavesy',
-        '/assets/product/img/teplovye-zavesy.jpg',
-        'тепловые завесы',
-        'тепловые завесы')
-    +catalogItem(
-        '/catalog/kondicionery',
-        '/assets/catalog/img/kondicionery.jpg',
-        'кондиционеры',
-        'кондиционеры')
-    +catalogItem(
-        '/catalog/metalloprokat',
-        '/assets/catalog/img/metalloprokat.jpg',
-        'металлопрокат',
-        'металлопрокат')
-    +catalogItem(
-        '/catalog/truby-i-fitingi',
-        '/assets/catalog/img/truby-i-fitingi.jpg',
-        'трубы и фитинги',
-        'трубы и фитинги')
-    +catalogItem(
-        '/products/ventilyatory',
-        '/assets/product/img/ventilyatory.jpg',
-        'вентиляторы',
-        'вентиляторы')
-    +catalogItem(
-        '/products/protivopozharnye-klapany',
-        '/assets/product/img/protivopozharnye-klapany.webp',
-        'противопожарные клапаны',
-        'противопожарные клапаны')
-    +catalogItem(
-        '/catalog/ognezashchita-i-teploizolyaciya',
-        '/assets/catalog/img/ognezashchita-i-teploizolyaciya.jpg',
-        'огнезащита и теплоизоляция',
-        'огнезащита и теплоизоляция')
+    .catalog__body
+        each product in products
+            if product.isSubcategory
+                +catalogItem(
+                    `/catalog/${product.translit}`,
+                    `${product.image.src}`,
+                    `${product.name}`,
+                    `${product.name}`)
+            else
+                +catalogItem(
+                    `/products/${product.translit}`,
+                    `${product.image.src}`,
+                    `${product.name}`,
+                    `${product.name}`)
