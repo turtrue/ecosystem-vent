@@ -1,0 +1,29 @@
+extends layouts/main.pug
+
+block links
+    //- https://michalsnik.github.io/aos/
+    //- link(href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet')
+    link(rel='stylesheet' href='/scss/index.scss')
+
+block content
+    - var vacancies = ['Менеджер по продажам','Менеджер направления проектных продаж','Специалист отдела продаж','Специалист по ценообразованию','Специалист отдела кадров','Ревизор-экономист','Юрист','Программист 1С','Кладовщик','Водитель автомобиля','Водитель погрузчика'];
+
+    .banner-mini
+    main
+        article.vacancies
+            .container
+                h1.vacancies__title Работа в компании
+                hr
+                ul.vacancies__list
+                    each vacancy in vacancies
+                        li
+                            a(href='tel:+78435052775')=vacancy
+                hr
+                .vacancies__text
+                    p Хороший сотрудник - это прежде всего саморазвивающаяся личность. Уровень квалификации специалистов является одним из важнейших факторов успешности компании.
+                    p Повышение профессионализма сотрудников - приоритетная задача руководства и основа развития бизнеса. Поэтому в компании активно развивают комплексную программу обучения, направленную на совершенствование профессиональных и личностных качеств.
+
+block scripts
+    //- https://michalsnik.github.io/aos/
+    script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
+    //- script(src='/scripts/service.js')

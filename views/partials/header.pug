@@ -23,6 +23,12 @@ header.header
                 else
                     li.nav__link
                         a(href='/service') Услуги
+                if isVacancies
+                    li.nav__link
+                        a.active(href='/vacancies') Вакансии
+                else
+                    li.nav__link
+                        a(href='/vacancies') Вакансии
 
         +btn(
             'tel:+78435052775',

@@ -1,0 +1,66 @@
+.vacancies {
+    padding: 80px 0;
+
+    @media (max-width: 680px) {
+        padding: 50px 0;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-size: 3.4rem;
+
+        @media (max-width: 910px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 680px) {
+            font-size: 2.4rem;
+            line-height: 1.2;
+        }
+    }
+
+    hr {
+        height: 1.5px;
+
+        background: $darkGreen;
+        border: none;
+    }
+
+    &__list {
+        margin: 20px 0;
+        padding-left: 40px;
+
+        list-style-type: disc;
+
+        @media (max-width: 680px) {
+            font-size: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $darkGreen;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+
+        p {
+            margin-bottom: 10px;
+
+            @media (max-width: 680px) {
+                margin-bottom: 5px;
+
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

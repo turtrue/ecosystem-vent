@@ -7,17 +7,14 @@ html(lang='ru')
         //- https://michalsnik.github.io/aos/
         link(href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet')
         link(rel='stylesheet' href='/scss/index.scss')
-
     body
         .page
             include ../partials/svg.pug
             .banner
             include ../partials/header.pug
-
             main.catalog
                 .container
                     h1.catalog__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true')=pageHeader
-
                     .catalog__body
                         block content
 

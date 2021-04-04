@@ -7,6 +7,7 @@ const productsRoutes = require('./routes/products');
 const serviceRoutes = require('./routes/service');
 const emailsRoutes = require('./routes/emails');
 const adminRoutes = require('./routes/admin');
+const vacanciesRoutes = require('./routes/vacancies');
 const favicon = require('serve-favicon');
 const fileUpload = require('express-fileupload');
 const mongoose = require('mongoose');
@@ -41,6 +42,7 @@ app.use('/products', productsRoutes);
 app.use('/service', serviceRoutes);
 app.use('/emails', emailsRoutes);
 app.use('/admin', adminRoutes);
+app.use('/vacancies', vacanciesRoutes);
 
 async function start() {
     const PORT = process.env.PORT || 3000;
