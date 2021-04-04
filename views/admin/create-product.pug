@@ -39,6 +39,8 @@ html(lang='ru')
                         select(id='form-select' class='form-select' name='category' required)
                             option(value='') Выберите категорию
                             option(value='Каталог') Каталог
+                            each category in categories
+                                option(value=category)=category
 
                         div
                             label(class='form-label') Новая категория

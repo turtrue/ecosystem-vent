@@ -7,11 +7,15 @@ const sharp = require('sharp');
 const router = Router();
 const cyrillicToTranslit = new CyrillicToTranslit();
 
-router.get('/create-product', (req, res) => {
+router.get('/create-product', async (req, res) => {
     try {
         if (req.query.password === 'true') {
+            const categoryData = await Product.find({ isSubcategory: true });
+            const categories = categoryData.map(obj => obj.name);
+
             res.render('admin/create-product', {
-                title: 'Создать'
+                title: 'Создать',
+                categories
             });
             return;
         }
