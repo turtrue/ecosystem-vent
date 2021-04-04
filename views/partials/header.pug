@@ -1,10 +1,38 @@
 header.header
+    nav#burger-menu.burger-menu
+        a.burger-menu__logo(href='/')
+            img(src='/assets/header/img/logo.jpg' alt='ecosystem производство и поставка воздуховодов в казани')
+        ul
+            if isHome
+                li.burger-menu__link
+                    a.active(href='/') Главная
+            else
+                li.burger-menu__link
+                    a(href='/') Главная
+            if isCatalog
+                li.burger-menu__link
+                    a.active(href='/catalog') Каталог
+            else
+                li.burger-menu__link
+                    a(href='/catalog') Каталог
+            if isService
+                li.burger-menu__link
+                    a.active(href='/service') Услуги
+            else
+                li.burger-menu__link
+                    a(href='/service') Услуги
+            if isVacancies
+                li.burger-menu__link
+                    a.active(href='/vacancies') Вакансии
+            else
+                li.burger-menu__link
+                    a(href='/vacancies') Вакансии
+
     .header__body
         a(href='/').header__logo
-            img(src='/assets/header/img/logo.jpg' alt='ecosystem производство и поставка воздуховодов')
-
-        nav
-            ul.nav
+            img(src='/assets/header/img/logo.jpg' alt='ecosystem производство и поставка воздуховодов в казани')
+        nav.nav
+            ul
                 if isHome
                     li.nav__link
                         a.active(href='/') Главная
@@ -29,12 +57,11 @@ header.header
                 else
                     li.nav__link
                         a(href='/vacancies') Вакансии
-
         +btn(
             'tel:+78435052775',
             '#phone',
             'Позвоните нам',
             '',
-            'btn--header-media',
-            'btn__logo--header-media',
+            '',
+            '',
             'btn__text--header-media')

@@ -1,6 +1,5 @@
 'use strict';
 
-// Services
 const serviceItems = document.querySelectorAll('.service__item');
 const serviceItemContents = document.querySelectorAll('.service__item-content');
 
@@ -38,6 +37,21 @@ serviceItemContents.forEach(serviceItemContent => {
             serviceItemContent,
             '.content-h',
             serviceItemContent);
+    }
+});
+
+const burgerBtn = document.querySelector('#burger-btn');
+const burgerMenu = document.querySelector('#burger-menu');
+
+burgerBtn.addEventListener('click', () => {
+    document.body.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
+});
+
+document.body.addEventListener('click', event => {
+    if (event.target === document.body) {
+        burgerMenu.classList.remove('active');
+        document.body.classList.remove('active');
     }
 });
 

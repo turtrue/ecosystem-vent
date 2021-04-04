@@ -1,0 +1,38 @@
+.banner {
+    height: 40px;
+
+    background: $lightBlack;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 10px 15px;
+        width: 100%;
+
+        position: fixed;
+        z-index: 1000;
+        display: flex;
+    }
+}
+
+.burger-btn {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    div {
+        margin-bottom: 5px;
+        width: 30px;
+        height: 3px;
+
+        background: $darkGreen;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

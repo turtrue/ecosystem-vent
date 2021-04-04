@@ -6,8 +6,12 @@
         url("../../../assets/home/img/tubes.jpg");
     background-attachment: fixed;
 
+    @media (max-width: 768px) {
+        padding: 120px 0 80px;
+    }
+
     @media (max-width: 680px) {
-        padding: 50px 0;
+        padding: 90px 0 50px;
     }
 
     &:before {
@@ -65,8 +69,8 @@
 
         display: inline-block;
         list-style: disc;
-        border-top: 2px solid $darkGreen;
-        border-bottom: 2px solid $darkGreen;
+        border-top: 1.5px solid $darkGreen;
+        border-bottom: 1.5px solid $darkGreen;
 
         li {
             @media (max-width: 680px) {
