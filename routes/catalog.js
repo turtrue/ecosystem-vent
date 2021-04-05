@@ -1,10 +1,9 @@
 const { Router } = require('express');
 const Category = require('../models/Category');
+const Product = require('../models/Product');
 const router = Router();
 
 function catalogRoute(category, translit) {
-    if (translit === 'katalog') translit = '';
-
     router.get(`/${translit}`, async (req, res) => {
         try {
             const productData = await Category
@@ -23,26 +22,18 @@ function catalogRoute(category, translit) {
             console.log(e);
         }
 
-        console.log(`Отработал роут /${translit || 'catalog'}`);
+        console.log(`Отработал роут /${translit}`);
     });
 }
 
 async function catalogRoutes() {
     try {
-        const categoryData = await Category.find({});
-        const setCategories = new Set();
-        const setTranslits = new Set();
+        const categories = await Product.find({ isSubcategory: true }, 'name translit');
 
-        categoryData.forEach(obj => {
-            setCategories.add(obj.category);
-            setTranslits.add(obj.translit);
-        });
+        categories.push({ name: 'Каталог', translit: '' });
 
-        const arrCategories = Array.from(setCategories);
-        const arrTranslits = Array.from(setTranslits);
-
-        arrTranslits.forEach((translit, i) => {
-            catalogRoute(arrCategories[i], translit);
+        categories.forEach(category => {
+            catalogRoute(category.name, category.translit);
         });
     } catch (e) {
         console.log(e);
