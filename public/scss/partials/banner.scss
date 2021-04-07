@@ -1,15 +1,17 @@
 .banner {
+    width: 100%;
+    padding: 3px;
     height: 40px;
 
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: flex-end;
     background: $lightBlack;
 
     @media (max-width: 768px) {
-        padding: 10px 15px;
-        width: 100%;
+        padding: 3px 15px;
 
-        position: fixed;
-        z-index: 1000;
-        display: flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -32,6 +34,61 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+.search-input {
+    padding: 0 10px;
+    width: 300px;
+    height: 100%;
+
+    font-size: 1.5rem;
+    border-radius: 2px;
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @media (max-width: 768px) {
+        margin: 0 15px;
+        width: 100%;
+    }
+}
+
+.search-output {
+    width: 300px;
+    max-height: 100vh;
+
+    position: absolute;
+    top: 40px;
+    right: 3px;
+    z-index: 1;
+    font-size: 1.5rem;
+    background: $white;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0 1px 0 $lightBlack;
+    overflow-y: scroll;
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+        right: 0;
+    }
+
+    a {
+        padding: 10px 10px;
+
+        display: block;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: rgba($lightBlack, 0.1);
         }
     }
 }

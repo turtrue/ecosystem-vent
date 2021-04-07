@@ -17,9 +17,10 @@ html(lang='ru')
                     h1.catalog__title(data-aos='fade-right' data-aos-duration='1000' data-aos-once='true')=pageHeader
                     .catalog__body
                         block content
-
+        
             include ../partials/footer.pug
 
         //- https://michalsnik.github.io/aos/
         script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
         script(src='/scripts/catalog.js')
+        script(src='/scripts/index.js')

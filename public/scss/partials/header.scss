@@ -1,4 +1,12 @@
 .header {
+    width: 100%;
+
+    position: fixed;
+    top: 40px;
+    z-index: 1000;
+    background: $white;
+    box-shadow: 0 0 1px 0 $lightBlack;
+
     &__body {
         padding: 10px 15px;
 
@@ -74,9 +82,6 @@
 
     @media (max-width: 768px) {
         display: block;
-    }
-
-    ul {
     }
 
     &__logo {

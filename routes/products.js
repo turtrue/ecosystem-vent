@@ -16,6 +16,18 @@ const info = {
 async function productRoutes() {
     try {
         const products = await Product.find({});
+        const productsToSearch = products.map(product => {
+            if (!product.isSubcategory) {
+                return {
+                    name: product.name,
+                    translit: product.translit
+                }
+            }
+            return {
+                name: '',
+                translit: ''
+            }
+        });
 
         products.forEach(product => {
             router.get(`/${product.translit}`, (req, res) => {
@@ -24,6 +36,7 @@ async function productRoutes() {
                         title: `${product.name} купить в Казани, цены от производителя`,
                         isCatalog: true,
                         product,
+                        data: JSON.stringify(productsToSearch),
                         info
                     });
                 } catch (e) {
