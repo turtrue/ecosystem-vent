@@ -1,43 +1,29 @@
 'use strict';
 
-const serviceItems = document.querySelectorAll('.service__item');
-const serviceItemContents = document.querySelectorAll('.service__item-content');
+const serviceItemTitles = document.querySelectorAll('.service__item-title');
 
-function getAndSetNodeHeight(searchNode, getNode, setNode) {
-    const height = searchNode.querySelector(getNode).offsetHeight;
-    setNode.style.height = `${height}px`;
+function showContent(node, isInit = false) {
+    const arrow = node.querySelector('.service__item-arrow');
+    const parent = node.parentNode;
+    const content = parent.querySelector('.service__item-content');
+    const height = parent.querySelector('.content-h').offsetHeight;
+    const isActive = arrow.classList.contains('active');
+
+    if (isInit) {
+        if (isActive) content.style.height = `${height}px`;
+        return;
+    }
+
+    isActive
+        ? content.style.height = '0'
+        : content.style.height = `${height}px`;
+
+    arrow.classList.toggle('active');
 }
 
-serviceItems.forEach(item => {
-    item.addEventListener('click', event => {
-        const isItemArrow = event.target.classList.contains('service__arrow');
-
-        if (isItemArrow) {
-            event.target.classList.toggle('active');
-            const isItemArrowActive =
-                event.target.classList.contains('active');
-
-            const serviceItemContent = item.querySelector('.service__item-content');
-            serviceItemContent.classList.toggle('active');
-
-            if (isItemArrowActive) {
-                getAndSetNodeHeight(item, '.content-h', serviceItemContent);
-            } else {
-                serviceItemContent.style.height = '0';
-            }
-        }
-    });
-});
-
-serviceItemContents.forEach(serviceItemContent => {
-    const isItemContentActive = serviceItemContent.classList.contains('active');
-
-    if (isItemContentActive) {
-        getAndSetNodeHeight(
-            serviceItemContent,
-            '.content-h',
-            serviceItemContent);
-    }
+serviceItemTitles.forEach(title => {
+    showContent(title, true);
+    title.addEventListener('click', () => showContent(title));
 });
 
 // https://michalsnik.github.io/aos/

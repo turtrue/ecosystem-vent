@@ -83,17 +83,18 @@
         @media (max-width: 460px) {
             margin-bottom: 5px;
         }
+    }
 
-        h2 {
-            font-size: 2.4rem;
+    &__item-title {
+        font-size: 2.4rem;
+        cursor: pointer;
 
-            @media (max-width: 680px) {
-                font-size: 2rem;
-            }
+        @media (max-width: 680px) {
+            font-size: 2rem;
         }
     }
 
-    &__arrow {
+    &__item-arrow {
         position: absolute;
         top: 50%;
         right: -25px;
@@ -101,7 +102,6 @@
         border-style: solid;
         border-width: 0 7.5px 10px 7.5px;
         border-color: transparent transparent $darkGreen transparent;
-        cursor: pointer;
         transition: border 0.2s ease;
 
         &.active {

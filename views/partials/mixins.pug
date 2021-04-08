@@ -41,9 +41,9 @@ mixin clientItem(src, alt, minDescr)
 //- Service
 mixin serviceItem(title, active='')
     div(class='service__item')
-        h2 #{title}
+        h2(class='service__item-title')=title
             span(class='pos-r')
-                span(class='service__arrow ' + active)
-        div(class='service__item-content ' + active)
+                span(class='service__item-arrow ' + active)
+        div(class='service__item-content')
             .content-h
                 block
