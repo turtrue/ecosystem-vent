@@ -1,26 +1,29 @@
 'use strict';
 
 // Burger menu
+const body = document.body;
 const burgerBtn = document.querySelector('#burger-btn');
 const burgerMenu = document.querySelector('#burger-menu');
 
 burgerBtn.addEventListener('click', () => {
-    document.body.classList.toggle('active');
+    body.classList.toggle('active');
     burgerMenu.classList.toggle('active');
 });
 
-document.body.addEventListener('click', event => {
-    if (event.target === document.body) {
+body.addEventListener('click', event => {
+    if (event.target === body) {
         burgerMenu.classList.remove('active');
-        document.body.classList.remove('active');
+        body.classList.remove('active');
     }
 });
 
-// Search
+// Search products
 const dataProducts = document.querySelector('#data-products');
 const searchInput = document.querySelector('#search-input');
 const searchOutput = document.querySelector('#search-output');
 const data = dataProducts.dataset.products;
+
+/* Формируется новый массив продукции в котором имена продуктов приводятся к нижнему регистру */
 const products = JSON.parse(data).map(product => {
     return {
         name: product.name.toLowerCase(),
@@ -28,6 +31,7 @@ const products = JSON.parse(data).map(product => {
     }
 });
 
+// Сортировка продукции в алфавитном порядке
 products.sort((a, b) => {
     if (a.name > b.name) return 1;
     if (a.name < b.name) return -1;
@@ -52,11 +56,21 @@ function searchProduct(value, output, data) {
 
     if (value) {
         data.forEach(product => {
-            if (product.name.includes(value)) {
-                const node = getLi(product.translit, product.name);
-                output.insertAdjacentHTML('beforeend', node);
-            }
+            product.name.split(' ').forEach(word => {
+                const letters = word.slice(0, value.length);
+
+                if (letters === value) {
+                    const node = getLi(product.translit, product.name);
+                    output.insertAdjacentHTML('beforeend', node);
+                }
+            });
         });
+    }
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        output.firstChild
+            ? body.classList.add('overflow-hidden')
+            : body.classList.remove('overflow-hidden')
     }
 }
 
